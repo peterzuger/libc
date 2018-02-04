@@ -7,7 +7,7 @@
 #ifndef __STDBOOL_H__
 #define __STDBOOL_H__
 
-#if defined(__cplusplus)
+#if !defined(__cplusplus)
 
 # define bool _Bool
 # define true 1
