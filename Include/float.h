@@ -2,7 +2,8 @@
  * @file   float.h
  * @author Peter Zueger
  * @date   28.01.2018
- * @brief  floatingpoint definitions
+ * @note   part of the freestanding headers
+ * @brief  floating types
  */
 #ifndef __FLOAT_H__
 #define __FLOAT_H__

@@ -2,6 +2,7 @@
  * @file   stdbool.h
  * @author Peter Zueger
  * @date   28.01.2018
+ * @note   part of the freestanding headers
  * @brief  bool type in C
  */
 #ifndef __STDBOOL_H__
@@ -13,6 +14,6 @@
 # define true 1
 # define false 0
 
-#endif /* defined(__cplusplus) */
+#endif /* !defined(__cplusplus) */
 
 #endif /* __STDBOOL_H__ */

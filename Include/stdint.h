@@ -2,7 +2,8 @@
  * @file   stdint.h
  * @author Peter Zueger
  * @date   28.01.2018
- * @brief  standard integers
+ * @note   part of the freestanding headers
+ * @brief  integer types
  */
 #ifndef __STDINT_H__
 #define __STDINT_H__
