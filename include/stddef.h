@@ -10,8 +10,10 @@
 
 #include <types/ptrdiff_t.h>
 #include <types/size_t.h>
+#include <types/max_align_t.h>
 #include <types/wchar_t.h>
-#include <types/NULL.h>
+
+#include <macros/NULL.h>
 
 #define offsetof(t, d) __builtin_offsetof(t, d)
 
