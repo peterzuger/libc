@@ -7,6 +7,13 @@
 #ifndef __CTYPE_H__
 #define __CTYPE_H__
 
+#if defined(__cplusplus)
+extern "C"{
+#endif /* defined(__cplusplus) */
+
+/******************************************************************************
+ *                     Character classification functions                     *
+ ******************************************************************************/
 int isalnum(int c);
 int isalpha(int c);
 int isblank(int c);
@@ -20,7 +27,14 @@ int isspace(int c);
 int isupper(int c);
 int isxdigit(int c);
 
+/******************************************************************************
+ *                      Character case mapping functions                      *
+ ******************************************************************************/
 int tolower(int c);
 int toupper(int c);
+
+#if defined(__cplusplus)
+}
+#endif /* defined(__cplusplus) */
 
 #endif /* __CTYPE_H___ */

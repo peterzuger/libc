@@ -9,45 +9,45 @@
 #define IN_RANGE(c,b,t)  (((c)>=(b))&&((c)<=(t)))
 
 int isalnum(int c){
-    return (IN_RANGE(c,0x30,0x39) || IN_RANGE(c,0x41,0x5A) || IN_RANGE(c,0x61,0x7A));
+    return (isdigit(c) || isalpha(c));
 }
 int isalpha(int c){
-    return (IN_RANGE(c,0x41,0x5A) || IN_RANGE(c,0x61,0x7A));
+    return (isupper(c) || islower(c));
 }
 int isblank(int c){
-    return ((c==0x09)||(c==0x20));
+    return ((c=='\t')||(c==' '));
 }
 int iscntrl(int c){
     return ((c<=0x1F) || (c==0x7F));
 }
 int isdigit(int c){
-    return IN_RANGE(c,0x30,0x39);
+    return IN_RANGE(c,'0','9');
 }
 int isgraph(int c){
-    return IN_RANGE(c,0x21,0x7E);
+    return IN_RANGE(c,'!','~');
 }
 int isupper(int c){
-    return IN_RANGE(c,0x41,0x5A);
+    return IN_RANGE(c,'A','Z');
 }
 int islower(int c){
-    return IN_RANGE(c,0x61,0x7A);
+    return IN_RANGE(c,'a','z');
 }
 int isprint(int c){
-    return IN_RANGE(c,0x20,0x7E);
+    return IN_RANGE(c,' ','~');
 }
 int ispunct(int c){
-    return (IN_RANGE(c,0x21,0x2F) || IN_RANGE(c,0x3A,0x40) || IN_RANGE(c,0x5B,0x60) || IN_RANGE(c,0x7B,0x7E));
+    return (IN_RANGE(c,'!','/') || IN_RANGE(c,':','@') || IN_RANGE(c,'[','`') || IN_RANGE(c,'{','~'));
 }
 int isspace(int c){
-    return (IN_RANGE(c,0x09,0x0D) || (c==0x20));
+    return (IN_RANGE(c,'\t','\r') || (c==' '));
 }
 int isxdigit(int c){
-    return (IN_RANGE(c,0x30,0x39) || IN_RANGE(c,0x41,0x46) || IN_RANGE(c,0x61,0x66));
+    return (isdigit(c) || IN_RANGE(c,'A','F') || IN_RANGE(c,'a','f'));
 }
 
 int tolower(int c){
-    return IN_RANGE(c,'A','Z')?(c+32):c;
+    return isupper(c)?(c+32):c;
 }
 int toupper(int c){
-    return IN_RANGE(c,'a','z')?(c-32):c;
+    return islower(c)?(c-32):c;
 }
