@@ -4,9 +4,6 @@
  * @date   08.02.2018
  * @brief  dynamic memory allocation
  */
-#ifndef __ALLOC_C__
-#define __ALLOC_C__
-
 #include <stdlib.h>
 #include <config.h>
 #include <types/NULL.h>
@@ -58,20 +55,20 @@ void* realloc(void* ptr, size_t size){
     block_t* blk = (block_t*)ptr-1;
     if(blk->size >= size) return ptr;
     if((blk->next.magic == MAGIC_FREE)&&((blk->size+blk->next.size)>=size)){
-	blk->size += blk->next.size + BLOCK_SIZE;
-	blk->next = blk->next.next;
-	blk->next.prev = blk;
-	return ptr;
+        blk->size += blk->next.size + BLOCK_SIZE;
+        blk->next = blk->next.next;
+        blk->next.prev = blk;
+        return ptr;
     }
     char* mem = malloc(size);
     if(mem){
-	char* orig = ptr;
-	size_t i;
-	for(i=0;i<blk->size;i++)
-	    mem[i] = orig[i];
-	for(;i<size;i++)
-	    mem[i] = 0;
-	free(ptr);
+        char* orig = ptr;
+        size_t i;
+        for(i=0;i<blk->size;i++)
+            mem[i] = orig[i];
+        for(;i<size;i++)
+            mem[i] = 0;
+        free(ptr);
     }
     return
 }
@@ -103,14 +100,14 @@ static block_t* find_free_block(size_t size){
 // create new blocks
 static block_t* create_block(size_t size){
     if((top + size + BLOCK_SIZE) <= HEAP_TOP){
-	top->next = top + size + BLOCK_SIZE;
-	top->next.prev = top;
-	top = top->next;
-	top->size = size;
-	top->magic = MAGIC_USED;
-	top->next = NULL;  // should not be necessary
+        top->next = top + size + BLOCK_SIZE;
+        top->next.prev = top;
+        top = top->next;
+        top->size = size;
+        top->magic = MAGIC_USED;
+        top->next = NULL;  // should not be necessary
     }else
-	return NULL;
+        return NULL;
 }
 
 // Split block into smaller chunks
@@ -133,5 +130,3 @@ static void merge_blocks(block_t* block){
         block.next.prev = block.prev;
     }
 }
-
-#endif /* __ALLOC_C__ */
