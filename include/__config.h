@@ -10,8 +10,9 @@
 /*
  * stdlib configuration
  */
-#define MALLOC_HEAP_TOP       0x0400
-#define MALLOC_MIN_BLOCK_SIZE 0x20
+#define MALLOC_HEAP_BOT       (0x0200)
+#define MALLOC_HEAP_TOP       (0x0400)
+#define MALLOC_MIN_BLOCK_SIZE (0x20)
 #define MALLOC_USE_BEST_FIT
 //#define MALLOC_USE_FIRST_FIT
 
