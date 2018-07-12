@@ -6,6 +6,7 @@
  */
 #include <stdlib.h>
 #include <stddef.h>
+#include <errno.h>
 #include <types/size_t.h>
 #include <macros/NULL.h>
 #include <__config.h>
@@ -199,14 +200,17 @@ static block_t* find_free_block(size_t size){
 
 static block_t* create_block(size_t size){
     if(base.flags & MALLOC_FLAG_CLOBBERED){
+        if((size+sizeof(block_t))>(MALLOC_HEAP_TOP-MALLOC_HEAP_BOT)){
+            errno = ENOMEM;
+            return NULL;
+        }
         base.flags &= ~MALLOC_FLAG_CLOBBERED;
         base.first->prev = NULL;
         base.first->next = NULL;
         base.first->size = size;
         base.first->magic = MAGIC_FREE;
         return base.first;
-    }
-    if((base.last + size + sizeof(block_t)) <= (block_t*)MALLOC_HEAP_TOP){
+    }else if((base.last + size + sizeof(block_t)) <= (block_t*)MALLOC_HEAP_TOP){
         base.last->next = base.last + size + sizeof(block_t);
         base.last->next->prev = base.last;
         base.last = base.last->next;
@@ -214,8 +218,9 @@ static block_t* create_block(size_t size){
         base.last->magic = MAGIC_FREE;
         base.last->next = NULL;  // should not be necessary
         return base.last;
-    }else
-        return NULL;
+    }
+    errno = ENOMEM;
+    return NULL;
 }
 
 /**
