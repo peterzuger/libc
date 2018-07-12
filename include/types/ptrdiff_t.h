@@ -9,7 +9,7 @@
 
 #if defined(__PTRDIFF_TYPE__) || defined(DOXYGEN)
 # if !defined(__PTRDIFF_T_DEFINED__)
-#  defined __PTRDIFF_T_DEFINED__
+#  define __PTRDIFF_T_DEFINED__
 typedef __PTRDIFF_TYPE__ ptrdiff_t;
 #endif /* !defined(__PTRDIFF_T_DEFINED__) */
 #endif /* defined(__PTRDIFF_TYPE__) || defined(DOXYGEN) */

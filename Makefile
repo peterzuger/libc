@@ -1,8 +1,5 @@
 MCPU=cortex-m4
 
-
-
-
 NAME = libc
 
 INC  = include
