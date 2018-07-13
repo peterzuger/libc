@@ -9,30 +9,10 @@
 
 #include <types/size_t.h>
 #include <types/wchar_t.h>
+#include <types/div_t.h>
+#include <types/ldiv_t.h>
+#include <types/lldiv_t.h>
 
-#if !defined(__DIV_T_DEFINED__)
-# define __DIV_T_DEFINED__
-typedef struct{
-    int quot;
-    int rem;
-}div_t;
-#endif /* !defined(__DIV_T_DEFINED__) */
-
-#if !defined(__LDIV_T_DEFINED__)
-# define __LDIV_T_DEFINED__
-typedef struct{
-    long int quot;
-    long int rem;
-}ldiv_t;
-#endif /* !defined(__LDIV_T_DEFINED__) */
-
-#if !defined(__LLDIV_T_DEFINED__)
-# define __LLDIV_T_DEFINED__
-typedef struct{
-    long long int quot;
-    long long int rem;
-}lldiv_t;
-#endif /* !defined(__LLDIV_T_DEFINED__) */
 
 double atof(const char *nptr);
 int atoi(const char *nptr);
@@ -43,11 +23,11 @@ float strtof(const char * restrict nptr, char ** restrict endptr);
 long double strtold(const char * restrict nptr, char ** restrict endptr);
 long int strtol(const char * restrict nptr,char ** restrict endptr, int base);
 long long int strtoll(const char * restrict nptr,
-		      char ** restrict endptr, int base);
+                      char ** restrict endptr, int base);
 unsigned long int strtoul(const char * restrict nptr,
-			  char ** restrict endptr, int base);
+                          char ** restrict endptr, int base);
 unsigned long long int strtoull(const char * restrict nptr,
-				char ** restrict endptr, int base);
+                                char ** restrict endptr, int base);
 
 int rand(void);
 void srand(unsigned int seed);
@@ -69,9 +49,9 @@ _Noreturn void quick_exit(int status);
 int system(const char *string);
 
 void *bsearch(const void *key, const void *base, size_t nmemb, size_t size,
-	      int (*compar)(const void *, const void *));
+              int (*compar)(const void *, const void *));
 void qsort(void *base, size_t nmemb, size_t size,
-	   int (*compar)(const void *, const void *));
+           int (*compar)(const void *, const void *));
 
 int abs(int j);
 long int labs(long int j);
