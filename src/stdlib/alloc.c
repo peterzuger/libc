@@ -68,7 +68,7 @@ typedef struct{
  * this struct is a global variable
  */
 static volatile malloc_t base = {
-    .first = (block_t*)HEAP_BOT,
+    .first = NULL,
     .last  = NULL,
     .flags = MALLOC_FLAG_CLOBBERED,
     .used  = 0
@@ -199,18 +199,23 @@ static block_t* find_free_block(size_t size){
 #endif /* defined(MALLOC_USE_BEST_FIT) */
 
 static block_t* create_block(size_t size){
+    extern int __heap_size__;
+    extern int __heap_bot__;
+    extern int __heap_top__;
+
     if(base.flags & MALLOC_FLAG_CLOBBERED){
-        if((size+sizeof(block_t))>(HEAP_SIZE)){
+        if((size+sizeof(block_t))>(__heap_size__)){
             errno = ENOMEM;
             return NULL;
         }
         base.flags &= ~MALLOC_FLAG_CLOBBERED;
+        base.first = (block_t*)__heap_bot__;
         base.first->prev = NULL;
         base.first->next = NULL;
         base.first->size = size;
         base.first->magic = MAGIC_FREE;
         return base.first;
-    }else if((base.last+size+2*sizeof(block_t))<=(block_t*)(HEAP_BOT+HEAP_SIZE)){
+    }else if((base.last+size+2*sizeof(block_t))<=(block_t*)(__heap_top__)){
         base.last->next = base.last + size + sizeof(block_t);
         base.last->next->prev = base.last;
         base.last = base.last->next;

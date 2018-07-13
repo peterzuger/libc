@@ -1,8 +1,5 @@
-NAME      ?=libc
-
-MCPU      ?=cortex-m4
-HEAP_BOT  ?=0x2000000
-HEAP_SIZE ?=0x400
+NAME ?=libc
+MCPU ?=cortex-m4
 
 
 INC  = include
@@ -22,7 +19,7 @@ AS      = $(CC)as
 RANLIB  = $(CC)ranlib
 
 
-DFLAGS  =-DHEAP_BOT=$(HEAP_BOT) -DHEAP_SIZE=$(HEAP_SIZE)
+DFLAGS  =
 OPTFLAGS= -O2
 IFLAGS  =-I$(INC)
 COMFLAGS= -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
