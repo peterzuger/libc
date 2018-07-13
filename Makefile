@@ -1,8 +1,9 @@
-MCPU=cortex-m4
-HEAP_BOT =0x2000000
-HEAP_SIZE=0x400
+NAME      ?=libc
 
-NAME = libc
+MCPU      ?=cortex-m4
+HEAP_BOT  ?=0x2000000
+HEAP_SIZE ?=0x400
+
 
 INC  = include
 SRC  = src/assert.c src/ctype.c src/errno.c
@@ -40,10 +41,11 @@ all: $(NAME).a
 %.o: %.cpp
 	$(G++) $(CPPFLAGS) $< -o $@
 
-$(NAME).a: $(OBJECTS)
-	$(AR) rcs $(NAME).a $(OBJECTS)
+%.a: $(OBJECTS)
+	$(AR)  $(ARFLAGS) rcs $@ $<
 
-.PHONY: clean
+.PHONY: clean clean_all
 clean:
-	rm -fv $(NAME).a
 	rm -fv $(OBJECTS)
+clean_all: clean
+	rm -fv *.a

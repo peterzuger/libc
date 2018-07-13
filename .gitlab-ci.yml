@@ -4,4 +4,15 @@ before_script:
 
 build:
   script:
-    - make
+    - make clean && make NAME=libcm0 MCPU=cortex-m0
+    - make clean && make NAME=libcm0p MCPU=cortex-m0plus
+    - make clean && make NAME=libcm3 MCPU=cortex-m3
+    - make clean && make NAME=libcm4 MCPU=cortex-m4
+    - make clean && make NAME=libcm7 MCPU=cortex-m7
+  artifacts:
+    paths:
+      - libcm0.a
+      - libcm0p.a
+      - libcm3.a
+      - libcm4.a
+      - libcm7.a
