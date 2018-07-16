@@ -4,7 +4,8 @@ MCPU ?=
 
 INC  = include
 SRC  = src/assert.c src/ctype.c src/errno.c
-SRC += src/stdlib/alloc.c src/stdlib/rand.c src/stdlib/abort.c
+SRC += src/stdlib/alloc.c src/stdlib/rand.c src/stdlib/abort.c src/stdlib/abs.c
+SRC += src/stdlib/div.c
 
 OBJECTS = $(patsubst %.c, %.o, $(SRC))
 
