@@ -1,5 +1,5 @@
 NAME ?=libc
-MCPU ?=cortex-m4
+MCPU ?=
 
 
 INC  = include
