@@ -24,7 +24,7 @@ RANLIB  = $(CC)ranlib
 DFLAGS  =
 OPTFLAGS= -O2
 IFLAGS  =-I$(INC)
-COMFLAGS= -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
+COMFLAGS= -Wall -Wextra -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
 
 CFLAGS  = $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
 CPPFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
