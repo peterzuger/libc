@@ -41,7 +41,7 @@ all: $(NAME).a
 	$(G++) $(CPPFLAGS) $< -o $@
 
 %.a: $(OBJECTS)
-	$(AR)  $(ARFLAGS) rcs $@ $<
+	$(AR)  $(ARFLAGS) rcs $@ $^
 
 .PHONY: clean clean_all
 clean:
