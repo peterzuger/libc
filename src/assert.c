@@ -17,6 +17,6 @@ void __assert(const char* expr,const char* file,
     fputs("\n\t on line: ",stderr);
     fputs(line,stderr);
     fputs("\n\t in function: ",stderr);
-    fputs(file,stderr);
+    fputs(func,stderr);
     abort();
 }
