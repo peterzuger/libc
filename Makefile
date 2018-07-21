@@ -1,50 +1,62 @@
 NAME ?=libc
 MCPU ?=
 
+ifdef VERBOSE
+	Q =
+else
+	Q = @
+endif
+
 
 INC  = include
-SRC  = src/assert.c src/ctype.c src/errno.c
-SRC += src/stdlib/alloc.c src/stdlib/rand.c src/stdlib/abort.c src/stdlib/abs.c
-SRC += src/stdlib/div.c src/stdlib/bsearch.c
-SRC += src/complex/creal.c src/complex/cimag.c
+SRC  = $(wildcard src/*.c)
+SRC += $(wildcard src/stdlib/*.c)
+SRC += $(wildcard src/complex/*.c)
 
-OBJECTS = $(patsubst %.c, %.o, $(SRC))
+OBJECTS = $(SRC:.c=.o)
 
 CC=arm-none-eabi-
 GCC     = $(CC)gcc
 G++     = $(CC)g++
-OBJCOPY = $(CC)objcopy
-OBJDUMP = $(CC)objdump
-LD      = $(CC)ld
+CPP     = $(CC)gcc -E
 AR      = $(CC)ar
 AS      = $(CC)as
-RANLIB  = $(CC)ranlib
-
+ECHO    = echo -e
 
 DFLAGS  =
 OPTFLAGS= -O2
-IFLAGS  =-I$(INC)
-COMFLAGS= -Wall -Wextra -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
+IFLAGS  = -I$(INC)
+WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
+WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
+WFLAGS += -Wdouble-promotion -Wchkp -Winit-self -Wswitch-default -Wswitch-enum
+WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
+COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
 
-CFLAGS  = $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
-CPPFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
-LDFLAGS =
+GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
+C++FLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
+CPPFLAGS=
 ARFLAGS =
 ASFLAGS =
 
 all: $(NAME).a
 
 %.o: %.c
-	$(GCC) $(CFLAGS) $< -o $@
+	@$(ECHO) "GCC\t$@"
+	$(Q)$(GCC) $(GCCFLAGS) $< -o $@
 
 %.o: %.cpp
-	$(G++) $(CPPFLAGS) $< -o $@
+	@$(ECHO) "G++\t$@"
+	$(Q)$(G++) $(C++FLAGS) $< -o $@
 
-%.a: $(OBJECTS)
-	$(AR)  $(ARFLAGS) rcs $@ $^
+
+$(NAME).a: $(OBJECTS)
+	@$(ECHO) "AR\t$@"
+	$(Q)$(Q)$(AR)  $(ARFLAGS) rcsv $@ $^
+
 
 .PHONY: clean clean_all
 clean:
-	rm -fv $(OBJECTS)
+	$(Q)rm -fv $(OBJECTS)
+
 clean_all: clean
-	rm -fv *.a
+	$(Q)rm -fv *.a
