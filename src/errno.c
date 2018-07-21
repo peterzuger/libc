@@ -6,4 +6,4 @@
  */
 #include <errno.h>
 
-int errno;
+int errno = 0;
