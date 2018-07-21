@@ -10,7 +10,7 @@
 #if !defined(__FILE_DEFINED__)
 # define __FILE_DEFINED__
 typedef struct{
-    // missing
+    char MISSING;
 }FILE;
 #endif /* !defined(__FILE_DEFINED__) */
 
