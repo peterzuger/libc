@@ -17,9 +17,9 @@
  * @param type:   the type of the container struct this is embedded in.
  * @param member: the name of the member within the struct.
  */
-#define container_of(ptr, type, member) ({                      \
-        const typeof( ((type *)0)->member ) *__mptr = (ptr);    \
-        (type *)( (char *)__mptr - offsetof(type,member) );})
+#define container_of(ptr, type, member) __extension__({                        \
+            const typeof( ((type *)0)->member ) *__mptr = (ptr);               \
+            (type *)( (char *)__mptr - offsetof(type,member) );})
 
 /**
  * Force Memory alignement
@@ -45,7 +45,7 @@
 /**
  * flags for the implementation
  */
-#define MALLOC_FLAG_CLOBBERED (0x1 << 0xC)
+#define MALLOC_FLAG_CLOBBERED ((size_t)0x1)
 
 typedef struct block_t {
     struct block_t* prev; /**< pointer to the next block */
@@ -204,7 +204,7 @@ static block_t* create_block(size_t size){
     extern int __heap_end__;
 
     if(base.flags & MALLOC_FLAG_CLOBBERED){
-        if((size+sizeof(block_t))>(__heap_size__)){
+        if((size+sizeof(block_t))>((size_t)__heap_size__)){
             errno = ENOMEM;
             return NULL;
         }
@@ -239,7 +239,8 @@ static block_t* create_block(size_t size){
  * set new sizes
  */
 static void split_block(block_t* block, size_t size){
-
+    (void)block;
+    (void)size;
 }
 
 // Merge adjacent free blocks
