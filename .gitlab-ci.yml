@@ -1,6 +1,4 @@
-before_script:
-  - apt-get update -qq
-  - apt-get install -y -qq make gcc-arm-none-eabi
+image: registry.gitlab.com/peterzuger/libc:latest
 
 build:
   script:
