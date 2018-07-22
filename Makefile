@@ -11,6 +11,7 @@ endif
 INC  = include
 SRC  = $(wildcard src/*.c)
 SRC += $(wildcard src/stdlib/*.c)
+SRC += $(wildcard src/string/*.c)
 SRC += $(wildcard src/complex/*.c)
 
 OBJECTS = $(SRC:.c=.o)
