@@ -55,6 +55,8 @@ typedef struct block_t {
     char* memory;         /**< first Byte the user gets dont modify !*/
 }block_t;
 
+#define BLOCK_SIZE (sizeof(block_t)-sizeof(char*))
+
 typedef struct{
     struct block_t* first;/**< pointer to first memory block */
     struct block_t* last; /**< pointer to last memory block */
@@ -151,7 +153,8 @@ void* realloc(void* ptr, size_t size){
     if(blk->size >= size)
         return ptr;
     if((blk->next->magic == MAGIC_FREE)&&((blk->size+blk->next->size)>=size)){
-        blk->size += blk->next->size + sizeof(block_t);
+        base.used += blk->next->size + BLOCK_SIZE;
+        blk->size += blk->next->size + BLOCK_SIZE;
         blk->next = blk->next->next;
         blk->next->prev = blk;
         return ptr;
@@ -199,24 +202,25 @@ static block_t* find_free_block(size_t size){
 #endif /* defined(MALLOC_USE_BEST_FIT) */
 
 static block_t* create_block(size_t size){
-    extern int __heap_size__;
-    extern int __heap_start__;
-    extern int __heap_end__;
+    extern char __heap_size__;
+    extern char __heap_start__;
+    extern char __heap_end__;
 
     if(base.flags & MALLOC_FLAG_CLOBBERED){
-        if((size+sizeof(block_t))>((size_t)__heap_size__)){
+        if((size+BLOCK_SIZE)>((size_t)(&__heap_size__))){
             errno = ENOMEM;
             return NULL;
         }
         base.flags &= ~MALLOC_FLAG_CLOBBERED;
-        base.first = (block_t*)__heap_start__;
+        base.first = (block_t*)&__heap_start__;
+        base.last = base.first;
         base.first->prev = NULL;
         base.first->next = NULL;
         base.first->size = size;
         base.first->magic = MAGIC_FREE;
         return base.first;
-    }else if((base.last+size+2*sizeof(block_t))<=(block_t*)(__heap_end__)){
-        base.last->next = base.last + size + sizeof(block_t);
+    }else if((base.last+size+BLOCK_SIZE)<=(block_t*)(&__heap_end__)){
+        base.last->next = base.last + size + BLOCK_SIZE;
         base.last->next->prev = base.last;
         base.last = base.last->next;
         base.last->size = size;
@@ -246,12 +250,12 @@ static void split_block(block_t* block, size_t size){
 // Merge adjacent free blocks
 static void merge_blocks(block_t* block){
     if(block->next->magic == MAGIC_FREE){
-        block->size += block->next->size + sizeof(block_t);
+        block->size += block->next->size + BLOCK_SIZE;
         block->next = block->next->next;
         block->next->prev = block;
     }
     if(block->prev->magic == MAGIC_FREE){
-        block->prev->size += block->size + sizeof(block_t);
+        block->prev->size += block->size + BLOCK_SIZE;
         block->prev->next = block->next;
         block->next->prev = block->prev;
     }
