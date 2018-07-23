@@ -62,7 +62,7 @@
  * with p radix b digits can be rounded to a floating-point number
  * with n decimal digits and back again without change to the value,
  *     p * log10(b)           if b is a power of 10
- *     ⎡1 + p * log10(b)⎤     otherwise
+ *     1 + p * log10(b)     otherwise
  */
 #define FLT_DECIMAL_DIG       __FLT_DECIMAL_DIG__
 #define DBL_DECIMAL_DIG       __DBL_DECIMAL_DIG__
@@ -74,7 +74,7 @@
  * can be rounded to a floating-point number with n decimal digits
  * and back again without change to the value,
  *     pmax * log10(b)        if b is a power of 10
- *     ⎡1 + pmax * log10 b)⎤  otherwise
+ *     1 + pmax * log10 b)  otherwise
  */
 #define DECIMAL_DIG           __DECIMAL_DIG__
 
@@ -83,7 +83,7 @@
  * q decimal digits can be rounded into a floating-point number with
  * p radix b digits and back again without change to the q decimal digits,
  *     p * log10(b)           if b is a power of 10
- *     ⎣( p − 1) * log10(b)⎦  otherwise
+ *     ( p - 1) * log10(b)  otherwise
  */
 #define FLT_DIG               __FLT_DIG__
 #define DBL_DIG               __DBL_DIG__
@@ -101,7 +101,7 @@
 /**
  * minimum negative integer such that 10 raised to that power is in
  * the range of normalized floating-point numbers,
- *     ⎡⎢log10(b^(emin−1))⎤⎥
+ *     log10(b^(emin-1))
  */
 #define FLT_MIN_10_EXP        __FLT_MIN_10_EXP__
 #define DBL_MIN_10_EXP        __DBL_MIN_10_EXP__
@@ -119,7 +119,7 @@
 /**
  * maximum integer such that 10 raised to that power is in the
  * range of representable finite floating-point numbers,
- *     ⎣log10((1 − b^−p)b^emax)⎦
+ *     log10((1 - b^-p)b^emax)
  */
 #define FLT_MAX_10_EXP        __FLT_MAX_10_EXP__
 #define DBL_MAX_10_EXP        __DBL_MAX_10_EXP__
@@ -127,7 +127,7 @@
 
 /**
  * maximum representable finite floating-point number,
- *     (1 − b^−p)b^emax
+ *     (1 - b^-p)b^emax
  */
 #define FLT_MAX               __FLT_MAX__
 #define DBL_MAX               __DBL_MAX__
