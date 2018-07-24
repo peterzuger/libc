@@ -45,7 +45,7 @@ ARFLAGS =
 ASFLAGS =
 
 all: $(NAME).a
-includecheck: $(HDR_OBJECTS)
+headercheck: $(HDR_OBJECTS)
 
 %.o: %.c
 	@$(ECHO) "GCC\t$@"
