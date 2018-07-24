@@ -7,14 +7,17 @@ else
 	Q = @
 endif
 
+HDR  = $(wildcard include/*.h)
+HDR += $(wildcard include/types/*.h)
+HDR += $(wildcard include/macros/*.h)
 
-INC  = include
 SRC  = $(wildcard src/*.c)
 SRC += $(wildcard src/stdlib/*.c)
 SRC += $(wildcard src/string/*.c)
 SRC += $(wildcard src/complex/*.c)
 SRC += $(wildcard src/inttypes/*.c)
 
+HDR_OBJECTS = $(HDR:.h=.j)
 OBJECTS = $(SRC:.c=.o)
 
 CC=arm-none-eabi-
@@ -27,7 +30,7 @@ ECHO    = echo -e
 
 DFLAGS  =
 OPTFLAGS= -O2
-IFLAGS  = -I$(INC)
+IFLAGS  = -Iinclude
 WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
 WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
 WFLAGS += -Wdouble-promotion -Wchkp -Winit-self -Wswitch-default -Wswitch-enum
@@ -35,12 +38,14 @@ WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
+HCCFLAGS=             $(IFLAGS) $(COMFLAGS) $(DFLAGS) -fsyntax-only
 C++FLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
 CPPFLAGS=
 ARFLAGS =
 ASFLAGS =
 
 all: $(NAME).a
+includecheck: $(HDR_OBJECTS)
 
 %.o: %.c
 	@$(ECHO) "GCC\t$@"
@@ -50,6 +55,10 @@ all: $(NAME).a
 	@$(ECHO) "G++\t$@"
 	$(Q)$(G++) $(C++FLAGS) $< -o $@
 
+.PHONY: %.j
+%.j: %.h
+	@$(ECHO) "GCC\ttesting $<"
+	$(Q)$(GCC) $(HCCFLAGS) $<
 
 $(NAME).a: $(OBJECTS)
 	@$(ECHO) "AR\t$@"
