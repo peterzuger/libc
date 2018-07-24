@@ -7,7 +7,7 @@
 #ifndef __FP_FAST_FMA_H__
 #define __FP_FAST_FMA_H__
 
-#if __FP_FAST_FMA
+#if defined(__FP_FAST_FMA)
 # define FP_FAST_FMA 1
 #endif /* __FP_FAST_FMA */
 

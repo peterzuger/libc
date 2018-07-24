@@ -7,7 +7,7 @@
 #ifndef __FP_FAST_FMAL_H__
 #define __FP_FAST_FMAL_H__
 
-#if __FP_FAST_FMAL
+#if defined(__FP_FAST_FMAL)
 # define FP_FAST_FMAL 1
 #endif /* __FP_FAST_FMAL */
 
