@@ -58,7 +58,7 @@ headercheck: $(HDR_OBJECTS)
 .PHONY: %.j
 %.j: %.h
 	@$(ECHO) "GCC\ttesting $<"
-	$(Q)$(GCC) $(HCCFLAGS) $<
+	$(Q)$(GCC) $(HCCFLAGS) -Wno-pedantic $<
 
 $(NAME).a: $(OBJECTS)
 	@$(ECHO) "AR\t$@"
