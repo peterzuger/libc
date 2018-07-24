@@ -13,6 +13,7 @@ HDR += $(wildcard include/macros/*.h)
 
 SRC  = $(wildcard src/*.c)
 SRC += $(wildcard src/stdlib/*.c)
+SRC += $(wildcard src/stdio/*.c)
 SRC += $(wildcard src/string/*.c)
 SRC += $(wildcard src/complex/*.c)
 SRC += $(wildcard src/inttypes/*.c)
