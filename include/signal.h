@@ -30,6 +30,7 @@ extern "C"{
 // Specify signal handling
 void (*signal(int sig, void (*func)(int)))(int);
 
+
 // Send signal
 int raise(int sig);
 

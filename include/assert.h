@@ -15,13 +15,14 @@
 
 #define static_assert _Static_assert
 
-
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
+
 void __assert(const char* expr,const char* file,
               const char* line,const char* func);
+
 
 #if defined(__cplusplus)
 }

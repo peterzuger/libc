@@ -23,15 +23,15 @@ extern "C"{
 intmax_t imaxabs(intmax_t j);
 imaxdiv_t imaxdiv(intmax_t numer, intmax_t denom);
 
-intmax_t strtoimax(const char * __restrict__ nptr,
-                   char ** __restrict__ endptr, int base);
-uintmax_t strtoumax(const char * __restrict__ nptr,
-                    char ** __restrict__ endptr, int base);
+intmax_t strtoimax(const char* __restrict__ nptr,
+                   char** __restrict__ endptr, int base);
+uintmax_t strtoumax(const char* __restrict__ nptr,
+                    char** __restrict__ endptr, int base);
 
-intmax_t wcstoimax(const wchar_t * __restrict__ nptr,
-                   wchar_t ** __restrict__ endptr, int base);
-uintmax_t wcstoumax(const wchar_t * __restrict__ nptr,
-                    wchar_t ** __restrict__ endptr, int base);
+intmax_t wcstoimax(const wchar_t* __restrict__ nptr,
+                   wchar_t** __restrict__ endptr, int base);
+uintmax_t wcstoumax(const wchar_t* __restrict__ nptr,
+                    wchar_t** __restrict__ endptr, int base);
 
 
 #if defined(__cplusplus)

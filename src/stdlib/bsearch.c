@@ -18,8 +18,8 @@
  * @param compar function pointer to comparison function
  * @return NULL if key was not found otherwise pointer to the element
  */
-void *bsearch(const void *key, const void *base, size_t nmemb, size_t size,
-              int (*compar)(const void *, const void *)){
+void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
+              int (*compar)(const void*, const void *)){
     size_t l = 0;
     size_t u = nmemb;
     size_t idx;

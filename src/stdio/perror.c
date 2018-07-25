@@ -8,7 +8,7 @@
 #include <string.h> // for strerror
 #include <errno.h>  // for errno
 
-void perror(const char *s){
+void perror(const char* s){
     if(s){
         fputs(s,stderr);
         fputs(": ",stderr);

@@ -11,9 +11,8 @@
 extern "C"{
 #endif /* defined(__cplusplus) */
 
-/******************************************************************************
- *                     Character classification functions                     *
- ******************************************************************************/
+
+// Character classification functions
 int isalnum(int c);
 int isalpha(int c);
 int isblank(int c);
@@ -27,11 +26,11 @@ int isspace(int c);
 int isupper(int c);
 int isxdigit(int c);
 
-/******************************************************************************
- *                      Character case mapping functions                      *
- ******************************************************************************/
+
+// Character case mapping functions
 int tolower(int c);
 int toupper(int c);
+
 
 #if defined(__cplusplus)
 }

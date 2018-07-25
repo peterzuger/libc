@@ -11,12 +11,13 @@
 extern "C"{
 #endif /* defined(__cplusplus) */
 
+
 extern int errno;
+
 
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
-
 
 #define EPERM           1  /* Operation not permitted */
 #define ENOENT          2  /* No such file or directory */

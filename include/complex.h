@@ -11,14 +11,12 @@
 #define _Complex_I   (__extension__ 1.0iF)
 #define I            _Complex_I
 
-
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
-/******************************************************************************
- *                           Trigonometric functions                          *
- ******************************************************************************/
+
+// Trigonometric functions
 double complex cacos(double complex z);
 float complex cacosf(float complex z);
 long double complex cacosl(long double complex z);
@@ -75,9 +73,8 @@ double complex clog(double complex z);
 float complex clogf(float complex z);
 long double complex clogl(long double complex z);
 
-/******************************************************************************
- *                     Power and absolute-value functions                     *
- ******************************************************************************/
+
+// Power and absolute-value functions
 double cabs(double complex z);
 float cabsf(float complex z);
 long double cabsl(long double complex z);
@@ -90,9 +87,8 @@ double complex csqrt(double complex z);
 float complex csqrtf(float complex z);
 long double complex csqrtl(long double complex z);
 
-/******************************************************************************
- *                           Manipulation functions                           *
- ******************************************************************************/
+
+// Manipulation functions
 double carg(double complex z);
 float cargf(float complex z);
 long double cargl(long double complex z);

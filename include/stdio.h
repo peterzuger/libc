@@ -42,8 +42,8 @@ char* tmpnam(char* s);
 
 
 // File access functions
-int fclose(FILE *stream);
-int fflush(FILE *stream);
+int fclose(FILE* stream);
+int fflush(FILE* stream);
 FILE* fopen(const char* __restrict__ filename, const char* __restrict__ mode);
 FILE* freopen(const char* __restrict__ filename, const char* __restrict__ mode,
               FILE* __restrict__ stream);
@@ -76,38 +76,38 @@ int vsscanf(const char * __restrict__ s,
 
 
 // Character input/output functions
-int fgetc(FILE *stream);
-char *fgets(char * __restrict__ s, int n, FILE * __restrict__ stream);
+int fgetc(FILE* stream);
+char *fgets(char* __restrict__ s, int n, FILE* __restrict__ stream);
 int fputc(int c, FILE *stream);
-int fputs(const char * __restrict__ s, FILE * __restrict__ stream);
-int getc(FILE *stream);
+int fputs(const char* __restrict__ s, FILE* __restrict__ stream);
+int getc(FILE* stream);
 int getchar(void);
-int putc(int c, FILE *stream);
+int putc(int c, FILE* stream);
 int putchar(int c);
-int puts(const char *s);
-int ungetc(int c, FILE *stream);
+int puts(const char* s);
+int ungetc(int c, FILE* stream);
 
 
 // Direct input/output functions
-size_t fread(void * __restrict__ ptr, size_t size, size_t nmemb,
-             FILE * __restrict__ stream);
-size_t fwrite(const void * __restrict__ ptr, size_t size, size_t nmemb,
-              FILE * __restrict__ stream);
+size_t fread(void* __restrict__ ptr, size_t size, size_t nmemb,
+             FILE* __restrict__ stream);
+size_t fwrite(const void* __restrict__ ptr, size_t size, size_t nmemb,
+              FILE* __restrict__ stream);
 
 
 // File positioning functions
-int fgetpos(FILE * __restrict__ stream, fpos_t * __restrict__ pos);
-int fseek(FILE *stream, long int offset, int whence);
-int fsetpos(FILE *stream, const fpos_t *pos);
-long int ftell(FILE *stream);
-void rewind(FILE *stream);
+int fgetpos(FILE* __restrict__ stream, fpos_t* __restrict__ pos);
+int fseek(FILE* stream, long int offset, int whence);
+int fsetpos(FILE* stream, const fpos_t *pos);
+long int ftell(FILE* stream);
+void rewind(FILE* stream);
 
 
 // Error-handling functions
-void clearerr(FILE *stream);
-int feof(FILE *stream);
-int ferror(FILE *stream);
-void perror(const char *s);
+void clearerr(FILE* stream);
+int feof(FILE* stream);
+int ferror(FILE* stream);
+void perror(const char* s);
 
 
 #if defined(__cplusplus)

@@ -17,8 +17,8 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-char *setlocale(int category, const char *locale);
-struct lconv *localeconv(void);
+char* setlocale(int category, const char* locale);
+struct lconv* localeconv(void);
 
 
 #if defined(__cplusplus)
