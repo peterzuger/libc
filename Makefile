@@ -7,19 +7,19 @@ else
 	Q = @
 endif
 
-HDR  = $(wildcard include/*.h)
-HDR += $(wildcard include/types/*.h)
-HDR += $(wildcard include/macros/*.h)
+CHDR  = $(wildcard include/*.h)
+CHDR += $(wildcard include/types/*.h)
+CHDR += $(wildcard include/macros/*.h)
 
-SRC  = $(wildcard src/*.c)
-SRC += $(wildcard src/stdlib/*.c)
-SRC += $(wildcard src/stdio/*.c)
-SRC += $(wildcard src/string/*.c)
-SRC += $(wildcard src/complex/*.c)
-SRC += $(wildcard src/inttypes/*.c)
+CSRC  = $(wildcard src/*.c)
+CSRC += $(wildcard src/stdlib/*.c)
+CSRC += $(wildcard src/stdio/*.c)
+CSRC += $(wildcard src/string/*.c)
+CSRC += $(wildcard src/complex/*.c)
+CSRC += $(wildcard src/inttypes/*.c)
 
-HDR_OBJECTS = $(HDR:.h=.j)
-OBJECTS = $(SRC:.c=.o)
+HDR_OBJECTS = $(CHDR:.h=.j)
+OBJECTS = $(CSRC:.c=.o)
 
 CC=arm-none-eabi-
 GCC     = $(CC)gcc
