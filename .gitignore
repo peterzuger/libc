@@ -29,5 +29,5 @@
 # emacs files
 .dir-locals.el
 
-#temporary development directory
+# temporary development directory
 DEV/
