@@ -62,8 +62,9 @@ headercheck: $(HDR_OBJECTS)
 	$(Q)$(GCC) $(HCCFLAGS) -Wno-pedantic $<
 
 $(NAME).a: $(OBJECTS)
+	$(Q)rm -fv $@
 	@$(ECHO) "AR\t$@"
-	$(Q)$(Q)$(AR)  $(ARFLAGS) rcsv $@ $^
+	$(Q)$(Q)$(AR)  $(ARFLAGS) rcs $@ $^
 
 
 .PHONY: clean clean_all
