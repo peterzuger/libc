@@ -1,4 +1,4 @@
-image: registry.gitlab.com/peterzuger/libc:latest
+image: peterzuger/manjaro-devel
 
 build:
   script:
