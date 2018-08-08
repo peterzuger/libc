@@ -13,7 +13,9 @@
 # define assert(a) (a?:__assert(#a,__FILE__,__LINE__,__PRETTY_FUNCTION__))
 #endif /* defined(NDEBUG) */
 
+#if !defined(__cplusplus)
 #define static_assert _Static_assert
+#endif /* !defined(__cplusplus) */
 
 #if defined(__cplusplus)
 extern "C"{
