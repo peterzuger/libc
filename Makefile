@@ -23,7 +23,7 @@ OBJECTS = $(CSRC:.c=.o)
 
 CC=arm-none-eabi-
 GCC     = $(CC)gcc
-G++     = $(CC)g++
+GXX     = $(CC)g++
 CPP     = $(CC)gcc -E
 AR      = $(CC)ar
 AS      = $(CC)as
@@ -40,7 +40,7 @@ COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
 HCCFLAGS=             $(IFLAGS) $(COMFLAGS) $(DFLAGS) -fsyntax-only
-C++FLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
+CXXFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
 CPPFLAGS=
 ARFLAGS =
 ASFLAGS =
@@ -54,7 +54,7 @@ headercheck: $(HDR_OBJECTS)
 
 %.o: %.cpp
 	@$(ECHO) "G++\t$@"
-	$(Q)$(G++) $(C++FLAGS) $< -o $@
+	$(Q)$(GXX) $(CXXFLAGS) $< -o $@
 
 .PHONY: %.j
 %.j: %.h
