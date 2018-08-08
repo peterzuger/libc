@@ -7,9 +7,11 @@
 #ifndef __COMPLEX_H__
 #define __COMPLEX_H__
 
-#define complex      _Complex
-#define _Complex_I   (__extension__ 1.0iF)
-#define I            _Complex_I
+#include <macros/complex.h>
+#include <macros/_Complex_I.h>
+#include <macros/imaginary.h>
+#include <macros/_Imaginary_I.h>
+#include <macros/I.h>
 
 #if defined(__cplusplus)
 extern "C"{
