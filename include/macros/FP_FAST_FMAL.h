@@ -4,11 +4,11 @@
  * @date   22.07.2018
  * @brief  fmal() speed
  */
-#ifndef __FP_FAST_FMAL_H__
-#define __FP_FAST_FMAL_H__
+#ifndef __MACRO_FP_FAST_FMAL_H__
+#define __MACRO_FP_FAST_FMAL_H__
 
 #if defined(__FP_FAST_FMAL)
 # define FP_FAST_FMAL 1
 #endif /* __FP_FAST_FMAL */
 
-#endif /* __FP_FAST_FMAL_H__ */
+#endif /* __MACRO_FP_FAST_FMAL_H__ */

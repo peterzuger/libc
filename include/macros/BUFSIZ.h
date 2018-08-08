@@ -4,9 +4,9 @@
  * @date   24.07.2018
  * @brief  setbuf buffer size
  */
-#ifndef __BUFSIZE_H__
-#define __BUFSIZE_H__
+#ifndef __MACRO_BUFSIZE_H__
+#define __MACRO_BUFSIZE_H__
 
 #define BUFSIZE 256
 
-#endif /* __BUFSIZE_H__ */
+#endif /* __MACRO_BUFSIZE_H__ */

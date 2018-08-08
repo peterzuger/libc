@@ -4,9 +4,9 @@
  * @date   24.07.2018
  * @brief  setvbuf options
  */
-#ifndef __IOFBF_H__
-#define __IOFBF_H__
+#ifndef __MACRO_IOFBF_H__
+#define __MACRO_IOFBF_H__
 
 #define _IOFBF 1
 
-#endif /* __IOFBF_H__ */
+#endif /* __MACRO_IOFBF_H__ */

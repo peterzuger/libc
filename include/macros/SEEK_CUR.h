@@ -4,9 +4,9 @@
  * @date   24.07.2018
  * @brief  fseek() position
  */
-#ifndef __SEEK_CUR_H__
-#define __SEEK_CUR_H__
+#ifndef __MACRO_SEEK_CUR_H__
+#define __MACRO_SEEK_CUR_H__
 
 #define SEEK_CUR 1
 
-#endif /* __SEEK_CUR_H__ */
+#endif /* __MACRO_SEEK_CUR_H__ */

@@ -4,11 +4,11 @@
  * @date   24.07.2018
  * @brief  standard output stream
  */
-#ifndef __STDOUT_H__
-#define __STDOUT_H__
+#ifndef __MACRO_STDOUT_H__
+#define __MACRO_STDOUT_H__
 
 #include <types/FILE.h>
 
 #define stdout ((FILE*)1)
 
-#endif /* __STDOUT_H__ */
+#endif /* __MACRO_STDOUT_H__ */

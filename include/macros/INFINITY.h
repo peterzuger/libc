@@ -4,9 +4,9 @@
  * @date   22.07.2018
  * @brief  infinity
  */
-#ifndef __INFINITY_H__
-#define __INFINITY_H__
+#ifndef __MACRO_INFINITY_H__
+#define __MACRO_INFINITY_H__
 
 #define INFINITY (__builtin_inff())
 
-#endif /* __INFINITY_H__ */
+#endif /* __MACRO_INFINITY_H__ */

@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  Locale Conv
  */
-#ifndef __LC_H__
-#define __LC_H__
+#ifndef __MACRO_LC_H__
+#define __MACRO_LC_H__
 
 #define LC_ALL            1
 #define LC_COLLATE        2
@@ -22,4 +22,4 @@
 #define LC_MEASUREMENT    12
 #define LC_IDENTIFICATION 13
 
-#endif /* __LC_H__ */
+#endif /* __MACRO_LC_H__ */

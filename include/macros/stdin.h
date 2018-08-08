@@ -4,11 +4,11 @@
  * @date   24.07.2018
  * @brief  standard input stream
  */
-#ifndef __STDIN_H__
-#define __STDIN_H__
+#ifndef __MACRO_STDIN_H__
+#define __MACRO_STDIN_H__
 
 #include <types/FILE.h>
 
 #define stdin ((FILE*)2)
 
-#endif /* __STDIN_H__ */
+#endif /* __MACRO_STDIN_H__ */

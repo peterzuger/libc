@@ -4,9 +4,9 @@
  * @date   22.07.2018
  * @brief  huge value
  */
-#ifndef __HUGE_VAL_H__
-#define __HUGE_VAL_H__
+#ifndef __MACRO_HUGE_VAL_H__
+#define __MACRO_HUGE_VAL_H__
 
 #define HUGE_VAL (__builtin_huge_val())
 
-#endif /* __HUGE_VAL_H__ */
+#endif /* __MACRO_HUGE_VAL_H__ */

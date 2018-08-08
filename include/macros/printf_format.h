@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  printf() format specifier
  */
-#ifndef __PRINTF_FORMAT_H__
-#define __PRINTF_FORMAT_H__
+#ifndef __MACRO_PRINTF_FORMAT_H__
+#define __MACRO_PRINTF_FORMAT_H__
 
 /* printf macros for signed integers */
 #define PRId8            "d"       /* int8_t */
@@ -118,4 +118,4 @@
 #define PRIXMAX          "jX"      /* uintmax_t */
 #define PRIXPTR          "lX"      /* uintptr_t */
 
-#endif /* __PRINTF_FORMAT_H__ */
+#endif /* __MACRO_PRINTF_FORMAT_H__ */

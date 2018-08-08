@@ -4,9 +4,9 @@
  * @date   06.02.2018
  * @brief  Null pointer
  */
-#ifndef __NULL_H__
-#define __NULL_H__
+#ifndef __MACRO_NULL_H__
+#define __MACRO_NULL_H__
 
 #define NULL ((void*)0)
 
-#endif /* __NULL_H__ */
+#endif /* __MACRO_NULL_H__ */

@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  math error handling
  */
-#ifndef __MATH_ERRHANDLING_H__
-#define __MATH_ERRHANDLING_H__
+#ifndef __MACRO_MATH_ERRHANDLING_H__
+#define __MACRO_MATH_ERRHANDLING_H__
 
 #include <macros/MATH_ERRNO.h>
 #include <macros/MATH_ERREXCEPT.h>
@@ -16,4 +16,4 @@
 # define math_errhandling  (MATH_ERRNO | MATH_ERREXCEPT)
 #endif
 
-#endif /* __MATH_ERRHANDLING_H__ */
+#endif /* __MACRO_MATH_ERRHANDLING_H__ */

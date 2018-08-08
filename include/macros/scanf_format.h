@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  scanf() format specifier
  */
-#ifndef __SCANF_FORMAT_H__
-#define __SCANF_FORMAT_H__
+#ifndef __MACRO_SCANF_FORMAT_H__
+#define __MACRO_SCANF_FORMAT_H__
 
 /* scanf macros for signed integers */
 #define SCNd8            "hhd"     /* int8_t */
@@ -99,4 +99,4 @@
 #define SCNxMAX          "jx"      /* uintmax_t */
 #define SCNxPTR          "lx"      /* uintptr_t */
 
-#endif /* __SCANF_FORMAT_H__ */
+#endif /* __MACRO_SCANF_FORMAT_H__ */

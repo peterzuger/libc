@@ -4,9 +4,9 @@
  * @date   24.07.2018
  * @brief  clock ticks per second
  */
-#ifndef __CLOCKS_PER_SEC_H__
-#define __CLOCKS_PER_SEC_H__
+#ifndef __MACRO_CLOCKS_PER_SEC_H__
+#define __MACRO_CLOCKS_PER_SEC_H__
 
 #define CLOCKS_PER_SEC 1000
 
-#endif /* __CLOCKS_PER_SEC_H__ */
+#endif /* __MACRO_CLOCKS_PER_SEC_H__ */
