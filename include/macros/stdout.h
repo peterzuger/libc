@@ -1,5 +1,5 @@
 /**
- * @file   stdout.h
+ * @file   macros/stdout.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  standard output stream

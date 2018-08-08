@@ -1,5 +1,5 @@
 /**
- * @file   HUGE_VALF.h
+ * @file   macros/HUGE_VALF.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  huge float value

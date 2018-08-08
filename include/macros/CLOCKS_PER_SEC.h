@@ -1,5 +1,5 @@
 /**
- * @file   CLOCKS_PER_SEC.h
+ * @file   macros/CLOCKS_PER_SEC.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  clock ticks per second

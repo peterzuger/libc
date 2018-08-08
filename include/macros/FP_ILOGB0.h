@@ -1,5 +1,5 @@
 /**
- * @file   FP_ILOGB0.h
+ * @file   macros/FP_ILOGB0.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  return value of log(0)

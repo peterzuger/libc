@@ -1,5 +1,5 @@
 /**
- * @file   stdin.h
+ * @file   macros/stdin.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  standard input stream

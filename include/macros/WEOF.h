@@ -1,5 +1,5 @@
 /**
- * @file   WEOF.h
+ * @file   macros/WEOF.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  wide end of file

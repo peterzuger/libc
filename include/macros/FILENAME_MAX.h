@@ -1,5 +1,5 @@
 /**
- * @file   FILENAME_MAX.h
+ * @file   macros/FILENAME_MAX.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  maximum file name length

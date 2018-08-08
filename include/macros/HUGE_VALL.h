@@ -1,5 +1,5 @@
 /**
- * @file   HUGE_VALL.h
+ * @file   macros/HUGE_VALL.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  huge long value

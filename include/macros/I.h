@@ -1,5 +1,5 @@
 /**
- * @file   I.h
+ * @file   macros/I.h
  * @author Peter Zueger
  * @date   08.08.2018
  * @brief  complex number

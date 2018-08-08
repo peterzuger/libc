@@ -1,5 +1,5 @@
 /**
- * @file   FP_ILOGBNAN.h
+ * @file   macros/FP_ILOGBNAN.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  return value of log(NAN)

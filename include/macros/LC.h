@@ -1,5 +1,5 @@
 /**
- * @file   LC.h
+ * @file   macros/LC.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  Locale Conv

@@ -1,5 +1,5 @@
 /**
- * @file   FOPEN_MAX.h
+ * @file   macros/FOPEN_MAX.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  maximum number of files open

@@ -1,5 +1,5 @@
 /**
- * @file   math_errhandling.h
+ * @file   macros/math_errhandling.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  math error handling
