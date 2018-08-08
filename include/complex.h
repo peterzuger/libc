@@ -67,6 +67,8 @@ double complex ctanh(double complex z);
 float complex ctanhf(float complex z);
 long double complex ctanhl(long double complex z);
 
+
+// Exponential and logarithmic functions
 double complex cexp(double complex z);
 float complex cexpf(float complex z);
 long double complex cexpl(long double complex z);
