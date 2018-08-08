@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  double type
  */
-#ifndef __DOUBLE_T_H__
-#define __DOUBLE_T_H__
+#ifndef __TYPE_DOUBLE_T_H__
+#define __TYPE_DOUBLE_T_H__
 
 #if !defined(__DOUBLE_T_DEFINED__)
 # define __DOUBLE_T_DEFINED__
@@ -20,4 +20,4 @@ typedef long double double_t;
 # endif /* __FLT_EVAL_METHOD__ */
 #endif /* !defined(__DOUBLE_T_DEFINED__) */
 
-#endif /* __DOUBLE_T_H__ */
+#endif /* __TYPE_DOUBLE_T_H__ */

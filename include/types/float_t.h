@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  float type
  */
-#ifndef __FLOAT_T_H__
-#define __FLOAT_T_H__
+#ifndef __TYPE_FLOAT_T_H__
+#define __TYPE_FLOAT_T_H__
 
 #if !defined(__FLOAT_T_DEFINED__)
 # define __FLOAT_T_DEFINED__
@@ -20,4 +20,4 @@ typedef long double float_t;
 # endif /* __FLT_EVAL_METHOD__ */
 #endif /* !defined(__FLOAT_T_DEFINED__) */
 
-#endif /* __FLOAT_T_H__ */
+#endif /* __TYPE_FLOAT_T_H__ */

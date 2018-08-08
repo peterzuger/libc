@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  time
  */
-#ifndef __TIMESPEC_H__
-#define __TIMESPEC_H__
+#ifndef __TYPE_TIMESPEC_H__
+#define __TYPE_TIMESPEC_H__
 
 #include <types/time_t.h>
 
@@ -17,4 +17,4 @@ struct timespec{
 };
 #endif /* !defined(__STRUCT_TIMESPEC_DEFINED__) */
 
-#endif /* __TIMESPEC_H__ */
+#endif /* __TYPE_TIMESPEC_H__ */

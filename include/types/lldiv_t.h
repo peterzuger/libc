@@ -4,8 +4,8 @@
  * @date   13.07.2018
  * @brief  lldiv() result
  */
-#ifndef __LLDIV_T_H__
-#define __LLDIV_T_H__
+#ifndef __TYPE_LLDIV_T_H__
+#define __TYPE_LLDIV_T_H__
 
 #if !defined(__LLDIV_T_DEFINED__)
 # define __LLDIV_T_DEFINED__
@@ -15,4 +15,4 @@ typedef struct{
 }lldiv_t;
 #endif /* !defined(__LLDIV_T_DEFINED__) */
 
-#endif /* __LLDIV_T_H__ */
+#endif /* __TYPE_LLDIV_T_H__ */

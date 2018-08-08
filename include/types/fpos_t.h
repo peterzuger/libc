@@ -4,8 +4,8 @@
  * @date   23.07.2018
  * @brief  position in FILE
  */
-#ifndef __FPOS_T_H__
-#define __FPOS_T_H__
+#ifndef __TYPE_FPOS_T_H__
+#define __TYPE_FPOS_T_H__
 
 #if !defined(__FPOS_T_DEFINED__)
 # define __FPOS_T_DEFINED__
@@ -14,4 +14,4 @@ typedef struct{
 }fpos_t;
 #endif /* !defined(__FPOS_T_DEFINED__) */
 
-#endif /* __FPOS_T_H__ */
+#endif /* __TYPE_FPOS_T_H__ */

@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  32 bit char
  */
-#ifndef __CHAR32_T_H__
-#define __CHAR32_T_H__
+#ifndef __TYPE_CHAR32_T_H__
+#define __TYPE_CHAR32_T_H__
 
 #if defined(__CHAR32_TYPE__) || defined(DOXYGEN)
 # if !defined(__CHAR32_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __CHAR32_TYPE__ char32_t;
 # endif /* !defined(__CHAR32_T_DEFINED__) */
 #endif /* defined(__CHAR32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __CHAR32_T_H__ */
+#endif /* __TYPE_CHAR32_T_H__ */

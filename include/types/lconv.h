@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  formatting of numeric values
  */
-#ifndef __LCONV_H__
-#define __LCONV_H__
+#ifndef __TYPE_LCONV_H__
+#define __TYPE_LCONV_H__
 
 #if !defined(__STRUCT_LCONV_DEFINED__)
 # define __STRUCT_LCONV_DEFINED__
@@ -37,4 +37,4 @@ struct lconv{
 };
 #endif /* !defined(__STRUCT_LCONV_DEFINED__) */
 
-#endif /* __LCONV_H__ */
+#endif /* __TYPE_LCONV_H__ */

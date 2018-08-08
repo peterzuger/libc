@@ -4,8 +4,8 @@
  * @date   08.04.2018
  * @brief  unsigned fast 32 bit integer
  */
-#ifndef __UINT_FAST32_T_H__
-#define __UINT_FAST32_T_H__
+#ifndef __TYPE_UINT_FAST32_T_H__
+#define __TYPE_UINT_FAST32_T_H__
 
 #if defined(__UINT_FAST32_TYPE__) || defined(DOXYGEN)
 # if !defined(__UINT_FAST32_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __UINT_FAST32_TYPE__ uint_fast32_t;
 # endif /* !defined(__UINT_FAST32_T_DEFINED__) */
 #endif /* defined(__UINT_FAST32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __UINT_FAST32_T_H__ */
+#endif /* __TYPE_UINT_FAST32_T_H__ */

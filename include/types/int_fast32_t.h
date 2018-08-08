@@ -4,8 +4,8 @@
  * @date   08.04.2018
  * @brief  signed fast 32 bit integer
  */
-#ifndef __INT_FAST32_T_H__
-#define __INT_FAST32_T_H__
+#ifndef __TYPE_INT_FAST32_T_H__
+#define __TYPE_INT_FAST32_T_H__
 
 #if defined(__INT_FAST32_TYPE__) || defined(DOXYGEN)
 # if !defined(__INT_FAST32_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __INT_FAST32_TYPE__ int_fast32_t;
 # endif /* !defined(__INT_FAST32_T_DEFINED__) */
 #endif /* defined(__INT_FAST32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __INT_FAST32_T_H__ */
+#endif /* __TYPE_INT_FAST32_T_H__ */

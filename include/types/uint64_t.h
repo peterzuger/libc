@@ -4,8 +4,8 @@
  * @date   17.02.2018
  * @brief  unsigned 64 bit integer
  */
-#ifndef __UINT64_T_H__
-#define __UINT64_T_H__
+#ifndef __TYPE_UINT64_T_H__
+#define __TYPE_UINT64_T_H__
 
 #if defined(__UINT64_TYPE__) || defined(DOXYGEN)
 # if !defined(__UINT64_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __UINT64_TYPE__ uint64_t;
 # endif /* !defined(__UINT64_T_DEFINED__) */
 #endif /* defined(__UINT64_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __UINT64_T_H__ */
+#endif /* __TYPE_UINT64_T_H__ */

@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  time structure
  */
-#ifndef __TM_H__
-#define __TM_H__
+#ifndef __TYPE_TM_H__
+#define __TYPE_TM_H__
 
 #if !defined(__STRUCT_TM_DEFINED__)
 # define __STRUCT_TM_DEFINED__
@@ -22,4 +22,4 @@ struct tm{
 };
 #endif /* !defined(__STRUCT_TM_DEFINED__) */
 
-#endif /* __TM_H__ */
+#endif /* __TYPE_TM_H__ */

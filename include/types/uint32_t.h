@@ -4,8 +4,8 @@
  * @date   17.02.2018
  * @brief  unsigned 32 bit integer
  */
-#ifndef __UINT32_T_H__
-#define __UINT32_T_H__
+#ifndef __TYPE_UINT32_T_H__
+#define __TYPE_UINT32_T_H__
 
 #if defined(__UINT32_TYPE__) || defined(DOXYGEN)
 # if !defined(__UINT32_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __UINT32_TYPE__ uint32_t;
 # endif /* !defined(__UINT32_T_DEFINED__) */
 #endif /* defined(__UINT32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __UINT32_T_H__ */
+#endif /* __TYPE_UINT32_T_H__ */

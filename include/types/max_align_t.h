@@ -4,8 +4,8 @@
  * @date   17.02.2018
  * @brief  maximum alignment integer type
  */
-#ifndef __MAX_ALIGN_T_H__
-#define __MAX_ALIGN_T_H__
+#ifndef __TYPE_MAX_ALIGN_T_H__
+#define __TYPE_MAX_ALIGN_T_H__
 
 #if !defined(__MAX_ALIGN_T_DEFINED__)
 # define __MAX_ALIGN_T_DEFINED__
@@ -15,4 +15,4 @@ typedef struct{
 }max_align_t;
 #endif /* !defined(__MAX_ALIGN_T_DEFINED__) */
 
-#endif /* __MAX_ALIGN_T_H__ */
+#endif /* __TYPE_MAX_ALIGN_T_H__ */

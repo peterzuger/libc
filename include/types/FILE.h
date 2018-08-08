@@ -4,8 +4,8 @@
  * @date   17.02.2018
  * @brief  FILE structure
  */
-#ifndef __FILE_H__
-#define __FILE_H__
+#ifndef __TYPE_FILE_H__
+#define __TYPE_FILE_H__
 
 #if !defined(__FILE_DEFINED__)
 # define __FILE_DEFINED__
@@ -14,4 +14,4 @@ typedef struct{
 }FILE;
 #endif /* !defined(__FILE_DEFINED__) */
 
-#endif /* __FILE_H__ */
+#endif /* __TYPE_FILE_H__ */

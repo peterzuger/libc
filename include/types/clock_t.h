@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  clock ticks this second
  */
-#ifndef __CLOCK_T_H__
-#define __CLOCK_T_H__
+#ifndef __TYPE_CLOCK_T_H__
+#define __TYPE_CLOCK_T_H__
 
 #if defined(__UINT32_TYPE__) || defined(DOXYGEN)
 # if !defined(__CLOCK_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __UINT32_TYPE__ clock_t;
 # endif /* !defined(__CLOCK_T_DEFINED__) */
 #endif /* defined(__UINT32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __CLOCK_T_H__ */
+#endif /* __TYPE_CLOCK_T_H__ */

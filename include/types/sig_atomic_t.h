@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  atomic accessible type
  */
-#ifndef __SIG_ATOMIC_T_H__
-#define __SIG_ATOMIC_T_H__
+#ifndef __TYPE_SIG_ATOMIC_T_H__
+#define __TYPE_SIG_ATOMIC_T_H__
 
 #if defined(__UINT32_TYPE__) || defined(DOXYGEN)
 # if !defined(__SIG_ATOMIC_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __UINT32_TYPE__ sig_atomic_t;
 # endif /* !defined(__SIG_ATOMIC_T_DEFINED__) */
 #endif /* defined(__UINT32_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __SIG_ATOMIC_T_H__ */
+#endif /* __TYPE_SIG_ATOMIC_T_H__ */

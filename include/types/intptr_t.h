@@ -4,8 +4,8 @@
  * @date   17.02.2018
  * @brief  signed integer pointer
  */
-#ifndef __INTPTR_T_H__
-#define __INTPTR_T_H__
+#ifndef __TYPE_INTPTR_T_H__
+#define __TYPE_INTPTR_T_H__
 
 #if defined(__INTPTR_TYPE__) || defined(DOXYGEN)
 # if !defined(__INTPTR_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __INTPTR_TYPE__ intptr_t;
 # endif /* !defined(__INTPTR_T_DEFINED__) */
 #endif /* defined(__INTPTR_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __INTPTR_T_H__ */
+#endif /* __TYPE_INTPTR_T_H__ */

@@ -4,8 +4,8 @@
  * @date   24.07.2018
  * @brief  16 bit char
  */
-#ifndef __CHAR16_T_H__
-#define __CHAR16_T_H__
+#ifndef __TYPE_CHAR16_T_H__
+#define __TYPE_CHAR16_T_H__
 
 #if defined(__CHAR16_TYPE__) || defined(DOXYGEN)
 # if !defined(__CHAR16_T_DEFINED__)
@@ -16,4 +16,4 @@ typedef __CHAR16_TYPE__ char16_t;
 # endif /* !defined(__CHAR16_T_DEFINED__) */
 #endif /* defined(__CHAR16_TYPE__) || defined(DOXYGEN) */
 
-#endif /* __CHAR16_T_H__ */
+#endif /* __TYPE_CHAR16_T_H__ */

@@ -4,8 +4,8 @@
  * @date   22.07.2018
  * @brief  imaxdiv() result
  */
-#ifndef __IMAXDIV_T_H__
-#define __IMAXDIV_T_H__
+#ifndef __TYPE_IMAXDIV_T_H__
+#define __TYPE_IMAXDIV_T_H__
 
 #include <types/intmax_t.h>
 
@@ -17,4 +17,4 @@ typedef struct{
 }imaxdiv_t;
 #endif /* !defined(__IMAXDIV_T_DEFINED__) */
 
-#endif /* __IMAXDIV_T_H__ */
+#endif /* __TYPE_IMAXDIV_T_H__ */
