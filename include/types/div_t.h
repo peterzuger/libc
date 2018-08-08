@@ -1,5 +1,5 @@
 /**
- * @file   div_t.h
+ * @file   types/div_t.h
  * @author Peter Zueger
  * @date   13.07.2018
  * @brief  div() result

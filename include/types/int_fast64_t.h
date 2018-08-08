@@ -1,5 +1,5 @@
 /**
- * @file   int_fast64_t.h
+ * @file   types/int_fast64_t.h
  * @author Peter Zueger
  * @date   08.04.2018
  * @brief  signed fast 64 bit integer

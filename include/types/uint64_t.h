@@ -1,5 +1,5 @@
 /**
- * @file   uint64_t.h
+ * @file   types/uint64_t.h
  * @author Peter Zueger
  * @date   17.02.2018
  * @brief  unsigned 64 bit integer

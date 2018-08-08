@@ -1,5 +1,5 @@
 /**
- * @file   int8_t.h
+ * @file   types/int8_t.h
  * @author Peter Zueger
  * @date   17.02.2018
  * @brief  signed 8 bit integer

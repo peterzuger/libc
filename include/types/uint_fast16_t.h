@@ -1,5 +1,5 @@
 /**
- * @file   uint_fast16_t.h
+ * @file   types/uint_fast16_t.h
  * @author Peter Zueger
  * @date   08.04.2018
  * @brief  unsigned fast 16 bit integer

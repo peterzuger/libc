@@ -1,5 +1,5 @@
 /**
- * @file   double_t.h
+ * @file   types/double_t.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  double type

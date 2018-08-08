@@ -1,5 +1,5 @@
 /**
- * @file   wint_t.h
+ * @file   types/wint_t.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  wide integer type

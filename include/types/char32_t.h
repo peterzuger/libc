@@ -1,5 +1,5 @@
 /**
- * @file   char32_t.h
+ * @file   types/char32_t.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  32 bit char

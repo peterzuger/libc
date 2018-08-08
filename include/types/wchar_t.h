@@ -1,5 +1,5 @@
 /**
- * @file   wchar_t.h
+ * @file   types/wchar_t.h
  * @author Peter Zueger
  * @date   05.02.2018
  * @brief  wide character type

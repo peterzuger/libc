@@ -1,5 +1,5 @@
 /**
- * @file   char16_t.h
+ * @file   types/char16_t.h
  * @author Peter Zueger
  * @date   24.07.2018
  * @brief  16 bit char

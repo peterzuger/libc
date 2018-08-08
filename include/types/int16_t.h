@@ -1,5 +1,5 @@
 /**
- * @file   int16_t.h
+ * @file   types/int16_t.h
  * @author Peter Zueger
  * @date   17.02.2018
  * @brief  signed 16 bit integer

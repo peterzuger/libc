@@ -1,5 +1,5 @@
 /**
- * @file   ptrdiff_t.h
+ * @file   types/ptrdiff_t.h
  * @author Peter Zueger
  * @date   06.02.2018
  * @brief  ptrdiff_t type

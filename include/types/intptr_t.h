@@ -1,5 +1,5 @@
 /**
- * @file   intptr_t.h
+ * @file   types/intptr_t.h
  * @author Peter Zueger
  * @date   17.02.2018
  * @brief  signed integer pointer

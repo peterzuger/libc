@@ -1,5 +1,5 @@
 /**
- * @file   imaxdiv_t.h
+ * @file   types/imaxdiv_t.h
  * @author Peter Zueger
  * @date   22.07.2018
  * @brief  imaxdiv() result

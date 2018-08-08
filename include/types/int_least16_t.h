@@ -1,5 +1,5 @@
 /**
- * @file   int_least16_t.h
+ * @file   types/int_least16_t.h
  * @author Peter Zueger
  * @date   08.04.2018
  * @brief  signed least 16 bit integer

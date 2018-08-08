@@ -1,5 +1,5 @@
 /**
- * @file   size_t.h
+ * @file   types/size_t.h
  * @author Peter Zueger
  * @date   05.02.2018
  * @brief  return type of sizeof

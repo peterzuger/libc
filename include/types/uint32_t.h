@@ -1,5 +1,5 @@
 /**
- * @file   uint32_t.h
+ * @file   types/uint32_t.h
  * @author Peter Zueger
  * @date   17.02.2018
  * @brief  unsigned 32 bit integer

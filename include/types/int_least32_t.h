@@ -1,5 +1,5 @@
 /**
- * @file   int_least32_t.h
+ * @file   types/int_least32_t.h
  * @author Peter Zueger
  * @date   08.04.2018
  * @brief  signed least 32 bit integer
