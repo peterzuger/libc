@@ -16,6 +16,7 @@ CSRC += $(wildcard src/stdlib/*.c)
 CSRC += $(wildcard src/stdio/*.c)
 CSRC += $(wildcard src/string/*.c)
 CSRC += $(wildcard src/complex/*.c)
+CSRC += $(wildcard src/ctype/*.c)
 CSRC += $(wildcard src/inttypes/*.c)
 
 HDR_OBJECTS = $(CHDR:.h=.j)
