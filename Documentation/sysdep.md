@@ -1,12 +1,13 @@
 # System dependant functions
 
-Architectures:
+## Architectures:
     * cortex m0
     * cortex m0plus
     * cortex m3
     * cortex m4
     * cortex m7
-# Summary
+
+## Summary
     This should be a complete list of the options that
     have to be configured before compiling this library
     * MCPU
@@ -30,13 +31,30 @@ Architectures:
     * enable
     * disable
   * RAM
-## stdlib.h
-### malloc
+
+### stdlib.h
+
+#### malloc
     the malloc family of functions have to be configured for every processor
-    the values HEAP\_BOT and HEAP\_SIZE have to be set to the appropriate values
-    HEAP\_BOT should be set to the base addres of the RAM
-    HEAP\_SIZE must be set to the size you want to give malloc
-### abort
+    the following variables have to be defined in the linker script, they define
+    the chunk of ram that malloc can use:
+        \_\_heap_size\_\_
+        \_\_heap_start\_\_
+        \_\_heap_end\_\_
+    an example linkerscript may contain this:
+    HEAP\_SIZE is in this case the size of the chunk
+    ```
+        .heap (NOLOAD):
+        {
+            . = ALIGN(4);
+            __heap_start__ = .;
+            . += HEAP_SIZE;
+            . = ALIGN(4);
+            __heap_end__ = .;
+        } > RAM
+    ```
+
+#### abort
     The abort() function excecutes an illegal instruction to raise
     the NMI exception handler.
     this instruction is dependant on the mode of the processor
