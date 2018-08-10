@@ -58,5 +58,46 @@ extern int errno;
 #define EFTYPE          37 /* Inappropriate file type or format */
 #define ENOBUFS         38 /* No buffer space available */
 #define ENOMSG          39 /* No message of desired type */
+#define E2BIG           40 /* Arg list too long */
+#define EADDRINUSE      41 /* Address already in use */
+#define EADDRNOTAVAIL   42 /* Can't assign requested address */
+#define EAFNOSUPPORT    43 /* Address family not supported by protocol family */
+#define EALREADY        44 /* Socket already connected */
+#define EBADMSG         45 /* Bad message */
+#define ECANCELED       46 /* Operation canceled */
+#define ECHILD          47 /* No children */
+#define ECONNABORTED    48 /* Software caused connection abort */
+#define ECONNREFUSED    49 /* Connection refused */
+#define ECONNRESET      50 /* Connection reset by peer */
+#define EDEADLK         51 /* Deadlock */
+#define EDESTADDRREQ    52 /* Destination address required */
+#define EHOSTUNREACH    53 /* Host is unreachable */
+#define EIDRM           54 /* Identifier removed */
+#define EINPROGRESS     55 /* Connection already in progress */
+#define EISCONN         56 /* Socket is already connected */
+#define EMSGSIZE        57 /* Message too long */
+#define ENETDOWN        58 /* Network interface is not configured */
+#define ENETRESET       59 /* Network dropped connection because of reset */
+#define ENETUNREACH     60 /* Network is unreachable */
+#define ENOEXEC         61 /* Exec format error */
+#define ENOLCK          62 /* No lock */
+#define ENOPROTOOPT     63 /* Protocol not available */
+#define ENOSR           64 /* No stream resources */
+#define ENOSTR          65 /* Not a stream */
+#define ENOTCONN        66 /* Socket is not connected */
+#define ENOTRECOVERABLE 67 /* State not recoverable */
+#define ENOTSOCK        68 /* Socket operation on non-socket */
+#define ENOTSUP         69 /* Operation not supported on socket */
+#define ENXIO           70 /* No such device or address */
+#define EOPNOTSUPP      71 /* Operation not supported on socket */
+#define EOVERFLOW       72 /* Value too large to be stored in data type */
+#define EOWNERDEAD      73 /* Previous owner died */
+#define EPIPE           74 /* Broken pipe */
+#define EPROTO          75 /* Protocol error */
+#define EPROTONOSUPPORT 76 /* Unknown protocol */
+#define EPROTOTYPE      77 /* Protocol wrong type for socket */
+#define ESRCH           78 /* No such process */
+#define ETIMEDOUT       79 /* Connection timed out */
+#define EWOULDBLOCK     80 /* Operation would block */
 
 #endif /* __ERRNO_H___ */
