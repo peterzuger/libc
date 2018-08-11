@@ -22,8 +22,8 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-void __assert(const char* expr,const char* file,
-              const char* line,const char* func);
+__attribute__((noreturn)) void __assert(const char* expr,const char* file,
+                                        const char* line,const char* func);
 
 
 #if defined(__cplusplus)
