@@ -31,7 +31,7 @@ AS      = $(CC)as
 ECHO    = echo -e
 
 DFLAGS  =
-OPTFLAGS= -O2
+OPTFLAGS= -O2 -flto -ffunction-sections -fdata-sections
 IFLAGS  = -Iinclude
 WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
 WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
@@ -39,7 +39,7 @@ WFLAGS += -Wdouble-promotion -Wchkp -Winit-self -Wswitch-default -Wswitch-enum
 WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 WFLAGS += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
 WFLAGS += -Wsuggest-attribute=cold
-COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib
+COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib -g
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
 HCCFLAGS=             $(IFLAGS) $(COMFLAGS) $(DFLAGS) -fsyntax-only
