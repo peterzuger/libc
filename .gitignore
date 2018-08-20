@@ -31,3 +31,6 @@
 
 # temporary development directory
 DEV/
+
+# clang files
+.clang_complete
