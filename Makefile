@@ -1,5 +1,6 @@
 NAME ?=libc
 MCPU ?=
+FPU  ?=
 
 ifdef VERBOSE
 	Q =
@@ -30,8 +31,14 @@ AR      = $(CC)ar
 AS      = $(CC)as
 ECHO    = echo -e
 
+ifeq ($(FPU),1)
+	FPUFLAGS = -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+else
+	FPUFLAGS = -mfloat-abi=soft
+endif
+
 DFLAGS  =
-OPTFLAGS= -O2 -flto -ffunction-sections -fdata-sections
+OPTFLAGS= -O2 -g -ffunction-sections -fdata-sections
 IFLAGS  = -Iinclude
 WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
 WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
@@ -39,7 +46,7 @@ WFLAGS += -Wdouble-promotion -Wchkp -Winit-self -Wswitch-default -Wswitch-enum
 WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 WFLAGS += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
 WFLAGS += -Wsuggest-attribute=cold
-COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) -nostartfiles -nostdlib -g
+COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib -g
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
 HCCFLAGS=             $(IFLAGS) $(COMFLAGS) $(DFLAGS) -fsyntax-only
