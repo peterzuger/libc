@@ -17,7 +17,7 @@ extern "C"{
 
 // Copying functions
 void* memcpy(void* __restrict__ s1, const void* __restrict__ s2, size_t n);
-void* memmove(void* s1, void* s2, size_t n);
+void* memmove(void* s1, const void* s2, size_t n);
 
 char* strcpy(char* __restrict__ s1, const char* __restrict__ s2);
 char* strncpy(char* __restrict__ s1, const char* __restrict__ s2, size_t n);

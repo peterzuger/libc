@@ -6,7 +6,7 @@
  */
 #include <string.h>
 
-void* memmove(void* s1, void* s2, size_t n){
+void* memmove(void* s1, const void* s2, size_t n){
     unsigned char* d = (unsigned char*)s1;
     const unsigned char* s = (const unsigned char*)s2;
 
