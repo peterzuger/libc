@@ -10,8 +10,7 @@
 /*
  * stdlib configuration
  */
-#define MALLOC_MIN_BLOCK_SIZE (0x20)
-#define MALLOC_USE_BEST_FIT
-//#define MALLOC_USE_FIRST_FIT
+//#define MALLOC_USE_BEST_FIT
+#define MALLOC_USE_FIRST_FIT
 
 #endif /* __CONFIG_H__ */
