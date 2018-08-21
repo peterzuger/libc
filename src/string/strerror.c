@@ -11,6 +11,7 @@ char* strerror(int errnum){
     char* s;
 
     switch(errnum){
+    case 0               : s = "No errors";                               break;
     case EPERM           : s = "Operation not permitted";                 break;
     case ENOENT          : s = "No such file or directory";               break;
     case EINTR           : s = "Interrupted system call";                 break;
