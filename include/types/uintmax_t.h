@@ -12,6 +12,7 @@
 #  define __UINTMAX_T_DEFINED__
 #  define UINTMAX_MIN (0)
 #  define UINTMAX_MAX (__UINTMAX_MAX__)
+#  define UINTMAX_C(c) __UINTMAX_C(c)
 typedef __UINTMAX_TYPE__ uintmax_t;
 # endif /* !defined(__UINTMAX_T_DEFINED__) */
 #endif /* defined(__UINTMAX_TYPE__) || defined(DOXYGEN) */

@@ -12,6 +12,7 @@
 #  define __UINT16_T_DEFINED__
 #  define UINT16_MIN (0)
 #  define UINT16_MAX (__UINT16_MAX__)
+#  define UINT16_C(c) __UINT16_C(c)
 typedef __UINT16_TYPE__ uint16_t;
 # endif /* !defined(__UINT16_T_DEFINED__) */
 #endif /* defined(__UINT16_TYPE__) || defined(DOXYGEN) */

@@ -12,6 +12,7 @@
 #  define __INTMAX_T_DEFINED__
 #  define INTMAX_MIN (-__INTMAX_MAX__-1)
 #  define INTMAX_MAX (__INTMAX_MAX__)
+#  define INTMAX_C(c) __INTMAX_C(c)
 typedef __INTMAX_TYPE__ intmax_t;
 # endif /* !defined(__INTMAX_T_DEFINED__) */
 #endif /* defined(__INTMAX_TYPE__) || defined(DOXYGEN) */

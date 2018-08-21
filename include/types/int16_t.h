@@ -12,6 +12,7 @@
 #  define __INT16_T_DEFINED__
 #  define INT16_MIN (-__INT16_MAX__-1)
 #  define INT16_MAX (__INT16_MAX__)
+#  define INT16_C(c) __INT16_C(c)
 typedef __INT16_TYPE__ int16_t;
 # endif /* !defined(__INT16_T_DEFINED__) */
 #endif /* defined(__INT16_TYPE__) || defined(DOXYGEN) */

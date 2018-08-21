@@ -12,6 +12,7 @@
 #  define __INT32_T_DEFINED__
 #  define INT32_MIN (-__INT32_MAX__-1)
 #  define INT32_MAX (__INT32_MAX__)
+#  define INT32_C(c) __INT32_C(c)
 typedef __INT32_TYPE__ int32_t;
 # endif /* !defined(__INT32_T_DEFINED__) */
 #endif /* defined(__INT32_TYPE__) || defined(DOXYGEN) */
