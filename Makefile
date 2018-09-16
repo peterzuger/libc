@@ -38,7 +38,7 @@ else
 endif
 
 DFLAGS  =
-OPTFLAGS= -O2 -g -ffunction-sections -fdata-sections
+OPTFLAGS= -O2 -ffunction-sections -fdata-sections
 IFLAGS  = -Iinclude
 WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
 WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
