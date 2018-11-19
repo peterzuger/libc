@@ -36,7 +36,7 @@ extern "C"{
 
 // Operations on files
 int remove(const char* filename);
-int rename(const char* old, const char *new);
+int rename(const char* old, const char *_new);
 FILE* tmpfile(void);
 char* tmpnam(char* s);
 
