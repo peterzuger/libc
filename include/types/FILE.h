@@ -11,6 +11,7 @@
 # define __FILE_DEFINED__
 typedef struct{
     int    fd;
+    char   eof;
 }FILE;
 #endif /* !defined(__FILE_DEFINED__) */
 
