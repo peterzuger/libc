@@ -15,7 +15,7 @@ size_t fwrite(const void* __restrict__ ptr, size_t size, size_t nmemb,
     for(size_t n = 0; n < nmemb; n++){
         for(size_t m = 0; m < size; m++){
             if(fputc(*p, stream) != *p)
-                return nmemb;
+                return n;
             p++;
         }
     }
