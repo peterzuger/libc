@@ -13,6 +13,12 @@
 #include <types/ldiv_t.h>
 #include <types/lldiv_t.h>
 
+#include <macros/NULL.h>
+#include <macros/EXIT_FAILURE.h>
+#include <macros/EXIT_SUCCESS.h>
+#include <macros/RAND_MAX.h>
+#include <macros/MB_CUR_MAX.h>
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
