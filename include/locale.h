@@ -2,7 +2,7 @@
  * @file   locale.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  category macros
+ * @brief  Localization
  */
 #ifndef __LOCALE_H__
 #define __LOCALE_H__

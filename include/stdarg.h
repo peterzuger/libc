@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  handle variable argument list
+ * @brief  Variable arguments
  */
 #ifndef __STDARG_H__
 #define __STDARG_H__

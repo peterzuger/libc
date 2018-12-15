@@ -2,7 +2,7 @@
  * @file   signal.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  signals
+ * @brief  Signal handling
  */
 #ifndef __SIGNAL_H__
 #define __SIGNAL_H__

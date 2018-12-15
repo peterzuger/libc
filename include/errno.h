@@ -2,7 +2,7 @@
  * @file   errno.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  system error numbers
+ * @brief  Errors
  */
 #ifndef __ERRNO_H__
 #define __ERRNO_H__

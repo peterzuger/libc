@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  floating types
+ * @brief  Characteristics of floating types
  */
 #ifndef __FLOAT_H__
 #define __FLOAT_H__

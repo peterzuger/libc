@@ -2,7 +2,7 @@
  * @file   uchar.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  unicode-character handling
+ * @brief  Unicode utilities
  */
 #ifndef __UCHAR_H__
 #define __UCHAR_H__

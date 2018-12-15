@@ -2,7 +2,7 @@
  * @file   assert.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  verify program assertion
+ * @brief  Diagnostics
  */
 #ifndef __ASSERT_H__
 #define __ASSERT_H__

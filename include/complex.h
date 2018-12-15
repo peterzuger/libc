@@ -2,7 +2,7 @@
  * @file   complex.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  complex arithmetic
+ * @brief  Complex arithmetic
  */
 #ifndef __COMPLEX_H__
 #define __COMPLEX_H__

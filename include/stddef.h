@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  standard type definitions
+ * @brief  Common definitions
  */
 #ifndef __STDDEF_H__
 #define __STDDEF_H__

@@ -2,7 +2,7 @@
  * @file   time.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  time types
+ * @brief  Date and time
  */
 #ifndef __TIME_H__
 #define __TIME_H__

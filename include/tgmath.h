@@ -2,7 +2,7 @@
  * @file   tgmath.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  type-generic macros
+ * @brief  Type-generic math
  */
 #ifndef __TGMATH_H__
 #define __TGMATH_H__

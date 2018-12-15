@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  alignment
+ * @brief  Alignment
  */
 #ifndef __STDALIGN_H__
 #define __STDALIGN_H__

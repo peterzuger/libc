@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  alternative spellings
+ * @brief  Alternative spellings
  */
 #ifndef __ISO646_H__
 #define __ISO646_H__

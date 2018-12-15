@@ -2,7 +2,7 @@
  * @file   ctype.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  character types
+ * @brief  Character handling
  */
 #ifndef __CTYPE_H__
 #define __CTYPE_H__

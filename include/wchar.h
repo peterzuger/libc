@@ -2,7 +2,7 @@
  * @file   wchar.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  wide-character handling
+ * @brief  Extended multibyte and wide character utilities
  */
 #ifndef __WCHAR_H__
 #define __WCHAR_H__

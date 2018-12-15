@@ -3,7 +3,7 @@
  * @author Peter Zueger
  * @date   28.01.2018
  * @note   part of the freestanding headers
- * @brief  implementation-defined constants
+ * @brief  Sizes of integer types
  */
 #ifndef __LIMITS_H__
 #define __LIMITS_H__

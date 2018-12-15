@@ -2,7 +2,7 @@
  * @file   stdlib.h
  * @author Peter Zueger
  * @date   07.02.2018
- * @brief  standard library definitions
+ * @brief  General utilities
  */
 #ifndef __STDLIB_H__
 #define __STDLIB_H__
