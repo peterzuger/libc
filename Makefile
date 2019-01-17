@@ -21,12 +21,12 @@ CSRC += $(wildcard src/inttypes/*.c)
 OBJECTS = $(CSRC:.c=.o)
 
 CC=arm-none-eabi-
-GCC     = $(CC)gcc
-GXX     = $(CC)g++
-CPP     = $(CC)gcc -E
-AR      = $(CC)ar
-AS      = $(CC)as
-ECHO    = echo -e
+GCC     = $(Q)$(CC)gcc
+GXX     = $(Q)$(CC)g++
+CPP     = $(Q)$(CC)gcc -E
+AR      = $(Q)$(CC)ar
+AS      = $(Q)$(CC)as
+ECHO    = @echo -e
 
 ifeq ($(FPU),1)
 	FPUFLAGS = -mfpu=fpv4-sp-d16 -mfloat-abi=hard
@@ -60,22 +60,22 @@ ASFLAGS =
 all: $(NAME).a
 
 %.o: %.c
-	@$(ECHO) "GCC\t$@"
-	$(Q)$(GCC) $(GCCFLAGS) $< -o $@
+	$(ECHO) "GCC\t$@"
+	$(GCC) $(GCCFLAGS) $< -o $@
 
 %.o: %.cpp
-	@$(ECHO) "G++\t$@"
-	$(Q)$(GXX) $(CXXFLAGS) $< -o $@
+	$(ECHO) "G++\t$@"
+	$(GXX) $(CXXFLAGS) $< -o $@
 
 $(NAME).a: $(OBJECTS)
-	$(Q)rm -fv $@
-	@$(ECHO) "AR\t$@"
-	$(Q)$(Q)$(AR)  $(ARFLAGS) rcs $@ $^
+	@rm -f $@
+	$(ECHO) "AR\t$@"
+	$(AR)  $(ARFLAGS) rcs $@ $^
 
 
 .PHONY: clean clean_all
 clean:
-	$(Q)rm -fv $(OBJECTS)
+	@rm -f $(OBJECTS)
 
 clean_all: clean
-	$(Q)rm -fv *.a
+	@rm -f *.a
