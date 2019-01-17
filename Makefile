@@ -8,10 +8,6 @@ else
 	Q = @
 endif
 
-CHDR  = $(wildcard include/*.h)
-CHDR += $(wildcard include/types/*.h)
-CHDR += $(wildcard include/macros/*.h)
-
 CSRC  = $(wildcard src/*.c)
 CSRC += $(wildcard src/stdlib/*.c)
 CSRC += $(wildcard src/stdio/*.c)
@@ -20,7 +16,6 @@ CSRC += $(wildcard src/complex/*.c)
 CSRC += $(wildcard src/ctype/*.c)
 CSRC += $(wildcard src/inttypes/*.c)
 
-HDR_OBJECTS = $(CHDR:.h=.j)
 OBJECTS = $(CSRC:.c=.o)
 
 CC=arm-none-eabi-
@@ -49,14 +44,12 @@ WFLAGS += -Wsuggest-attribute=cold
 COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib -g
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
-HCCFLAGS=             $(IFLAGS) $(COMFLAGS) $(DFLAGS) -fsyntax-only
 CXXFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
 CPPFLAGS=
 ARFLAGS =
 ASFLAGS =
 
 all: $(NAME).a
-headercheck: $(HDR_OBJECTS)
 
 %.o: %.c
 	@$(ECHO) "GCC\t$@"
@@ -65,11 +58,6 @@ headercheck: $(HDR_OBJECTS)
 %.o: %.cpp
 	@$(ECHO) "G++\t$@"
 	$(Q)$(GXX) $(CXXFLAGS) $< -o $@
-
-.PHONY: %.j
-%.j: %.h
-	@$(ECHO) "GCC\ttesting $<"
-	$(Q)$(GCC) $(HCCFLAGS) -Wno-pedantic $<
 
 $(NAME).a: $(OBJECTS)
 	$(Q)rm -fv $@
