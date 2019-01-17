@@ -52,7 +52,7 @@ WFLAGS += -Wsuggest-attribute=cold
 COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
-CXXFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
+CXXFLAGS= $(GCCFLAGS) -std=c++17 -fno-rtti -fno-exceptions -fno-threadsafe-statics
 CPPFLAGS=
 ARFLAGS =
 ASFLAGS =
