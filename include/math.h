@@ -25,12 +25,28 @@
 #include <macros/MATH_ERREXCEPT.h>
 #include <macros/math_errhandling.h>
 
+// 7.12.3 Classification macros
+#define fpclassify(x) ()
+#define isfinite(x)   ()
+#define isinf(x)      ()
+#define isnan(x)      ()
+#define isnormal(x)   ()
+#define signbit(x)    ()
+
+// 7.12.14 Comparison macros
+#define isgreater(x,y)      ()
+#define isgreaterequal(x,y) ()
+#define isless(x,y)         ()
+#define islessequal(x,y)    ()
+#define islessgreater(x,y)  ()
+#define isunordered(x,y)    ()
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Trigonometric functions
+// 7.12.4 Trigonometric functions
 double acos(double x);
 float acosf(float x);
 long double acosl(long double x);
@@ -59,6 +75,8 @@ double tan(double x);
 float tanf(float x);
 long double tanl(long double x);
 
+
+// 7.12.5 Hyperbolic functions
 double acosh(double x);
 float acoshf(float x);
 long double acoshl(long double x);
@@ -84,7 +102,7 @@ float tanhf(float x);
 long double tanhl(long double x);
 
 
-// Exponential and logarithmic functions
+// 7.12.6 Exponential and logarithmic functions
 double exp(double x);
 float expf(float x);
 long double expl(long double x);
@@ -141,7 +159,7 @@ float scalblnf(float x, long int n);
 long double scalblnl(long double x, long int n);
 
 
-// Power and absolute-value functions
+// 7.12.7 Power and absolute-value functions
 double cbrt(double x);
 float cbrtf(float x);
 long double cbrtl(long double x);
@@ -163,7 +181,7 @@ float sqrtf(float x);
 long double sqrtl(long double x);
 
 
-// Error and gamma functions
+// 7.12.8 Error and gamma functions
 double erf(double x);
 float erff(float x);
 long double erfl(long double x);
@@ -180,6 +198,8 @@ double tgamma(double x);
 float tgammaf(float x);
 long double tgammal(long double x);
 
+
+// 7.12.9 Nearest integer functions
 double ceil(double x);
 float ceilf(float x);
 long double ceill(long double x);
@@ -219,7 +239,7 @@ float truncf(float x);
 long double truncl(long double x);
 
 
-// Remainder functions
+// 7.12.10 Remainder functions
 double fmod(double x, double y);
 float fmodf(float x, float y);
 long double fmodl(long double x, long double y);
@@ -233,7 +253,7 @@ float remquof(float x, float y, int *quo);
 long double remquol(long double x, long double y, int *quo);
 
 
-// Manipulation functions
+// 7.12.11 Manipulation functions
 double copysign(double x, double y);
 float copysignf(float x, float y);
 long double copysignl(long double x, long double y);
@@ -251,7 +271,7 @@ float nexttowardf(float x, long double y);
 long double nexttowardl(long double x, long double y);
 
 
-// Maximum, minimum, and positive difference functions
+// 7.12.12 Maximum, minimum, and positive difference functions
 double fdim(double x, double y);
 float fdimf(float x, float y);
 long double fdiml(long double x, long double y);
@@ -265,7 +285,7 @@ float fminf(float x, float y);
 long double fminl(long double x, long double y);
 
 
-// Floating multiply-add
+// 7.12.13 Floating multiply-add
 double fma(double x, double y, double z);
 float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);

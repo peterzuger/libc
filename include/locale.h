@@ -17,7 +17,11 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
+// 7.11.1 Locale control
 char* setlocale(int category, const char* locale);
+
+
+// 7.11.2 Numeric formatting convention inquiry
 struct lconv* localeconv(void);
 
 

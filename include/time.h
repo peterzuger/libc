@@ -22,7 +22,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Time manipulation functions
+// 7.27.2 Time manipulation functions
 clock_t clock(void);
 double difftime(time_t time1, time_t time0);
 time_t mktime(struct tm* timeptr);
@@ -30,7 +30,7 @@ time_t time(time_t* timer);
 int timespec_get(struct timespec* ts, int base);
 
 
-// Time conversion functions
+// 7.27.3 Time conversion functions
 char* asctime(const struct tm* timeptr);
 char* ctime(const time_t* timer);
 struct tm* gmtime(const time_t* timer);

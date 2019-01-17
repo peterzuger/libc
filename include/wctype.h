@@ -18,7 +18,8 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Wide character classification functions
+// 7.30.2 Wide character classification utilities
+// 7.30.2.1 Wide character classification functions
 int iswalnum(wint_t wc);
 int iswalpha(wint_t wc);
 int iswblank(wint_t wc);
@@ -33,17 +34,18 @@ int iswupper(wint_t wc);
 int iswxdigit(wint_t wc);
 
 
-// Extensible wide character classification functions
+// 7.30.2.2 Extensible wide character classification functions
 int iswctype(wint_t wc, wctype_t desc);
 wctype_t wctype(const char *property);
 
 
-// Wide character case mapping utilities
+// 7.30.3 Wide character case mapping utilities
+// 7.30.3.1 Wide character case mapping functions
 wint_t towlower(wint_t wc);
 wint_t towupper(wint_t wc);
 
 
-// Extensible wide character case mapping functions
+// 7.30.3.2 Extensible wide character case mapping functions
 wint_t towctrans(wint_t wc, wctrans_t desc);
 wctrans_t wctrans(const char *property);
 

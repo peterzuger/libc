@@ -41,14 +41,14 @@ extern FILE _stderr;
 
 
 
-// Operations on files
+// 7.21.4 Operations on files
 int remove(const char* filename);
 int rename(const char* old, const char *_new);
 FILE* tmpfile(void);
 char* tmpnam(char* s);
 
 
-// File access functions
+// 7.21.5 File access functions
 int fclose(FILE* stream);
 int fflush(FILE* stream);
 FILE* fopen(const char* __restrict__ filename, const char* __restrict__ mode);
@@ -59,7 +59,7 @@ int setvbuf(FILE* __restrict__ stream, char* __restrict__ buf, int mode,
             size_t size);
 
 
-// Formatted input/output functions
+// 7.21.6 Formatted input/output functions
 int fprintf(FILE* __restrict__ stream, const char* __restrict__ format, ...);
 int fscanf(FILE* __restrict__ stream, const char* __restrict__ format, ...);
 int printf(const char* __restrict__ format, ...);
@@ -82,7 +82,7 @@ int vsscanf(const char * __restrict__ s,
             const char* __restrict__ format, va_list arg);
 
 
-// Character input/output functions
+// 7.21.7 Character input/output functions
 int fgetc(FILE* stream);
 char *fgets(char* __restrict__ s, int n, FILE* __restrict__ stream);
 int fputc(int c, FILE *stream);
@@ -95,14 +95,14 @@ int puts(const char* s);
 int ungetc(int c, FILE* stream);
 
 
-// Direct input/output functions
+// 7.21.8 Direct input/output functions
 size_t fread(void* __restrict__ ptr, size_t size, size_t nmemb,
              FILE* __restrict__ stream);
 size_t fwrite(const void* __restrict__ ptr, size_t size, size_t nmemb,
               FILE* __restrict__ stream);
 
 
-// File positioning functions
+// 7.21.9 File positioning functions
 int fgetpos(FILE* __restrict__ stream, fpos_t* __restrict__ pos);
 int fseek(FILE* stream, long int offset, int whence);
 int fsetpos(FILE* stream, const fpos_t *pos);
@@ -110,7 +110,7 @@ long int ftell(FILE* stream);
 void rewind(FILE* stream);
 
 
-// Error-handling functions
+// 7.21.10 Error-handling functions
 void clearerr(FILE* stream);
 int feof(FILE* stream);
 int ferror(FILE* stream);

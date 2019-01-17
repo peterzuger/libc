@@ -17,7 +17,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Restartable multibyte/wide character conversion functions
+// 7.28.1 Restartable multibyte/wide character conversion functions
 size_t mbrtoc16(char16_t* restrict pc16,
                 const char* restrict s, size_t n,
                 mbstate_t* restrict ps);

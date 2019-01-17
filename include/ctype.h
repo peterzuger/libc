@@ -12,7 +12,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Character classification functions
+// 7.4.1 Character classification functions
 int isalnum(int c);
 int isalpha(int c);
 int isblank(int c);
@@ -27,7 +27,7 @@ int isupper(int c);
 int isxdigit(int c);
 
 
-// Character case mapping functions
+// 7.4.2 Character case mapping functions
 int tolower(int c);
 int toupper(int c);
 

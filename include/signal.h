@@ -27,11 +27,11 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Specify signal handling
+// 7.14.1 Specify signal handling
 void (*signal(int sig, void (*func)(int)))(int);
 
 
-// Send signal
+// 7.14.2 Send signal
 int raise(int sig);
 
 

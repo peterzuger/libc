@@ -18,7 +18,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-// Trigonometric functions
+// 7.3.5 Trigonometric functions
 double complex cacos(double complex z);
 float complex cacosf(float complex z);
 long double complex cacosl(long double complex z);
@@ -43,6 +43,8 @@ double complex ctan(double complex z);
 float complex ctanf(float complex z);
 long double complex ctanl(long double complex z);
 
+
+// 7.3.6 Hyperbolic functions
 double complex cacosh(double complex z);
 float complex cacoshf(float complex z);
 long double complex cacoshl(long double complex z);
@@ -68,7 +70,7 @@ float complex ctanhf(float complex z);
 long double complex ctanhl(long double complex z);
 
 
-// Exponential and logarithmic functions
+// 7.3.7 Exponential and logarithmic functions
 double complex cexp(double complex z);
 float complex cexpf(float complex z);
 long double complex cexpl(long double complex z);
@@ -78,7 +80,7 @@ float complex clogf(float complex z);
 long double complex clogl(long double complex z);
 
 
-// Power and absolute-value functions
+// 7.3.8 Power and absolute-value functions
 double cabs(double complex z);
 float cabsf(float complex z);
 long double cabsl(long double complex z);
@@ -92,7 +94,7 @@ float complex csqrtf(float complex z);
 long double complex csqrtl(long double complex z);
 
 
-// Manipulation functions
+// 7.3.9 Manipulation functions
 double carg(double complex z);
 float cargf(float complex z);
 long double cargl(long double complex z);

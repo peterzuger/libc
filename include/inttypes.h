@@ -20,6 +20,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
+// 7.8.2 Functions for greatest-width integer types
 intmax_t imaxabs(intmax_t j);
 imaxdiv_t imaxdiv(intmax_t numer, intmax_t denom);
 
