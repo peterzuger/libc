@@ -1,6 +1,8 @@
-NAME ?=libc
-MCPU ?=
-FPU  ?=
+NAME    ?=libc
+MCPU    ?=
+FPU     ?=
+VERBOSE ?=
+DEBUG   ?=
 
 ifeq ($(VERBOSE),1)
 	Q =
@@ -32,8 +34,14 @@ else
 	FPUFLAGS = -mfloat-abi=soft
 endif
 
+ifeq ($(DEBUG),1)
+	DBGFLAGS = -g
+else
+	DBGFLAGS =
+endif
+
 DFLAGS  =
-OPTFLAGS= -O2 -ffunction-sections -fdata-sections
+OPTFLAGS= -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
 IFLAGS  = -Iinclude
 WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
 WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
@@ -41,7 +49,7 @@ WFLAGS += -Wdouble-promotion -Wchkp -Winit-self -Wswitch-default -Wswitch-enum
 WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 WFLAGS += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
 WFLAGS += -Wsuggest-attribute=cold
-COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib -g
+COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib
 
 GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
 CXXFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c -std=c++17 -fno-rtti
