@@ -2,7 +2,7 @@ NAME ?=libc
 MCPU ?=
 FPU  ?=
 
-ifdef VERBOSE
+ifeq ($(VERBOSE),1)
 	Q =
 else
 	Q = @
