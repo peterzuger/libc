@@ -7,13 +7,15 @@
 #ifndef __TYPE_CHAR16_T_H__
 #define __TYPE_CHAR16_T_H__
 
-#if defined(__CHAR16_TYPE__) || defined(DOXYGEN)
-# if !defined(__CHAR16_T_DEFINED__)
-#  define __CHAR16_T_DEFINED__
-#  define CHAR16_MIN (-__CHAR16_MAX__-1)
-#  define CHAR16_MAX (__CHAR16_MAX__)
+#if !defined(__cplusplus)
+# if defined(__CHAR16_TYPE__) || defined(DOXYGEN)
+#  if !defined(__CHAR16_T_DEFINED__)
+#   define __CHAR16_T_DEFINED__
+#   define CHAR16_MIN (-__CHAR16_MAX__-1)
+#   define CHAR16_MAX (__CHAR16_MAX__)
 typedef __CHAR16_TYPE__ char16_t;
-# endif /* !defined(__CHAR16_T_DEFINED__) */
-#endif /* defined(__CHAR16_TYPE__) || defined(DOXYGEN) */
+#  endif /* !defined(__CHAR16_T_DEFINED__) */
+# endif /* defined(__CHAR16_TYPE__) || defined(DOXYGEN) */
+#endif /* !defined(__cplusplus) */
 
 #endif /* __TYPE_CHAR16_T_H__ */
