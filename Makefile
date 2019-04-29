@@ -1,4 +1,4 @@
-NAME    ?=libc
+NAME     =libc
 MCPU    ?=
 FPU     ?=
 VERBOSE ?=
