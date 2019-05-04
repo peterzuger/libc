@@ -1,8 +1,8 @@
 /**
- * @file
- * @author Peter Zueger
- * @date
- * @brief
+ * @file   src/stdfiles.c
+ * @author Peter Züger
+ * @date   01.12.2018
+ * @brief  stdio files
  */
 #include <stdio.h>
 

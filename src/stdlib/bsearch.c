@@ -1,6 +1,6 @@
 /**
  * @file   bsearch.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   16.07.2018
  * @brief  binary search implementation
  */

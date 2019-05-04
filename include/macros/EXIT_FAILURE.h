@@ -1,6 +1,6 @@
 /**
  * @file   macros/EXIT_FAILURE.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   02.12.2018
  * @brief  unsuccessful program termination exit(EXIT_FAILURE)
  */

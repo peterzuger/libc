@@ -1,6 +1,6 @@
 /**
  * @file   fenv.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   07.02.2018
  * @brief  Floating-point environment
  */

@@ -1,6 +1,6 @@
 /**
  * @file   strcmp.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   22.07.2018
  * @brief  strcmp() implementation
  */

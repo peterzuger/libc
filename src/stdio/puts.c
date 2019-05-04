@@ -1,6 +1,6 @@
 /**
  * @file   puts.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   14.11.2018
  * @brief  puts() implementation
  */

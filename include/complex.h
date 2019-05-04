@@ -1,6 +1,6 @@
 /**
  * @file   complex.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   07.02.2018
  * @brief  Complex arithmetic
  */

@@ -1,6 +1,6 @@
 /**
  * @file   src/ctype/isdigit.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   09.08.2018
  * @brief  character type
  */

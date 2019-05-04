@@ -1,6 +1,6 @@
 /**
  * @file   types/uint_least64_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   08.04.2018
  * @brief  unsigned least 64 bit integer
  */

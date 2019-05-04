@@ -1,6 +1,6 @@
 /**
  * @file   strrchr.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   25.07.2018
  * @brief  find character in string reversed
  */

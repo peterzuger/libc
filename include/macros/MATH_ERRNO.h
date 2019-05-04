@@ -1,6 +1,6 @@
 /**
  * @file   macros/MATH_ERRNO.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   22.07.2018
  * @brief  math error handling
  */

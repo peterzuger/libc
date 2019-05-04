@@ -1,6 +1,6 @@
 /**
  * @file   imaxabs.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   22.07.2018
  * @breif  absolute value of imax_t
  */

@@ -1,6 +1,6 @@
 /**
  * @file   types/uint8_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   17.02.2018
  * @brief  unsigned 8 bit integer
  */

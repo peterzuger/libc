@@ -1,6 +1,6 @@
 /**
  * @file   perror.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   24.07.2018
  * @brief  print errno with message
  */

@@ -1,6 +1,6 @@
 /**
  * @file   types/int_least8_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   08.04.2018
  * @brief  signed least 8 bit integer
  */

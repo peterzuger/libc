@@ -1,6 +1,6 @@
 /**
  * @file   stdnoreturn.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   22.07.2018
  * @note   part of the freestanding headers
  * @brief  _Noreturn

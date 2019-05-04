@@ -1,6 +1,6 @@
 /**
  * @file   wctype.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   07.02.2018
  * @brief  Wide character classification and mapping utilities
  */

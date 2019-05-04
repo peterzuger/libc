@@ -1,6 +1,6 @@
 /**
  * @file   macros/MB_CUR_MAX.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   02.12.2018
  * @brief  maximum number of bytes in a multibyte character
  */

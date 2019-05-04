@@ -1,6 +1,6 @@
 /**
  * @file   div.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   16.07.2018
  * @breif  division
  */

@@ -1,6 +1,6 @@
 /**
  * @file   macros/TMP_MAX.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   24.07.2018
  * @brief  maximum number of unique filenames from tmpnam()
  */

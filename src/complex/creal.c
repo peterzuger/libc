@@ -1,6 +1,6 @@
 /**
  * @file   creal.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   12.07.2018
  * @brief  get the real part of a complex number
  */

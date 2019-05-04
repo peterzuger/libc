@@ -1,6 +1,6 @@
 /**
  * @file   config.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   08.02.2018
  * @brief  library configuration
  */

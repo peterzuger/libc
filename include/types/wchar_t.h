@@ -1,6 +1,6 @@
 /**
  * @file   types/wchar_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   05.02.2018
  * @brief  wide character type
  */

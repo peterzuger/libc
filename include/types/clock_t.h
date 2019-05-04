@@ -1,6 +1,6 @@
 /**
  * @file   types/clock_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   24.07.2018
  * @brief  clock ticks this second
  */

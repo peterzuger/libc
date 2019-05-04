@@ -1,6 +1,6 @@
 /**
  * @file   types/FILE.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   17.02.2018
  * @brief  FILE structure
  */

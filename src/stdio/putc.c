@@ -1,6 +1,6 @@
 /**
  * @file   putc.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   14.11.2018
  * @brief  putc() implementation
  */

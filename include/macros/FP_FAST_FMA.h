@@ -1,6 +1,6 @@
 /**
  * @file   macros/FP_FAST_FMA.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   22.07.2018
  * @brief  fma() speed
  */

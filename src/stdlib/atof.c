@@ -1,6 +1,6 @@
 /**
  * @file   atof.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   18.08.2018
  * @brief  atof() implementation
  */

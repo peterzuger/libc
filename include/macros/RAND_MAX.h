@@ -1,6 +1,6 @@
 /**
  * @file   macros/RAND_MAX.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   02.12.2018
  * @brief  maximum value returned by rand()
  */

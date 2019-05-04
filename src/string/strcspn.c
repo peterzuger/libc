@@ -1,6 +1,6 @@
 /**
  * @file   strcspn.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   25.07.2018
  * @brief  position of first occurence of a span in string
  */

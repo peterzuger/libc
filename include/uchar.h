@@ -1,6 +1,6 @@
 /**
  * @file   uchar.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   07.02.2018
  * @brief  Unicode utilities
  */

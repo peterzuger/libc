@@ -1,6 +1,6 @@
 /**
  * @file   types/lldiv_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   13.07.2018
  * @brief  lldiv() result
  */

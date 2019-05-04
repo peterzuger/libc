@@ -1,6 +1,6 @@
 /**
  * @file   sprintf.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   26.07.2018
  * @brief  sprintf() implementation
  */

@@ -1,6 +1,6 @@
 /**
  * @file   macros/I.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   08.08.2018
  * @brief  complex number
  */

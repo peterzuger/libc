@@ -1,6 +1,6 @@
 /**
  * @file   macros/NULL.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   06.02.2018
  * @brief  Null pointer
  */

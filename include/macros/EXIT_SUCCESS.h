@@ -1,6 +1,6 @@
 /**
  * @file   macros/EXIT_SUCCESS.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   02.12.2018
  * @brief  successful program termination exit(EXIT_SUCCESS)
  */

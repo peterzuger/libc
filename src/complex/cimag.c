@@ -1,6 +1,6 @@
 /**
  * @file   cimag.c
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   12.07.2018
  * @brief  get the imaginary part of a complex number
  */

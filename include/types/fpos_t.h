@@ -1,6 +1,6 @@
 /**
  * @file   types/fpos_t.h
- * @author Peter Zueger
+ * @author Peter Züger
  * @date   23.07.2018
  * @brief  position in FILE
  */
