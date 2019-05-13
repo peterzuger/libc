@@ -6,8 +6,8 @@
  */
 #include <errno.h>
 
-static int errno = 0;
+static int _errno = 0;
 
 int* __errno(){
-    return &errno;
+    return &_errno;
 }
