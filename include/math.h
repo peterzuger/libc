@@ -26,20 +26,24 @@
 #include <macros/math_errhandling.h>
 
 // 7.12.3 Classification macros
-#define fpclassify(x) ()
-#define isfinite(x)   ()
-#define isinf(x)      ()
-#define isnan(x)      ()
-#define isnormal(x)   ()
-#define signbit(x)    ()
+#if !defined(__cplusplus)
+# define fpclassify(x)        ()
+# define isfinite(x)          ()
+# define isinf(x)             ()
+# define isnan(x)             ()
+# define isnormal(x)          ()
+# define signbit(x)           ()
+#endif /* !defined(__cplusplus) */
 
 // 7.12.14 Comparison macros
-#define isgreater(x,y)      ()
-#define isgreaterequal(x,y) ()
-#define isless(x,y)         ()
-#define islessequal(x,y)    ()
-#define islessgreater(x,y)  ()
-#define isunordered(x,y)    ()
+#if !defined(__cplusplus)
+# define isgreater(x,y)       ()
+# define isgreaterequal(x,y)  ()
+# define isless(x,y)          ()
+# define islessequal(x,y)     ()
+# define islessgreater(x,y)   ()
+# define isunordered(x,y)     ()
+#endif /* !defined(__cplusplus) */
 
 #if defined(__cplusplus)
 extern "C"{
