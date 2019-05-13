@@ -7,8 +7,7 @@
 #ifndef __SETJMP_H__
 #define __SETJMP_H__
 
-typedef struct{}jmp_buf;
-
+#include <types/jmp_buf.h>
 
 // 7.13.1 Save calling environment
 #define setjmp(jmp_buf) (0)
