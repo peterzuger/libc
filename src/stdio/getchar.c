@@ -1,8 +1,8 @@
 /**
- * @file   getchar.c
+ * @file   src/stdio/getchar.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  getchar() implementation
+ * @brief  7.21.7.6 The getchar function
  */
 #include <stdio.h>
 

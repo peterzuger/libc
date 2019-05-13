@@ -1,5 +1,5 @@
 /**
- * @file   macros/IOLBF.h
+ * @file   include/macros/IOLBF.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  setvbuf options

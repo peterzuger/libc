@@ -1,8 +1,8 @@
 /**
- * @file   strncat.c
+ * @file   src/string/strncat.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  concatenate strings
+ * @brief  7.24.3.2 The strncat function
  */
 #include <string.h>
 

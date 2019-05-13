@@ -1,5 +1,5 @@
 /**
- * @file   macros/EOF.h
+ * @file   include/macros/EOF.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  End Of File

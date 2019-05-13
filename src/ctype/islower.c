@@ -2,7 +2,7 @@
  * @file   src/ctype/islower.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.1.7 The islower function
  */
 #include <ctype.h>
 

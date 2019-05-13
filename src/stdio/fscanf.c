@@ -1,8 +1,8 @@
 /**
- * @file   fscanf.c
+ * @file   src/stdio/fscanf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  fscanf() implementation
+ * @brief  7.21.6.2 The fscanf function
  */
 #include <stdio.h>
 #include <stdarg.h>

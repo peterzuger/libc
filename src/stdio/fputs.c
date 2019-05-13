@@ -1,8 +1,8 @@
 /**
- * @file   fputs.c
+ * @file   src/stdio/fputs.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  fputs() implementation
+ * @brief  7.21.7.4 The fputs function
  */
 #include <stdio.h>
 

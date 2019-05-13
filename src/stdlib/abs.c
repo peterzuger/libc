@@ -1,8 +1,8 @@
 /**
- * @file   abs.c
+ * @file   src/stdlib/abs.c
  * @author Peter Züger
  * @date   16.07.2018
- * @breif  absolute value
+ * @breif  7.22.6.1 The abs, labs and llabs functions
  */
 #include <stdlib.h>
 

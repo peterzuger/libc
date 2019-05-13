@@ -1,8 +1,8 @@
 /**
- * @file   vscanf.c
+ * @file   src/stdio/vscanf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  vscanf() implementation
+ * @brief  7.21.6.11 The vscanf function
  */
 #include <stdio.h>
 #include <stdarg.h>

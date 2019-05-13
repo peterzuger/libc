@@ -2,7 +2,7 @@
  * @file   src/ctype/isblank.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.1.3 The isblank function
  */
 #include <ctype.h>
 

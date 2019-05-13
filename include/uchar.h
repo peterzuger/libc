@@ -1,5 +1,5 @@
 /**
- * @file   uchar.h
+ * @file   include/uchar.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Unicode utilities

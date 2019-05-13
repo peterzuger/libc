@@ -1,8 +1,8 @@
 /**
- * @file   assert.h
+ * @file   src/assert.c
  * @author Peter Züger
  * @date   08.02.2018
- * @brief  verify program assertion
+ * @brief  7.2.1.1 The assert macro
  */
 #include <assert.h>
 #include <stdlib.h>

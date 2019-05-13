@@ -1,8 +1,8 @@
 /**
- * @file   memmove.c
+ * @file   src/string/memmove.c
  * @author Peter Züger
  * @date   22.07.2018
- * @brief  memmove() implementation
+ * @brief  7.24.2.2 The memmove function
  */
 #include <string.h>
 

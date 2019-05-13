@@ -1,8 +1,8 @@
 /**
- * @file   free.c
+ * @file   src/stdlib/free.c
  * @author Peter Züger
  * @date   18.08.2018
- * @brief  free() implementation
+ * @brief  7.22.3.3 The free function
  */
 #include <stdlib.h>
 #include "alloc.h"

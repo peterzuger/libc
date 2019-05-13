@@ -1,8 +1,8 @@
 /**
- * @file   cimag.c
+ * @file   src/complex/cimag.c
  * @author Peter Züger
  * @date   12.07.2018
- * @brief  get the imaginary part of a complex number
+ * @brief  7.3.9.2 The cimag functions
  */
 #include <complex.h>
 

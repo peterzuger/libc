@@ -1,5 +1,5 @@
 /**
- * @file   errno.h
+ * @file   include/errno.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Errors

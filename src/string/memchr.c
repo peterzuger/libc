@@ -1,8 +1,8 @@
 /**
- * @file   memchr.c
+ * @file   src/string/memchr.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  find character in memory
+ * @brief  7.24.5.1 The memchr function
  */
 #include <string.h>
 

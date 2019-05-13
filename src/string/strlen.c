@@ -1,8 +1,8 @@
 /**
- * @file   strlen.c
+ * @file   src/string/strlen.c
  * @author Peter Züger
  * @date   22.07.2018
- * @brief  string lenght function
+ * @brief  7.24.6.3 The strlen function
  */
 #include <string.h>
 

@@ -1,5 +1,5 @@
 /**
- * @file   macros/TIME_UTC.h
+ * @file   include/macros/TIME_UTC.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  UTC timebase for timespec_get()

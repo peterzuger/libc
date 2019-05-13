@@ -1,8 +1,8 @@
 /**
- * @file   perror.c
+ * @file   src/stdio/perror.c
  * @author Peter Züger
  * @date   24.07.2018
- * @brief  print errno with message
+ * @brief  7.21.10.4 The perror function
  */
 #include <stdio.h>
 #include <string.h> // for strerror

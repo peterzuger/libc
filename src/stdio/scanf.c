@@ -1,8 +1,8 @@
 /**
- * @file   scanf.c
+ * @file   src/stdio/scanf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  scanf() implementation
+ * @brief  7.21.6.4 The scanf function
  */
 #include <stdio.h>
 #include <stdarg.h>

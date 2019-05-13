@@ -1,8 +1,8 @@
 /**
- * @file   memcpy.c
+ * @file   src/string/memcpy.c
  * @author Peter Züger
  * @date   22.07.2018
- * @brief  memcpy() implementation
+ * @brief  7.24.2.1 The memcpy function
  */
 #include <string.h>
 

@@ -1,8 +1,8 @@
 /**
- * @file   putc.c
+ * @file   src/stdio/putc.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  putc() implementation
+ * @brief  7.21.7.7 The putc function
  */
 #include <stdio.h>
 

@@ -1,8 +1,8 @@
 /**
- * @file   fread.c
+ * @file   src/stdio/fread.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  fread() implementation
+ * @brief  7.21.8.1 The fread function
  */
 #include <stdio.h>
 

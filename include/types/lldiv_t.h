@@ -1,5 +1,5 @@
 /**
- * @file   types/lldiv_t.h
+ * @file   include/types/lldiv_t.h
  * @author Peter Züger
  * @date   13.07.2018
  * @brief  lldiv() result

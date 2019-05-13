@@ -1,5 +1,5 @@
 /**
- * @file   types/uintptr_t.h
+ * @file   include/types/uintptr_t.h
  * @author Peter Züger
  * @date   17.02.2018
  * @brief  unsigned integer pointer

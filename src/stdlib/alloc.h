@@ -1,5 +1,5 @@
 /**
- * @file   alloc.h
+ * @file   src/stdlib/alloc.h
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  dynamic memory allocation

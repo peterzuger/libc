@@ -1,5 +1,5 @@
 /**
- * @file   types/max_align_t.h
+ * @file   include/types/max_align_t.h
  * @author Peter Züger
  * @date   17.02.2018
  * @brief  maximum alignment integer type

@@ -1,8 +1,8 @@
 /**
- * @file   calloc.c
+ * @file   src/stdlib/calloc.c
  * @author Peter Züger
  * @date   18.08.2018
- * @brief  calloc() implementation
+ * @brief  7.22.3.2 The calloc function
  */
 #include <stdlib.h>
 #include "alloc.h"

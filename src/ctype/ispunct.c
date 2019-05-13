@@ -2,7 +2,7 @@
  * @file   src/ctype/ispunct.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.1.9 The ispunct function
  */
 #include <ctype.h>
 

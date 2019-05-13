@@ -1,8 +1,8 @@
 /**
- * @file   malloc.c
+ * @file   src/stdlib/malloc.c
  * @author Peter Züger
  * @date   18.08.2018
- * @brief  malloc() implementation
+ * @brief  7.22.3.4 The malloc function
  */
 #include <stdlib.h>
 #include <types/size_t.h>

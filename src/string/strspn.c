@@ -1,8 +1,8 @@
 /**
- * @file   strcspn.c
+ * @file   src/string/strcspn.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  lengt of string only out of span
+ * @brief  7.24.5.6 The strspn function
  */
 #include <string.h>
 

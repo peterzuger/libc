@@ -1,8 +1,8 @@
 /**
- * @file   abort.c
+ * @file   src/stdlib/abort.c
  * @author Peter Züger
  * @date   16.07.2018
- * @brief  implement abort()
+ * @brief  7.2.1.1 The assert macro implementation
  */
 #include <stdlib.h>
 

@@ -1,5 +1,5 @@
 /**
- * @file   threads.h
+ * @file   include/threads.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Threads

@@ -1,5 +1,5 @@
 /**
- * @file   types/mbstate.h
+ * @file   include/types/mbstate.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  multi byte character state

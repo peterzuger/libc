@@ -1,5 +1,5 @@
 /**
- * @file   macros/L_tmpnam.h
+ * @file   include/macros/L_tmpnam.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  minimum lengt for tmpnam()

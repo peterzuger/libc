@@ -1,8 +1,8 @@
 /**
- * @file   strerror.c
+ * @file   src/string/strerror.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  errno to string
+ * @brief  7.24.6.2 The strerror function
  */
 #include <string.h>
 #include <errno.h>

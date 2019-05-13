@@ -1,8 +1,8 @@
 /**
- * @file   imaxabs.c
+ * @file   src/inttypes/imaxabs.c
  * @author Peter Züger
  * @date   22.07.2018
- * @breif  absolute value of imax_t
+ * @breif  7.8.2.1 The imaxabs function
  */
 #include <inttypes.h>
 

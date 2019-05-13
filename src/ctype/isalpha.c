@@ -2,7 +2,7 @@
  * @file   src/ctype/isalpha.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.1.2 The isalpha function
  */
 #include <ctype.h>
 

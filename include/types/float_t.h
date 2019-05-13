@@ -1,5 +1,5 @@
 /**
- * @file   types/float_t.h
+ * @file   include/types/float_t.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  float type

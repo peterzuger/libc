@@ -1,5 +1,5 @@
 /**
- * @file   stdnoreturn.h
+ * @file   include/stdnoreturn.h
  * @author Peter Züger
  * @date   22.07.2018
  * @note   part of the freestanding headers

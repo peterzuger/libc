@@ -1,8 +1,8 @@
 /**
- * @file   strrchr.c
+ * @file   src/string/strrchr.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  find character in string reversed
+ * @brief  7.24.5.5 The strrchr function
  */
 #include <string.h>
 

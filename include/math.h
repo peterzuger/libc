@@ -1,5 +1,5 @@
 /**
- * @file   math.h
+ * @file   include/math.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Mathematics

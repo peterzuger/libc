@@ -1,8 +1,8 @@
 /**
- * @file   memset.c
+ * @file   src/string/memset.c
  * @author Peter Züger
  * @date   22.07.2018
- * @brief  memset() implementation
+ * @brief  7.24.6.1 The memset function
  */
 #include <string.h>
 

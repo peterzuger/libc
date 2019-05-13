@@ -1,8 +1,8 @@
 /**
- * @file   sscanf.c
+ * @file   src/stdio/sscanf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  sscanf() implementation
+ * @brief  7.21.6.7 The sscanf function
  */
 #include <stdio.h>
 #include <stdarg.h>

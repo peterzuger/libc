@@ -1,8 +1,8 @@
 /**
- * @file   fwrite.c
+ * @file   src/stdio/fwrite.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  fwrite() implementation
+ * @brief  7.21.8.2 The fwrite function
  */
 #include <stdio.h>
 

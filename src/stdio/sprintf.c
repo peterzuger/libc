@@ -1,8 +1,8 @@
 /**
- * @file   sprintf.c
+ * @file   src/stdio/sprintf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  sprintf() implementation
+ * @brief  7.21.6.6 The sprintf function
  */
 #include <stdio.h>
 #include <stdarg.h>

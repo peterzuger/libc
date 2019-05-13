@@ -1,5 +1,5 @@
 /**
- * @file   macros/NAN.h
+ * @file   include/macros/NAN.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  float representing a quiet NaN

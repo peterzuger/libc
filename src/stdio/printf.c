@@ -1,8 +1,8 @@
 /**
- * @file   printf.c
+ * @file   src/stdio/printf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  printf() implementation
+ * @brief  7.21.6.3 The printf function
  */
 #include <stdio.h>
 #include <stdarg.h>

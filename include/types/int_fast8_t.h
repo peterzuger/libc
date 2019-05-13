@@ -1,5 +1,5 @@
 /**
- * @file   types/int_fast8_t.h
+ * @file   include/types/int_fast8_t.h
  * @author Peter Züger
  * @date   08.04.2018
  * @brief  signed fast 8 bit integer

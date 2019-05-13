@@ -1,8 +1,8 @@
 /**
- * @file   strncmp.c
+ * @file   src/string/strncmp.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  compare up to n characters
+ * @brief  7.24.4.4 The strncmp function
  */
 #include <string.h>
 

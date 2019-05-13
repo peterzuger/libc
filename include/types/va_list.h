@@ -1,5 +1,5 @@
 /**
- * @file   types/va_list.h
+ * @file   include/types/va_list.h
  * @author Peter Züger
  * @date   05.02.2018
  * @brief  variable argument list

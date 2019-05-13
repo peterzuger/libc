@@ -1,8 +1,9 @@
 /**
- * @file   rand.c
+ * @file   src/stdlib/rand.c
  * @author Peter Züger
  * @date   08.02.2018
- * @brief  random
+ * @brief  7.22.2.1 The rand function
+ * @brief  7.22.2.2 The srand function
  */
 #include <stdlib.h>
 

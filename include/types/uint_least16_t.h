@@ -1,5 +1,5 @@
 /**
- * @file   types/uint_least64_t.h
+ * @file   include/types/uint_least64_t.h
  * @author Peter Züger
  * @date   08.04.2018
  * @brief  unsigned least 16 bit integer

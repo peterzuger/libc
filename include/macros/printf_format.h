@@ -1,5 +1,5 @@
 /**
- * @file   macros/printf_format.h
+ * @file   include/macros/printf_format.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  printf() format specifier

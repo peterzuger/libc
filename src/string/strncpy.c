@@ -1,8 +1,8 @@
 /**
- * @file   strncpy.c
+ * @file   src/string/strncpy.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  copy n bytes in string
+ * @brief  7.24.2.4 The strncpy function
  */
 #include <string.h>
 

@@ -1,8 +1,8 @@
 /**
- * @file   div.c
+ * @file   src/stdlib/div.c
  * @author Peter Züger
  * @date   16.07.2018
- * @breif  division
+ * @breif  7.22.6.2 The div, ldiv, and lldiv functions
  */
 #include <stdlib.h>
 

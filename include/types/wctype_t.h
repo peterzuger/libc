@@ -1,5 +1,5 @@
 /**
- * @file   types/wctype_t.h
+ * @file   include/types/wctype_t.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  wide character type

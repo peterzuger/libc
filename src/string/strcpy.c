@@ -1,8 +1,8 @@
 /**
- * @file   strcpy.c
+ * @file   src/string/strcpy.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  copy string
+ * @brief  7.24.2.3 The strcpy function
  */
 #include <string.h>
 

@@ -2,7 +2,7 @@
  * @file   src/ctype/toupper.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.2.2 The toupper function
  */
 #include <ctype.h>
 

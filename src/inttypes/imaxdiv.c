@@ -1,8 +1,8 @@
 /**
- * @file   imaxdiv.c
+ * @file   src/inttypes/imaxdiv.c
  * @author Peter Züger
  * @date   22.07.2018
- * @breif  imax_t division
+ * @breif  7.8.2.2 The imaxdiv function
  */
 #include <inttypes.h>
 

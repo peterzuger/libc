@@ -2,7 +2,7 @@
  * @file   src/ctype/isalnum.c
  * @author Peter Züger
  * @date   09.08.2018
- * @brief  character type
+ * @brief  7.4.1.1 The isalnum function
  */
 #include <ctype.h>
 

@@ -1,5 +1,5 @@
 /**
- * @file   setjmp.h
+ * @file   include/setjmp.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Nonlocal jumps

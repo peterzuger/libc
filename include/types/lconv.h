@@ -1,5 +1,5 @@
 /**
- * @file   types/lconv.h
+ * @file   include/types/lconv.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  formatting of numeric values

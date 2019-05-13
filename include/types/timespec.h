@@ -1,5 +1,5 @@
 /**
- * @file   types/timespec.h
+ * @file   include/types/timespec.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  time

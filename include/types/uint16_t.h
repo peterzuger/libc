@@ -1,5 +1,5 @@
 /**
- * @file   types/uint16_t.h
+ * @file   include/types/uint16_t.h
  * @author Peter Züger
  * @date   17.02.2018
  * @brief  unsigned 16 bit integer

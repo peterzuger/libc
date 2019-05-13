@@ -1,5 +1,5 @@
 /**
- * @file   macros/scanf_format.h
+ * @file   include/macros/scanf_format.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  scanf() format specifier

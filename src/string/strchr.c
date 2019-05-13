@@ -1,8 +1,8 @@
 /**
- * @file   strchr.c
+ * @file   src/string/strchr.c
  * @author Peter Züger
  * @date   25.07.2018
- * @brief  find character in string
+ * @brief  7.24.5.2 The strchr function
  */
 #include <string.h>
 

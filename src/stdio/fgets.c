@@ -1,8 +1,8 @@
 /**
- * @file   fgets.c
+ * @file   src/stdio/fgets.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  fgets() implementation
+ * @brief  7.21.7.2 The fgets function
  */
 #include <stdio.h>
 

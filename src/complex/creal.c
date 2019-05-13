@@ -1,8 +1,8 @@
 /**
- * @file   creal.c
+ * @file   src/complex/creal.c
  * @author Peter Züger
  * @date   12.07.2018
- * @brief  get the real part of a complex number
+ * @brief  7.3.9.6 The creal functions
  */
 #include <complex.h>
 

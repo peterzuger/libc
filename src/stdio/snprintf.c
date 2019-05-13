@@ -1,8 +1,8 @@
 /**
- * @file   snprintf.c
+ * @file   src/stdio/snprintf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  snprintf() implementation
+ * @brief  7.21.6.5 The snprintf function
  */
 #include <stdio.h>
 #include <stdarg.h>

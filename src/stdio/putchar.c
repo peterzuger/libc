@@ -1,8 +1,8 @@
 /**
- * @file   putchar.c
+ * @file   src/stdio/putchar.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  putchar() implementation
+ * @brief  7.21.7.8 The putchar function
  */
 #include <stdio.h>
 

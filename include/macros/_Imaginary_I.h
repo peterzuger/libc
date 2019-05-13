@@ -1,5 +1,5 @@
 /**
- * @file   macros/_Imaginary_I.h
+ * @file   include/macros/_Imaginary_I.h
  * @author Peter Züger
  * @date   08.08.2018
  * @brief  _Imaginary_I macro

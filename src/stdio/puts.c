@@ -1,8 +1,8 @@
 /**
- * @file   puts.c
+ * @file   src/stdio/puts.c
  * @author Peter Züger
  * @date   14.11.2018
- * @brief  puts() implementation
+ * @brief  7.21.7.9 The puts function
  */
 #include <stdio.h>
 

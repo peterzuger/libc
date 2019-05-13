@@ -1,8 +1,8 @@
 /**
- * @file   aligned_alloc.c
+ * @file   src/stdlib/aligned_alloc.c
  * @author Peter Züger
  * @date   18.08.2018
- * @brief  aligned_alloc() implementation
+ * @brief  7.22.3.1 The aligned_alloc function
  */
 #include <stdlib.h>
 #include "alloc.h"

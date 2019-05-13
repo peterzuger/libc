@@ -1,5 +1,5 @@
 /**
- * @file   config.h
+ * @file   include/config.h
  * @author Peter Züger
  * @date   08.02.2018
  * @brief  library configuration

@@ -1,8 +1,8 @@
 /**
- * @file   vprintf.c
+ * @file   src/stdio/vprintf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  vprintf() implementation
+ * @brief  7.21.6.10 The vprintf function
  */
 #include <stdio.h>
 #include <stdarg.h>

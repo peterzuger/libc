@@ -1,5 +1,5 @@
 /**
- * @file   types/FILE.h
+ * @file   include/types/FILE.h
  * @author Peter Züger
  * @date   17.02.2018
  * @brief  FILE structure

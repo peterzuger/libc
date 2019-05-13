@@ -1,5 +1,5 @@
 /**
- * @file   types/intmax_t.h
+ * @file   include/types/intmax_t.h
  * @author Peter Züger
  * @date   17.02.2018
  * @brief  unsigned maximum sized bit integer

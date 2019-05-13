@@ -1,8 +1,8 @@
 /**
- * @file   fprintf.c
+ * @file   src/stdio/fprintf.c
  * @author Peter Züger
  * @date   26.07.2018
- * @brief  fprintf() implementation
+ * @brief  7.21.6.1 The fprintf function
  */
 #include <stdio.h>
 #include <stdarg.h>

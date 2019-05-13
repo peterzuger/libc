@@ -1,5 +1,5 @@
 /**
- * @file   string.h
+ * @file   include/string.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  String handling

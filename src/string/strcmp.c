@@ -1,8 +1,8 @@
 /**
- * @file   strcmp.c
+ * @file   src/string/strcmp.c
  * @author Peter Züger
  * @date   22.07.2018
- * @brief  strcmp() implementation
+ * @brief  7.24.4.2 The strcmp function
  */
 #include <string.h>
 
