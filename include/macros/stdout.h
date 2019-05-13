@@ -7,7 +7,18 @@
 #ifndef STDOUT_H
 #define STDOUT_H
 
+#if defined(__cplusplus)
+extern "C"{
+#endif /* defined(__cplusplus) */
+
+
 extern FILE __stdout;
+
+
+#if defined(__cplusplus)
+}
+#endif /* defined(__cplusplus) */
+
 #define stdout (&__stdout)
 
 #endif /* STDOUT_H */

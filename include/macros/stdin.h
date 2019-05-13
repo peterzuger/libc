@@ -7,7 +7,18 @@
 #ifndef STDIN_H
 #define STDIN_H
 
+#if defined(__cplusplus)
+extern "C"{
+#endif /* defined(__cplusplus) */
+
+
 extern FILE __stdin;
+
+
+#if defined(__cplusplus)
+}
+#endif /* defined(__cplusplus) */
+
 #define stdin (&__stdin)
 
 #endif /* STDIN_H */
