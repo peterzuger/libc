@@ -25,20 +25,13 @@
 #include <macros/SEEK_END.h>
 #include <macros/SEEK_SET.h>
 #include <macros/TMP_MAX.h>
+#include <macros/stdin.h>
+#include <macros/stdout.h>
+#include <macros/stderr.h>
 
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
-
-
-extern FILE _stdin;
-extern FILE _stdout;
-extern FILE _stderr;
-
-#define stdin  (&_stdin)
-#define stdout (&_stdout)
-#define stderr (&_stderr)
-
 
 
 // 7.21.4 Operations on files

@@ -6,14 +6,14 @@
  */
 #include <stdio.h>
 
-FILE _stdin = {
+FILE __stdin = {
     .fd = 0,
 };
 
-FILE _stdout = {
+FILE __stdout = {
     .fd = 1,
 };
 
-FILE _stderr = {
+FILE __stderr = {
     .fd = 2,
 };
