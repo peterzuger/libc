@@ -4,8 +4,8 @@
  * @date   10.05.2019
  * @brief  stderr file stream
  */
-#ifndef STDERR_H
-#define STDERR_H
+#ifndef __MACROS_STDERR_H__
+#define __MACROS_STDERR_H__
 
 #if defined(__cplusplus)
 extern "C"{
@@ -21,4 +21,4 @@ extern FILE __stderr;
 
 #define stderr (&__stderr)
 
-#endif /* STDERR_H */
+#endif /* __MACROS_STDERR_H__ */

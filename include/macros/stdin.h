@@ -4,8 +4,8 @@
  * @date   10.05.2019
  * @brief  stdin file stream
  */
-#ifndef STDIN_H
-#define STDIN_H
+#ifndef __MACROS_STDIN_H__
+#define __MACROS_STDIN_H__
 
 #if defined(__cplusplus)
 extern "C"{
@@ -21,4 +21,4 @@ extern FILE __stdin;
 
 #define stdin (&__stdin)
 
-#endif /* STDIN_H */
+#endif /* __MACROS_STDIN_H__ */

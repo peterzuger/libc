@@ -4,8 +4,8 @@
  * @date   10.05.2019
  * @brief  stdout file stream
  */
-#ifndef STDOUT_H
-#define STDOUT_H
+#ifndef __MACROS_STDOUT_H__
+#define __MACROS_STDOUT_H__
 
 #if defined(__cplusplus)
 extern "C"{
@@ -21,4 +21,4 @@ extern FILE __stdout;
 
 #define stdout (&__stdout)
 
-#endif /* STDOUT_H */
+#endif /* __MACROS_STDOUT_H__ */
