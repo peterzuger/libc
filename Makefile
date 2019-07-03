@@ -73,4 +73,4 @@ $(NAME).a: $(OBJECTS)
 .PHONY: clean
 clean:
 	$(RM) -f $(OBJECTS)
-	$(RM) -f *.a
+	$(RM) -f $(NAME).a
