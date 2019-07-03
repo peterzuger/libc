@@ -1,6 +1,4 @@
-NAME     =libc
-MCPU    ?=
-FPU     ?=
+NAME     = libc
 VERBOSE ?=
 DEBUG   ?=
 
@@ -20,18 +18,18 @@ CSRC += $(wildcard src/inttypes/*.c)
 
 OBJECTS = $(CSRC:.c=.o)
 
-CC=arm-none-eabi-
-GCC     = $(Q)$(CC)gcc
-GXX     = $(Q)$(CC)g++
-CPP     = $(Q)$(CC)gcc -E
-AR      = $(Q)$(CC)ar
-AS      = $(Q)$(CC)as
-ECHO    = @echo -e
+CC   = arm-none-eabi-
+GCC  = $(Q)$(CC)gcc
+GXX  = $(Q)$(CC)g++
+CPP  = $(Q)$(CC)gcc -E
+AR   = $(Q)$(CC)ar
+AS   = $(Q)$(CC)as
+ECHO = @echo -e
 
-ifeq ($(FPU),1)
-	FPUFLAGS = -mfpu=fpv4-sp-d16 -mfloat-abi=hard
+ifeq ($(VERBOSE),1)
+	RM = rm -v
 else
-	FPUFLAGS = -mfloat-abi=soft
+	RM = @rm
 endif
 
 ifeq ($(DEBUG),1)
@@ -40,22 +38,22 @@ else
 	DBGFLAGS =
 endif
 
-DFLAGS  =
-OPTFLAGS= -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
-IFLAGS  = -Iinclude
-WFLAGS  = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
-WFLAGS += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
-WFLAGS += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
-WFLAGS += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
-WFLAGS += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
-WFLAGS += -Wsuggest-attribute=cold
-COMFLAGS= $(WFLAGS) -static -mthumb -mcpu=$(MCPU) $(FPUFLAGS) -nostartfiles -nostdlib
+DFLAGS   =
+OPTFLAGS = -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
+IFLAGS   = -Iinclude
+WFLAGS   = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
+WFLAGS  += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
+WFLAGS  += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
+WFLAGS  += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
+WFLAGS  += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
+WFLAGS  += -Wsuggest-attribute=cold
+COMFLAGS = $(WFLAGS) -static -mthumb -mcpu=$(CPU) $(FPU) -nostartfiles -nostdlib
 
-GCCFLAGS= $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
-CXXFLAGS= $(GCCFLAGS) -std=c++17 -fno-rtti -fno-exceptions -fno-threadsafe-statics
-CPPFLAGS=
-ARFLAGS =
-ASFLAGS =
+GCCFLAGS = $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
+CXXFLAGS = $(GCCFLAGS) -std=c++17 -fno-rtti -fno-exceptions -fno-threadsafe-statics
+CPPFLAGS =
+ARFLAGS  =
+ASFLAGS  =
 
 all: $(NAME).a
 
@@ -68,14 +66,11 @@ all: $(NAME).a
 	$(GXX) $(CXXFLAGS) $< -o $@
 
 $(NAME).a: $(OBJECTS)
-	@rm -f $@
+	$(RM) -f $@
 	$(ECHO) "AR\t$@"
 	$(AR)  $(ARFLAGS) rcs $@ $^
 
-
-.PHONY: clean clean_all
+.PHONY: clean
 clean:
-	@rm -f $(OBJECTS)
-
-clean_all: clean
-	@rm -f *.a
+	$(RM) -f $(OBJECTS)
+	$(RM) -f *.a

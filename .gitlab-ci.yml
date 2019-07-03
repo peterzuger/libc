@@ -2,11 +2,11 @@ image: peterzuger/manjaro-devel
 
 build:
   script:
-    - make clean && make NAME=libcm0 MCPU=cortex-m0
-    - make clean && make NAME=libcm0p MCPU=cortex-m0plus
-    - make clean && make NAME=libcm3 MCPU=cortex-m3
-    - make clean && make NAME=libcm4 MCPU=cortex-m4
-    - make clean && make NAME=libcm7 MCPU=cortex-m7
+    - make clean && make NAME=libcm0  CPU=cortex-m0
+    - make clean && make NAME=libcm0p CPU=cortex-m0plus
+    - make clean && make NAME=libcm3  CPU=cortex-m3     FPU="-mfpu=fpv4-sp-d16 -mfloat-abi=hard"
+    - make clean && make NAME=libcm4  CPU=cortex-m4     FPU="-mfpu=fpv4-sp-d16 -mfloat-abi=hard"
+    - make clean && make NAME=libcm7  CPU=cortex-m7     FPU="-mfpu=fpv4-sp-d16 -mfloat-abi=hard"
   artifacts:
     paths:
       - libcm0.a
