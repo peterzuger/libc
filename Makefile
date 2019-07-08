@@ -46,7 +46,6 @@ WFLAGS  += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
 WFLAGS  += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
 WFLAGS  += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 WFLAGS  += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
-WFLAGS  += -Wsuggest-attribute=cold
 COMFLAGS = $(WFLAGS) -static -mthumb -mcpu=$(CPU) $(FPU) -nostartfiles -nostdlib
 
 GCCFLAGS = $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
