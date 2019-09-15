@@ -1,0 +1,26 @@
+-Iinclude
+-Wall
+-Wextra
+-Wpedantic
+-Wduplicated-cond
+-Wduplicated-branches
+-Wlogical-op
+-Wnull-dereference
+-Wjump-misses-init
+-Wshadow
+-Wdouble-promotion
+-Winit-self
+-Wswitch-default
+-Wswitch-enum
+-Wunsafe-loop-optimizations
+-Wundef
+-Wconversion
+-Winline
+-Waddress
+-Wsuggest-attribute=pure
+-Wsuggest-attribute=noreturn
+-mthumb
+-mcpu=cortex-m4
+-nostartfiles
+-nostdlib
+-target arm-none-eabi
