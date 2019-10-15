@@ -22,6 +22,8 @@
 #ifndef __MACRO_CLOCKS_PER_SEC_H__
 #define __MACRO_CLOCKS_PER_SEC_H__
 
-#define CLOCKS_PER_SEC 1000
+#include <types/clock_t.h>
+
+#define CLOCKS_PER_SEC ((clock_t)1000)
 
 #endif /* __MACRO_CLOCKS_PER_SEC_H__ */
