@@ -1,5 +1,5 @@
 /**
- * @file   include/types/double_t.h
+ * @file   libc/include/types/double_t.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  double type

@@ -1,5 +1,5 @@
 /**
- * @file   include/stdatomic.h
+ * @file   libc/include/stdatomic.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Atomics

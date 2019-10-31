@@ -1,8 +1,8 @@
 /**
- * @file   src/stdlib/div.c
+ * @file   libc/src/stdlib/div.c
  * @author Peter Züger
  * @date   16.07.2018
- * @breif  7.22.6.2 The div, ldiv, and lldiv functions
+ * @brief  7.22.6.2 The div, ldiv, and lldiv functions
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2019 Peter Züger.

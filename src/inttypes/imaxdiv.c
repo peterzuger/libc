@@ -1,5 +1,5 @@
 /**
- * @file   src/inttypes/imaxdiv.c
+ * @file   libc/src/inttypes/imaxdiv.c
  * @author Peter Züger
  * @date   22.07.2018
  * @breif  7.8.2.2 The imaxdiv function

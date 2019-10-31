@@ -1,5 +1,5 @@
 /**
- * @file   src/string/memcpy.c
+ * @file   libc/src/string/memcpy.c
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  7.24.2.1 The memcpy function

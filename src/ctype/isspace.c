@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isspace.c
+ * @file   libc/src/ctype/isspace.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.10 The isspace function

@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fgets.c
+ * @file   libc/src/stdio/fgets.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.7.2 The fgets function

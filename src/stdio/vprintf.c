@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/vprintf.c
+ * @file   libc/src/stdio/vprintf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.10 The vprintf function

@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/bsearch.c
+ * @file   libc/src/stdlib/bsearch.c
  * @author Peter Züger
  * @date   16.07.2018
  * @brief  7.22.5.1 The bsearch function

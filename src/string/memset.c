@@ -1,5 +1,5 @@
 /**
- * @file   src/string/memset.c
+ * @file   libc/src/string/memset.c
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  7.24.6.1 The memset function

@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/calloc.c
+ * @file   libc/src/stdlib/calloc.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.3.2 The calloc function

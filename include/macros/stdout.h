@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/stdout.h
+ * @file   libc/include/macros/stdout.h
  * @author Peter Züger
  * @date   10.05.2019
  * @brief  stdout file stream

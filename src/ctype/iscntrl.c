@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/iscntrl.c
+ * @file   libc/src/ctype/iscntrl.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.4 The iscntrl function

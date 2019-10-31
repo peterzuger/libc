@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/printf.c
+ * @file   libc/src/stdio/printf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.3 The printf function

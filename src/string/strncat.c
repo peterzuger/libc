@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strncat.c
+ * @file   libc/src/string/strncat.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.3.2 The strncat function

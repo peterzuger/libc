@@ -1,5 +1,5 @@
 /**
- * @file   include/tgmath.h
+ * @file   libc/include/tgmath.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Type-generic math

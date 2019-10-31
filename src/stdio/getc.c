@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/getc.c
+ * @file   libc/src/stdio/getc.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.7.5 The getc function

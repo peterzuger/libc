@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/MB_CUR_MAX.h
+ * @file   libc/include/macros/MB_CUR_MAX.h
  * @author Peter Züger
  * @date   02.12.2018
  * @brief  maximum number of bytes in a multibyte character

@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/NULL.h
+ * @file   libc/include/macros/NULL.h
  * @author Peter Züger
  * @date   06.02.2018
  * @brief  Null pointer

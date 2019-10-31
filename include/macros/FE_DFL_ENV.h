@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/FE_DFL_ENV.h
+ * @file   libc/include/macros/FE_DFL_ENV.h
  * @author Peter Züger
  * @date   02.05.2019
  * @brief  Floatingpoint environment default

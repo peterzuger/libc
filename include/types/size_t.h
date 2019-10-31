@@ -1,5 +1,5 @@
 /**
- * @file   include/types/size_t.h
+ * @file   libc/include/types/size_t.h
  * @author Peter Züger
  * @date   05.02.2018
  * @brief  return type of sizeof

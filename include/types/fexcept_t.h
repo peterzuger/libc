@@ -1,5 +1,5 @@
 /**
- * @file   include/types/fexcept_t.h
+ * @file   libc/include/types/fexcept_t.h
  * @author Peter Züger
  * @date   16.12.2018
  * @brief  floating-point status flags

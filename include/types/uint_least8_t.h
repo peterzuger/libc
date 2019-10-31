@@ -1,5 +1,5 @@
 /**
- * @file   include/types/uint_least8_t.h
+ * @file   libc/include/types/uint_least8_t.h
  * @author Peter Züger
  * @date   08.04.2018
  * @brief  unsigned least 8 bit integer

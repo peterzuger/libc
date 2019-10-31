@@ -1,5 +1,5 @@
 /**
- * @file   include/wctype.h
+ * @file   libc/include/wctype.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Wide character classification and mapping utilities

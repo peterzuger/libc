@@ -1,5 +1,5 @@
 /**
- * @file   include/inttypes.h
+ * @file   libc/include/inttypes.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Format conversion of integer types

@@ -1,5 +1,5 @@
 /**
- * @file   include/signal.h
+ * @file   libc/include/signal.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Signal handling

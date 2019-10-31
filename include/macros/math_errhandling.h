@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/math_errhandling.h
+ * @file   libc/include/macros/math_errhandling.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  math error handling

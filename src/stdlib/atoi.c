@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/atoi.c
+ * @file   libc/src/stdlib/atoi.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.1.2 The atoi, atol, and atoll functions

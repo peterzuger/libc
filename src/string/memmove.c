@@ -1,5 +1,5 @@
 /**
- * @file   src/string/memmove.c
+ * @file   libc/src/string/memmove.c
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  7.24.2.2 The memmove function

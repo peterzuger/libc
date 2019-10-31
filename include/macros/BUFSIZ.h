@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/BUFSIZE.h
+ * @file   libc/include/macros/BUFSIZE.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  setbuf buffer size

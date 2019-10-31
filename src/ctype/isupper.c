@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isupper.c
+ * @file   libc/src/ctype/isupper.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.11 The isupper function

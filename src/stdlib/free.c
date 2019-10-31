@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/free.c
+ * @file   libc/src/stdlib/free.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.3.3 The free function

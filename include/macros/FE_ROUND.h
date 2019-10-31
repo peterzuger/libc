@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/FE_ROUND.h
+ * @file   libc/include/macros/FE_ROUND.h
  * @author Peter Züger
  * @date   02.05.2019
  * @brief  Floatingpoint environment rounding styles

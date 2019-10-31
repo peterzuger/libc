@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/SIG_IGN.h
+ * @file   libc/include/macros/SIG_IGN.h
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  ignore signal

@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strncmp.c
+ * @file   libc/src/string/strncmp.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.4.4 The strncmp function

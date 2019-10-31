@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/SIG_DFL.h
+ * @file   libc/include/macros/SIG_DFL.h
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  default signal handling

@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/INFINITY.h
+ * @file   libc/include/macros/INFINITY.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  infinity

@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/ispunct.c
+ * @file   libc/src/ctype/ispunct.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.9 The ispunct function

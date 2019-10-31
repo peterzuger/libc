@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/scanf.c
+ * @file   libc/src/stdio/scanf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.4 The scanf function

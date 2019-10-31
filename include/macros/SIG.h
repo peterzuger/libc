@@ -1,5 +1,5 @@
 /**
- * @file   SIG.h
+ * @file   libc/include/macros/SIG.h
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  signals

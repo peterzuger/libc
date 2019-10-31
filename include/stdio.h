@@ -1,5 +1,5 @@
 /**
- * @file   include/stdio.h
+ * @file   libc/include/stdio.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Input/output

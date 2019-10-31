@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/stderr.h
+ * @file   libc/include/macros/stderr.h
  * @author Peter Züger
  * @date   10.05.2019
  * @brief  stderr file stream

@@ -1,8 +1,8 @@
 /**
- * @file   src/stdlib/abs.c
+ * @file   libc/src/stdlib/abs.c
  * @author Peter Züger
  * @date   16.07.2018
- * @breif  7.22.6.1 The abs, labs and llabs functions
+ * @brief  7.22.6.1 The abs, labs and llabs functions
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2019 Peter Züger.

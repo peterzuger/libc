@@ -1,5 +1,5 @@
 /**
- * @file   include/float.h
+ * @file   libc/include/float.h
  * @author Peter Züger
  * @date   28.01.2018
  * @note   part of the freestanding headers

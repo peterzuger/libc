@@ -1,5 +1,5 @@
 /**
- * @file   include/assert.h
+ * @file   libc/include/assert.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Diagnostics

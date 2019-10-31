@@ -1,5 +1,5 @@
 /**
- * @file   src/complex/creal.c
+ * @file   libc/src/complex/creal.c
  * @author Peter Züger
  * @date   12.07.2018
  * @brief  7.3.9.6 The creal functions

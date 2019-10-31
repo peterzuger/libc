@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fputs.c
+ * @file   libc/src/stdio/fputs.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.7.4 The fputs function

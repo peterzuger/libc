@@ -1,5 +1,5 @@
 /**
- * @file   include/types/fpos_t.h
+ * @file   libc/include/types/fpos_t.h
  * @author Peter Züger
  * @date   23.07.2018
  * @brief  position in FILE

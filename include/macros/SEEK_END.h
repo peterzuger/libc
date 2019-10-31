@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/SEEK_END.h
+ * @file   libc/include/macros/SEEK_END.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  fseek() position

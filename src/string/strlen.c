@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strlen.c
+ * @file   libc/src/string/strlen.c
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  7.24.6.3 The strlen function

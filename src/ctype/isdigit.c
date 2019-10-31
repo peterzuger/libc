@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isdigit.c
+ * @file   libc/src/ctype/isdigit.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.5 The isdigit function

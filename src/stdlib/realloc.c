@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/realloc.c
+ * @file   libc/src/stdlib/realloc.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.3.5 The realloc function

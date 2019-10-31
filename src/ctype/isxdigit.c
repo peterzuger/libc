@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isxdigit.c
+ * @file   libc/src/ctype/isxdigit.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.12 The isxdigit function

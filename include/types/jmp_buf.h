@@ -1,5 +1,5 @@
 /**
- * @file   include/types/jmp_buf.h
+ * @file   libc/include/types/jmp_buf.h
  * @author Peter Züger
  * @date   13.05.2019
  * @brief  longjump buffer

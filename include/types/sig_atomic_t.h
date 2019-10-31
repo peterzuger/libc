@@ -1,5 +1,5 @@
 /**
- * @file   include/types/sig_atomic_t.h
+ * @file   libc/include/types/sig_atomic_t.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  atomic accessible type

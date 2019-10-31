@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/stdfiles.c
+ * @file   libc/src/stdio/stdfiles.c
  * @author Peter Züger
  * @date   01.12.2018
  * @brief  stdio files

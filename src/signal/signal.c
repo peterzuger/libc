@@ -1,5 +1,5 @@
 /**
- * @file   signal.c
+ * @file   libc/src/signal/signal.c
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  7.14.1.1  The signal function implementation

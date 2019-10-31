@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strncpy.c
+ * @file   libc/src/string/strncpy.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.2.4 The strncpy function

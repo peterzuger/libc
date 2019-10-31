@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strcspn.c
+ * @file   libc/src/string/strcspn.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.5.3 The strcspn function

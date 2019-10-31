@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/imaginary.h
+ * @file   libc/include/macros/imaginary.h
  * @author Peter Züger
  * @date   08.08.2018
  * @brief  imaginary macro

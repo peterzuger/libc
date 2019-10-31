@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isgraph.c
+ * @file   libc/src/ctype/isgraph.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.6 The isgraph function

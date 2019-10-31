@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fwrite.c
+ * @file   libc/src/stdio/fwrite.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.8.2 The fwrite function

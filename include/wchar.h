@@ -1,5 +1,5 @@
 /**
- * @file   include/wchar.h
+ * @file   libc/include/wchar.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Extended multibyte and wide character utilities

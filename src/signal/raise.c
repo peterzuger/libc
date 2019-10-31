@@ -1,5 +1,5 @@
 /**
- * @file   raise.c
+ * @file   libc/src/signal/raise.c
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  7.14.2.1  The raise function implementation

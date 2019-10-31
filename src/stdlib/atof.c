@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/atof.c
+ * @file   libc/src/stdlib/atof.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.1.1 The atof function

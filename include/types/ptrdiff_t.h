@@ -1,5 +1,5 @@
 /**
- * @file   include/types/ptrdiff_t.h
+ * @file   libc/include/types/ptrdiff_t.h
  * @author Peter Züger
  * @date   06.02.2018
  * @brief  ptrdiff_t type

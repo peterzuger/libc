@@ -1,5 +1,5 @@
 /**
- * @file   include/types/tm.h
+ * @file   libc/include/types/tm.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  time structure

@@ -1,5 +1,5 @@
 /**
- * @file   include/stdbool.h
+ * @file   libc/include/stdbool.h
  * @author Peter Züger
  * @date   28.01.2018
  * @note   part of the freestanding headers

@@ -1,5 +1,5 @@
 /**
- * @file   include/types/wctrans_t.h
+ * @file   libc/include/types/wctrans_t.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  wide character transformation

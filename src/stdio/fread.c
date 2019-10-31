@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fread.c
+ * @file   libc/src/stdio/fread.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.8.1 The fread function

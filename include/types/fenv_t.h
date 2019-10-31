@@ -1,5 +1,5 @@
 /**
- * @file   include/types/fenv_t.h
+ * @file   libc/include/types/fenv_t.h
  * @author Peter Züger
  * @date   16.12.2018
  * @brief  floating-point environment

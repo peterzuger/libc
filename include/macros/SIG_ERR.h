@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/SIG_ERR.h
+ * @file   libc/include/macros/SIG_ERR.h
  * @author Peter Züger
  * @date   09.10.2019
  * @brief  error return from signal

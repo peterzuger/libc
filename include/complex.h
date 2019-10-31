@@ -1,5 +1,5 @@
 /**
- * @file   include/complex.h
+ * @file   libc/include/complex.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Complex arithmetic

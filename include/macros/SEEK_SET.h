@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/SEEK_SET.h
+ * @file   libc/include/macros/SEEK_SET.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  fseek() position

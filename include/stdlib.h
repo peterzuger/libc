@@ -1,5 +1,5 @@
 /**
- * @file   include/stdlib.h
+ * @file   libc/include/stdlib.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  General utilities

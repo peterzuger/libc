@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/snprintf.c
+ * @file   libc/src/stdio/snprintf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.5 The snprintf function

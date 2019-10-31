@@ -1,5 +1,5 @@
 /**
- * @file   include/types/time_t.h
+ * @file   libc/include/types/time_t.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  unix time type

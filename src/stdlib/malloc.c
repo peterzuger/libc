@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/malloc.c
+ * @file   libc/src/stdlib/malloc.c
  * @author Peter Züger
  * @date   18.08.2018
  * @brief  7.22.3.4 The malloc function

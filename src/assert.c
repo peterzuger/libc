@@ -1,5 +1,5 @@
 /**
- * @file   src/assert.c
+ * @file   libc/src/assert.c
  * @author Peter Züger
  * @date   08.02.2018
  * @brief  7.2.1.1 The assert macro

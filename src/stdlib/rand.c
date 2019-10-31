@@ -1,5 +1,5 @@
 /**
- * @file   src/stdlib/rand.c
+ * @file   libc/src/stdlib/rand.c
  * @author Peter Züger
  * @date   08.02.2018
  * @brief  7.22.2.1 The rand function

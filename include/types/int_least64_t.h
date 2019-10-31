@@ -1,5 +1,5 @@
 /**
- * @file   include/types/int_least64_t.h
+ * @file   libc/include/types/int_least64_t.h
  * @author Peter Züger
  * @date   08.04.2018
  * @brief  signed least 64 bit integer

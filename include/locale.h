@@ -1,5 +1,5 @@
 /**
- * @file   include/locale.h
+ * @file   libc/include/locale.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Localization

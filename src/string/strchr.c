@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strchr.c
+ * @file   libc/src/string/strchr.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.5.2 The strchr function

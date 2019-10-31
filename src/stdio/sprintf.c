@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/sprintf.c
+ * @file   libc/src/stdio/sprintf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.6 The sprintf function

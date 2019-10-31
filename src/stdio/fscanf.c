@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fscanf.c
+ * @file   libc/src/stdio/fscanf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.2 The fscanf function

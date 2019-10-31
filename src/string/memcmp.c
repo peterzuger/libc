@@ -1,5 +1,5 @@
 /**
- * @file   src/string/memcmp.c
+ * @file   libc/src/string/memcmp.c
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  7.24.4.1 The memcmp function

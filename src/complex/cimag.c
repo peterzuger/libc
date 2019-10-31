@@ -1,5 +1,5 @@
 /**
- * @file   src/complex/cimag.c
+ * @file   libc/src/complex/cimag.c
  * @author Peter Züger
  * @date   12.07.2018
  * @brief  7.3.9.2 The cimag functions

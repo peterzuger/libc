@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/puts.c
+ * @file   libc/src/stdio/puts.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.7.9 The puts function

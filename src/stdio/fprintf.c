@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/fprintf.c
+ * @file   libc/src/stdio/fprintf.c
  * @author Peter Züger
  * @date   26.07.2018
  * @brief  7.21.6.1 The fprintf function

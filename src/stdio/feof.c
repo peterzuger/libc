@@ -1,5 +1,5 @@
 /**
- * @file   src/stdio/feof.c
+ * @file   libc/src/stdio/feof.c
  * @author Peter Züger
  * @date   14.11.2018
  * @brief  7.21.10.2 The feof function

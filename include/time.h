@@ -1,5 +1,5 @@
 /**
- * @file   include/time.h
+ * @file   libc/include/time.h
  * @author Peter Züger
  * @date   07.02.2018
  * @brief  Date and time

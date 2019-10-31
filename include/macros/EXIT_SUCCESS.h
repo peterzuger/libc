@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/EXIT_SUCCESS.h
+ * @file   libc/include/macros/EXIT_SUCCESS.h
  * @author Peter Züger
  * @date   02.12.2018
  * @brief  successful program termination exit(EXIT_SUCCESS)

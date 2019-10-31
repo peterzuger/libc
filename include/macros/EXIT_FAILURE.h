@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/EXIT_FAILURE.h
+ * @file   libc/include/macros/EXIT_FAILURE.h
  * @author Peter Züger
  * @date   02.12.2018
  * @brief  unsuccessful program termination exit(EXIT_FAILURE)

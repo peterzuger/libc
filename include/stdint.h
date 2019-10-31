@@ -1,5 +1,5 @@
 /**
- * @file   include/stdint.h
+ * @file   libc/include/stdint.h
  * @author Peter Züger
  * @date   28.01.2018
  * @note   part of the freestanding headers

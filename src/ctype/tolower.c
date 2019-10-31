@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/tolower.c
+ * @file   libc/src/ctype/tolower.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.2.1 The tolower function

@@ -1,5 +1,5 @@
 /**
- * @file   include/types/int_fast32_t.h
+ * @file   libc/include/types/int_fast32_t.h
  * @author Peter Züger
  * @date   08.04.2018
  * @brief  signed fast 32 bit integer

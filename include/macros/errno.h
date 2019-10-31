@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/errno.h
+ * @file   libc/include/macros/errno.h
  * @author Peter Züger
  * @date   13.05.2019
  * @brief  errno

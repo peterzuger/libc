@@ -1,5 +1,5 @@
 /**
- * @file   src/ctype/isblank.c
+ * @file   libc/src/ctype/isblank.c
  * @author Peter Züger
  * @date   09.08.2018
  * @brief  7.4.1.3 The isblank function

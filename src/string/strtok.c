@@ -1,5 +1,5 @@
 /**
- * @file   src/string/strtok.c
+ * @file   libc/src/string/strtok.c
  * @author Peter Züger
  * @date   25.07.2018
  * @brief  7.24.5.8 The strtok function

@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/FP_FAST_FMAF.h
+ * @file   libc/include/macros/FP_FAST_FMAF.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  fmaf() speed

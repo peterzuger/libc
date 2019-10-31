@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/MATH_ERREXCEPT.h
+ * @file   libc/include/macros/MATH_ERREXCEPT.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  math error handling

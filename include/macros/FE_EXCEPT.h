@@ -1,5 +1,5 @@
 /**
- * @file   include/macros/FE_EXCEPT.h
+ * @file   libc/include/macros/FE_EXCEPT.h
  * @author Peter Züger
  * @date   22.07.2018
  * @brief  Floation Point environment exceptions
