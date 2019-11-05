@@ -42,22 +42,22 @@
 
 // 7.12.3 Classification macros
 #if !defined(__cplusplus)
-# define fpclassify(x)        ()
-# define isfinite(x)          ()
-# define isinf(x)             ()
-# define isnan(x)             ()
-# define isnormal(x)          ()
-# define signbit(x)           ()
+# define fpclassify(x)        __builtin_fpclassify(x)
+# define isfinite(x)          __builtin_isfinite(x)
+# define isinf(x)             __builtin_isinf(x)
+# define isnan(x)             __builtin_isnan(x)
+# define isnormal(x)          __builtin_isnormal(x)
+# define signbit(x)           __builtin_signbit(x)
 #endif /* !defined(__cplusplus) */
 
 // 7.12.14 Comparison macros
 #if !defined(__cplusplus)
-# define isgreater(x,y)       ()
-# define isgreaterequal(x,y)  ()
-# define isless(x,y)          ()
-# define islessequal(x,y)     ()
-# define islessgreater(x,y)   ()
-# define isunordered(x,y)     ()
+# define isgreater(x,y)       __builtin_isgreater(x, y)
+# define isgreaterequal(x,y)  __builtin_isgreaterequal(x, y)
+# define isless(x,y)          __builtin_isless(x, y)
+# define islessequal(x,y)     __builtin_islessequal(x, y)
+# define islessgreater(x,y)   __builtin_islessgreater(x, y)
+# define isunordered(x,y)     __builtin_isunordered(x, y)
 #endif /* !defined(__cplusplus) */
 
 #if defined(__cplusplus)
