@@ -20,11 +20,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdlib.h>
+#include <stdnoreturn.h>
 
 /**
  * this executes a illegal instruction which triggers the NMI handler
  */
-_Noreturn void abort(){
+noreturn void abort(){
     __asm volatile (".word 0xe7f0def0\n"); /** arm+thumb illegal instruction */
     __asm volatile (".short 0xde00\n");    /** thumb illegal instruction */
     __asm volatile (".word 0xe7f000f0\n"); /** arm illegal instruction */

@@ -20,8 +20,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdlib.h>
+#include <stdnoreturn.h>
 
-__attribute__((noreturn)) void _Exit(int status){
+noreturn void _Exit(int status){
     (void)status;
     abort();
     __builtin_unreachable();

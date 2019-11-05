@@ -22,6 +22,8 @@
 #ifndef __ASSERT_H__
 #define __ASSERT_H__
 
+#include <stdnoreturn.h>
+
 #if defined(NDEBUG)
 # define assert(ignore) ((void)0)
 #else
@@ -37,8 +39,8 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-__attribute__((noreturn)) void __assert(const char* expr,const char* file,
-                                        const char* line,const char* func);
+noreturn void __assert(const char* expr,const char* file,
+                       const char* line,const char* func);
 
 
 #if defined(__cplusplus)

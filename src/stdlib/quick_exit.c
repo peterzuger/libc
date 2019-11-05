@@ -20,11 +20,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdlib.h>
+#include <stdnoreturn.h>
 
 extern void(*__at_quick_exit_functions[32])(void);
 extern unsigned int __at_quick_exit_function_count;
 
-__attribute__((noreturn)) void quick_exit(int status){
+noreturn void quick_exit(int status){
     for(; __at_quick_exit_function_count;)
         __at_quick_exit_functions[--__at_quick_exit_function_count]();
     abort();

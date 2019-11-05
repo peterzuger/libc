@@ -22,6 +22,8 @@
 #ifndef __SETJMP_H__
 #define __SETJMP_H__
 
+#include <stdnoreturn.h>
+
 #include <types/jmp_buf.h>
 
 // 7.13.1 Save calling environment
@@ -34,7 +36,7 @@ extern "C"{
 
 
 // 7.13.2 Restore calling environment
-__attribute__((noreturn)) void longjmp(jmp_buf env, int val);
+noreturn void longjmp(jmp_buf env, int val);
 
 
 #if defined(__cplusplus)

@@ -22,6 +22,8 @@
 #ifndef __STDLIB_H__
 #define __STDLIB_H__
 
+#include <stdnoreturn.h>
+
 #include <types/size_t.h>
 #include <types/wchar_t.h>
 #include <types/div_t.h>
@@ -70,13 +72,13 @@ void* realloc(void* ptr, size_t size);
 
 
 // 7.22.4 Communication with the environment
-__attribute__((noreturn)) void abort(void);
+noreturn void abort(void);
 int atexit(void (*func)(void));
 int at_quick_exit(void (*func)(void));
-__attribute__((noreturn)) void exit(int status);
-__attribute__((noreturn)) void _Exit(int status);
+noreturn void exit(int status);
+noreturn void _Exit(int status);
 char* getenv(const char* name);
-__attribute__((noreturn)) void quick_exit(int status);
+noreturn void quick_exit(int status);
 int system(const char *string);
 
 

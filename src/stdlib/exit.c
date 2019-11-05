@@ -20,11 +20,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdlib.h>
+#include <stdnoreturn.h>
 
 extern void(*__atexit_functions[32])(void);
 extern unsigned int __atexit_function_count;
 
-__attribute__((noreturn)) void exit(int status){
+noreturn void exit(int status){
     for(; __atexit_function_count;)
         __atexit_functions[--__atexit_function_count]();
     abort();
