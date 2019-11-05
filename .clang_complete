@@ -23,4 +23,4 @@
 -mcpu=cortex-m4
 -nostartfiles
 -nostdlib
--target arm-none-eabi
+--target=arm-none-eabi
