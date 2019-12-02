@@ -1,6 +1,6 @@
-NAME     = libc
-VERBOSE ?=
-DEBUG   ?=
+TARGET_NAME = libc
+VERBOSE    ?=
+DEBUG      ?=
 
 ifeq ($(VERBOSE),1)
 	Q =
@@ -54,7 +54,7 @@ CPPFLAGS =
 ARFLAGS  =
 ASFLAGS  =
 
-all: $(NAME).a
+all: $(TARGET_NAME).a
 
 %.o: %.c
 	$(ECHO) "GCC\t$@"
@@ -64,7 +64,7 @@ all: $(NAME).a
 	$(ECHO) "G++\t$@"
 	$(GXX) $(CXXFLAGS) $< -o $@
 
-$(NAME).a: $(OBJECTS)
+$(TARGET_NAME).a: $(OBJECTS)
 	$(RM) -f $@
 	$(ECHO) "AR\t$@"
 	$(AR)  $(ARFLAGS) rcs $@ $^
@@ -72,4 +72,4 @@ $(NAME).a: $(OBJECTS)
 .PHONY: clean
 clean:
 	$(RM) -f $(OBJECTS)
-	$(RM) -f $(NAME).a
+	$(RM) -f $(TARGET_NAME).a
