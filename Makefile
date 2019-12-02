@@ -1,6 +1,10 @@
-TARGET_NAME = libc
-VERBOSE    ?=
-DEBUG      ?=
+TARGET_NAME ?= libc
+VERBOSE     ?=
+DEBUG       ?=
+
+EXCEPTIONS ?=
+RTTI       ?=
+THREADING  ?=
 
 ifeq ($(VERBOSE),1)
 	Q =
@@ -42,17 +46,37 @@ DFLAGS   =
 OPTFLAGS = -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
 IFLAGS   = -Iinclude
 WFLAGS   = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
-WFLAGS  += -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow
+WFLAGS  += -Wlogical-op -Wnull-dereference -Wshadow
 WFLAGS  += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
 WFLAGS  += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
 WFLAGS  += -Waddress -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
+CWFLAGS  = -Wjump-misses-init
 COMFLAGS = $(WFLAGS) -static -mthumb -mcpu=$(CPU) $(FPU) -nostartfiles -nostdlib
+COMFLAGS += $(OPTFLAGS) $(IFLAGS) $(DFLAGS)
 
-GCCFLAGS = $(OPTFLAGS) $(IFLAGS) $(COMFLAGS) $(DFLAGS) -c
-CXXFLAGS = $(GCCFLAGS) -std=c++17 -fno-rtti -fno-exceptions -fno-threadsafe-statics
+GCCFLAGS = $(COMFLAGS) -c $(CWFLAGS)
+CXXFLAGS = $(COMFLAGS) -c -std=c++17
 CPPFLAGS =
 ARFLAGS  =
 ASFLAGS  =
+
+ifeq ($(EXCEPTIONS), 1)
+	CXXFLAGS +=
+else
+	CXXFLAGS += -fno-exceptions
+endif
+
+ifeq ($(RTTI), 1)
+	CXXFLAGS +=
+else
+	CXXFLAGS += -fno-rtti
+endif
+
+ifeq ($(THREADING), 1)
+	CXXFLAGS +=
+else
+	CXXFLAGS += -fno-threadsafe-statics
+endif
 
 all: $(TARGET_NAME).a
 
