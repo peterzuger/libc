@@ -36,7 +36,7 @@ extern "C"{
 
 
 // 7.13.2 Restore calling environment
-noreturn void longjmp(jmp_buf env, int val);
+_Noreturn void longjmp(jmp_buf env, int val);
 
 
 #if defined(__cplusplus)

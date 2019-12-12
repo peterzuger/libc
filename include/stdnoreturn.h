@@ -23,6 +23,10 @@
 #ifndef __STDNORETURN_H__
 #define __STDNORETURN_H__
 
-#define noreturn _Noreturn
+#if defined(__cplusplus)
+# define _Noreturn [[noreturn]]
+#else
+# define noreturn _Noreturn
+#endif /* defined(__cplusplus) */
 
 #endif /* __STDNORETURN_H__ */

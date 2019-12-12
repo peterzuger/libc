@@ -72,13 +72,13 @@ void* realloc(void* ptr, size_t size);
 
 
 // 7.22.4 Communication with the environment
-noreturn void abort(void);
+_Noreturn void abort(void);
 int atexit(void (*func)(void));
 int at_quick_exit(void (*func)(void));
-noreturn void exit(int status);
-noreturn void _Exit(int status);
+_Noreturn void exit(int status);
+_Noreturn void _Exit(int status);
 char* getenv(const char* name);
-noreturn void quick_exit(int status);
+_Noreturn void quick_exit(int status);
 int system(const char *string);
 
 
