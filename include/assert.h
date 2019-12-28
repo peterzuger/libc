@@ -39,7 +39,7 @@ extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-noreturn void __assert(const char* expr,const char* file,
+_Noreturn void __assert(const char* expr,const char* file,
                        const char* line,const char* func);
 
 

@@ -25,7 +25,7 @@
 extern void(*__atexit_functions[32])(void);
 extern unsigned int __atexit_function_count;
 
-noreturn void exit(int status){
+_Noreturn void exit(int status){
     for(; __atexit_function_count;)
         __atexit_functions[--__atexit_function_count]();
     abort();

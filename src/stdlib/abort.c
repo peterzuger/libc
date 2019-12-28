@@ -25,7 +25,7 @@
 /**
  * this executes a illegal instruction which triggers the NMI handler
  */
-noreturn void abort(){
+_Noreturn void abort(){
     __asm volatile (".word 0xe7f0def0\n"); /** arm+thumb illegal instruction */
     __asm volatile (".short 0xde00\n");    /** thumb illegal instruction */
     __asm volatile (".word 0xe7f000f0\n"); /** arm illegal instruction */

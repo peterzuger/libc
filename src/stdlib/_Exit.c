@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <stdnoreturn.h>
 
-noreturn void _Exit(int status){
+_Noreturn void _Exit(int status){
     (void)status;
     abort();
     __builtin_unreachable();
