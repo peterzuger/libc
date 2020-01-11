@@ -23,6 +23,9 @@
 #ifndef __STDINT_H__
 #define __STDINT_H__
 
+#include <types/int128_t.h>
+#include <types/uint128_t.h>
+
 #include <types/int64_t.h>
 #include <types/uint64_t.h>
 #include <types/int_least64_t.h>
