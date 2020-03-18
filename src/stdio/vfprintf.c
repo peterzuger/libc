@@ -218,6 +218,39 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             break;
 
         case 's':  // string                       --
+            if(length != LONG){// no l specifier
+                char* str = va_arg(arg, char*);
+                if(precision > 0){
+                    while(*str && precision){
+                        precision--;
+                        if(fputc(*str++, stream) == EOF)
+                            return EOF;
+                        num_chars++;
+                    }
+                }else{
+                    while(*str){
+                        if(fputc(*str++, stream) == EOF)
+                            return EOF;
+                        num_chars++;
+                    }
+                }
+            }else{
+                wchar_t* wstr = va_arg(arg, wchar_t*);
+                mbstate_t mb = {0};
+                char str[MB_CUR_MAX];
+                size_t n, m;
+                while(*wstr){
+                    m = wcrtomb(str, *wstr++, &mb);
+                    if(m == ((size_t)-1))
+                        return EOF;
+                    n = 0;
+                    while(n < m){
+                        if(fputc(str[n++],stream) == EOF)
+                            return EOF;
+                        num_chars++;
+                    }
+                }
+            }
             break;
 
         case 'p':  // pointer                      -- 0x01ABCDEF
