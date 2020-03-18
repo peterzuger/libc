@@ -64,8 +64,9 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
 
         // handle %%
         if(*format == '%'){
-            format++;
-            fputc('%', stream);
+            format++, num_chars++;
+            if(fputc('%', stream) == EOF)
+                return EOF;
             continue;
         }
 
