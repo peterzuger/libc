@@ -206,6 +206,15 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             break;
 
         case 'c':  // character                    --
+            if(length != LONG){// no l specifier
+                int x = va_arg(arg, int);
+                if(fputc((unsigned char)x, stream) == EOF)
+                    return EOF;
+                num_chars++;
+            }else{
+                wint_t x = va_arg(arg, wint_t);
+                (void)x;// TODO
+            }
             break;
 
         case 's':  // string                       --
