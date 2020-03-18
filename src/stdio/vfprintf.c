@@ -215,6 +215,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             break;
 
         case 'n':  // number of characters written so far
+            *va_arg(arg, int*) = num_chars;
             break;
 
         default:
