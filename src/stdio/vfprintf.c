@@ -52,7 +52,8 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
     while(*format){
         // write everything up to the next % sign
         for(; *format && ( *format != '%' ); format++, num_chars++)
-            fputc(*format, stream);
+            if(fputc(*format, stream) == EOF)
+                return EOF;
 
         // if string has ended just exit
         if(!*format)
