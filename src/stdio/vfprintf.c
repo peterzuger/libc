@@ -172,11 +172,6 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             break;
         }
 
-        (void)flags;
-        (void)width;
-        (void)precision;
-        (void)length;
-
         // conversion specifier
         switch(*format){
         case 'd':  // int as decimal               -- [-]dddd
