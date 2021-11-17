@@ -21,8 +21,8 @@
  */
 #include <stdlib.h>
 
-static void(*__atexit_functions[32])(void);
-static unsigned int __atexit_function_count = 0;
+void(*__atexit_functions[32])(void);
+unsigned int __atexit_function_count = 0;
 
 int atexit(void (*func)(void)){
     if(__atexit_function_count >= 32)

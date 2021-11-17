@@ -21,8 +21,8 @@
  */
 #include <stdlib.h>
 
-static void(*__at_quick_exit_functions[32])(void);
-static unsigned int __at_quick_exit_function_count = 0;
+void(*__at_quick_exit_functions[32])(void);
+unsigned int __at_quick_exit_function_count = 0;
 
 int at_quick_exit(void (*func)(void)){
     if(__at_quick_exit_function_count >= 32)
