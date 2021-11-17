@@ -1,11 +1,11 @@
 /**
- * @file   libc/src/stdlib/_Exit.c
+ * @file   libc/src/sys/none/_exit.c
  * @author Peter Züger
- * @date   18.10.2019
- * @brief  7.22.4.5  The _Exit function
+ * @date   17.11.2021
+ * @brief  _exit syscall stub for NOSYS
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
- * Copyright (c) 2019 Peter Züger.
+ * Copyright (c) 2021 Peter Züger.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,11 +19,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+#include <errno.h>
 #include <stdlib.h>
-#include <stdnoreturn.h>
+
 #include <syscall.h>
 
-_Noreturn void _Exit(int status){
-    _exit(status);
-    __builtin_unreachable();
+__attribute__((weak)) void _exit(int){
+    for(;;);
 }
