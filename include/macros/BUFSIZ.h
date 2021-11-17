@@ -1,5 +1,5 @@
 /**
- * @file   libc/include/macros/BUFSIZE.h
+ * @file   libc/include/macros/BUFSIZ.h
  * @author Peter Züger
  * @date   24.07.2018
  * @brief  setbuf buffer size
@@ -19,9 +19,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __MACRO_BUFSIZE_H__
-#define __MACRO_BUFSIZE_H__
+#ifndef __MACRO_BUFSIZ_H__
+#define __MACRO_BUFSIZ_H__
 
-#define BUFSIZE 256
+#define BUFSIZ 512
 
-#endif /* __MACRO_BUFSIZE_H__ */
+#endif /* __MACRO_BUFSIZ_H__ */
