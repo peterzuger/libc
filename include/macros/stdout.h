@@ -22,18 +22,20 @@
 #ifndef __MACROS_STDOUT_H__
 #define __MACROS_STDOUT_H__
 
+#include <types/FILE.h>
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-extern FILE __stdout;
+extern FILE* __stdout;
 
 
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
 
-#define stdout (&__stdout)
+#define stdout (__stdout)
 
 #endif /* __MACROS_STDOUT_H__ */

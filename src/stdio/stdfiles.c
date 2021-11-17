@@ -21,14 +21,8 @@
  */
 #include <stdio.h>
 
-FILE __stdin = {
-    .fd = 0,
-};
 
-FILE __stdout = {
-    .fd = 1,
-};
 
-FILE __stderr = {
-    .fd = 2,
-};
+FILE* __stdin;
+FILE* __stdout;
+FILE* __stderr;

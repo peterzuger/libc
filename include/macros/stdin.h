@@ -22,18 +22,20 @@
 #ifndef __MACROS_STDIN_H__
 #define __MACROS_STDIN_H__
 
+#include <types/FILE.h>
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-extern FILE __stdin;
+extern FILE* __stdin;
 
 
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
 
-#define stdin (&__stdin)
+#define stdin (__stdin)
 
 #endif /* __MACROS_STDIN_H__ */

@@ -22,18 +22,20 @@
 #ifndef __MACROS_STDERR_H__
 #define __MACROS_STDERR_H__
 
+#include <types/FILE.h>
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-extern FILE __stderr;
+extern FILE* __stderr;
 
 
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
 
-#define stderr (&__stderr)
+#define stderr (__stderr)
 
 #endif /* __MACROS_STDERR_H__ */
