@@ -27,7 +27,7 @@
 #if defined(NDEBUG)
 # define assert(ignore) ((void)0)
 #else
-# define assert(a) (a?:__assert(#a,__FILE__,__LINE__,__PRETTY_FUNCTION__))
+# define assert(a) (a ? : __assert(#a, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #endif /* defined(NDEBUG) */
 
 #if !defined(__cplusplus)
