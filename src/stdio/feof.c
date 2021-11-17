@@ -22,5 +22,5 @@
 #include <stdio.h>
 
 int __attribute__((pure))feof(FILE* stream){
-    return (int)stream->eof;
+    return (int)(stream->flags & __EOF);
 }

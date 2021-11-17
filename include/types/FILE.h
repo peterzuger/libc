@@ -22,11 +22,29 @@
 #ifndef __TYPE_FILE_H__
 #define __TYPE_FILE_H__
 
+#include <types/size_t.h>
+
 #if !defined(__FILE_DEFINED__)
 # define __FILE_DEFINED__
+# define __READ   ((int)(0 << 0))
+# define __WRITE  ((int)(0 << 1))
+# define __IOLBF  ((int)(0 << 2))
+# define __MALLOC ((int)(0 << 3))
+# define __EOF    ((int)(0 << 4))
+# define __ERR    ((int)(0 << 5))
+# define __APPEND ((int)(0 << 6))
+
+struct __fbuf{
+    char*  p;
+    size_t len;
+    size_t pos;
+};
+
 typedef struct{
-    int    fd;
-    char   eof;
+    int           fd;
+    int           flags;
+    struct __fbuf buf;
+    char          cbuf[1];
 }FILE;
 #endif /* !defined(__FILE_DEFINED__) */
 
