@@ -22,18 +22,6 @@
 #ifndef __MACROS_SIG_DFL_H__
 #define __MACROS_SIG_DFL_H__
 
-#if defined(__cplusplus)
-extern "C"{
-#endif /* defined(__cplusplus) */
-
-
-void __signal_handler_default(int);
-
-
-#if defined(__cplusplus)
-}
-#endif /* defined(__cplusplus) */
-
-#define SIG_DFL (__signal_handler_default)
+#define SIG_DFL ((void(*)(int))0)
 
 #endif /* __MACROS_SIG_DFL_H__ */

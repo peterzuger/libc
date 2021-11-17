@@ -22,18 +22,6 @@
 #ifndef __MACROS_SIG_IGN_H__
 #define __MACROS_SIG_IGN_H__
 
-#if defined(__cplusplus)
-extern "C"{
-#endif /* defined(__cplusplus) */
-
-
-void __signal_handler_ignore(int);
-
-
-#if defined(__cplusplus)
-}
-#endif /* defined(__cplusplus) */
-
-#define SIG_IGN (__signal_handler_ignore)
+#define SIG_IGN ((void(*)(int))1)
 
 #endif /* __MACROS_SIG_IGN_H__ */

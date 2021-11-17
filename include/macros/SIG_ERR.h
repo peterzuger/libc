@@ -22,18 +22,6 @@
 #ifndef __MACROS_SIG_ERR_H__
 #define __MACROS_SIG_ERR_H__
 
-#if defined(__cplusplus)
-extern "C"{
-#endif /* defined(__cplusplus) */
-
-
-void __signal_handler_error(int);
-
-
-#if defined(__cplusplus)
-}
-#endif /* defined(__cplusplus) */
-
-#define SIG_ERR (__signal_handler_error)
+#define SIG_ERR ((void(*)(int))-1)
 
 #endif /* __MACROS_SIG_ERR_H__ */
