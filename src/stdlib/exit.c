@@ -28,7 +28,9 @@ extern unsigned int __atexit_function_count;
 _Noreturn void exit(int status){
     for(; __atexit_function_count;)
         __atexit_functions[--__atexit_function_count]();
-    abort();
-    (void)status;
+    // TODO: flush all open streams
+    // TODO: close all open files
+    // TODO: remove tmpfile files
+    _Exit(status);
     __builtin_unreachable();
 }
