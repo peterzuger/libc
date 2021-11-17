@@ -23,5 +23,5 @@
 #include <macros/NULL.h>
 
 int atoi(const char* nptr){
-    return strtol(nptr, NULL, 10);
+    return (int)strtol(nptr, NULL, 10);
 }
