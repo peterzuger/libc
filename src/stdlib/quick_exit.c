@@ -28,7 +28,6 @@ extern unsigned int __at_quick_exit_function_count;
 _Noreturn void quick_exit(int status){
     for(; __at_quick_exit_function_count;)
         __at_quick_exit_functions[--__at_quick_exit_function_count]();
-    abort();
-    (void)status;
+    _Exit(status);
     __builtin_unreachable();
 }
