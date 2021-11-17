@@ -1,4 +1,5 @@
 -Iinclude
+-Iinclude/sys/thumb/none
 -Wall
 -Wextra
 -Wpedantic
