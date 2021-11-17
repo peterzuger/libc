@@ -21,7 +21,7 @@
  */
 #include <string.h>
 
-int memcmp(const void* s1, const void* s2, size_t n){
+__attribute__((pure)) int memcmp(const void* s1, const void* s2, size_t n){
     const unsigned char* l = (const unsigned char*)s1;
     const unsigned char* r = (const unsigned char*)s2;
 

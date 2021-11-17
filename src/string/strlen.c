@@ -24,9 +24,9 @@
 /**
  * simple strlen implementation O(n)
  * this checks every byte up to the end
- * can be optimized to check 4 bytes per loop
+ * can be optimized to check sizeof(unsinged int) bytes per loop
  */
-size_t strlen(const char* s){
+__attribute__((pure)) size_t strlen(const char* s){
     size_t i = 0;
     for( i=0 ; s[i] ; i++ );
     return i;
