@@ -1,11 +1,11 @@
 /**
- * @file   libc/src/stdlib/exit.c
+ * @file   libc/src/__libc_fini.c
  * @author Peter Züger
- * @date   18.10.2019
- * @brief  7.22.4.4  The exit function
+ * @date   18.11.2021
+ * @brief  libc deinitialization
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
- * Copyright (c) 2019 Peter Züger.
+ * Copyright (c) 2021 Peter Züger.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,20 +19,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#include <stdlib.h>
-#include <stdnoreturn.h>
 
-extern void(*__atexit_functions[32])(void);
-extern unsigned int __atexit_function_count;
+extern void __libc_fini_files(void);
 
-extern void __libc_fini(void);
-
-_Noreturn void exit(int status){
-    for(; __atexit_function_count;)
-        __atexit_functions[--__atexit_function_count]();
-
-    __libc_fini();
-
-    _Exit(status);
-    __builtin_unreachable();
+void __libc_fini(void){
+    __libc_fini_files();
 }
