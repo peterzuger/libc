@@ -24,6 +24,7 @@
 
 #include <macros/syscall.h>
 
+int _close(int fd);
 void _exit(int status);
 
 #endif /* __SYS_X86_64_LINUX_SYSCALL_H__ */

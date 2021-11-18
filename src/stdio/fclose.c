@@ -1,8 +1,8 @@
 /**
- * @file   libc/include/sys/thumb/none/syscall.h
+ * @file   libc/src/stdio/fclose.c
  * @author Peter Züger
- * @date   17.11.2021
- * @brief  syscall stubs for thumb on NOSYS
+ * @date   18.11.2021
+ * @brief  7.21.5.1 The fclose function
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2021 Peter Züger.
@@ -19,10 +19,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SYS_THUMB_NONE_SYSCALL_H__
-#define __SYS_THUMB_NONE_SYSCALL_H__
+#include <stdio.h>
+#include <stdlib.h>
+#include <syscall.h>
 
-int _close(int fd);
-void _exit(int status);
+int fclose(FILE* stream){
+    if(stream == NULL)
+        return 0;
 
-#endif /* __SYS_THUMB_NONE_SYSCALL_H__ */
+    fflush(stream);
+
+    int r = 0;
+
+    if(_close(stream->fd))
+        r = EOF;
+
+    if(stream->flags & __MALLOC)
+        free(stream->buf.p);
+
+    stream->buf.p = NULL;
+    stream->flags = 0;
+
+    return r;
+}
