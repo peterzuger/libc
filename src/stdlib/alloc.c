@@ -19,22 +19,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#include <stdlib.h>
-#include <stddef.h>
-#include <errno.h>
 #include <__config.h>
+#include <errno.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <syscall.h>
 
 #include "alloc.h"
 
 /**
  * this struct contains the global inforamtion needed by this implementation
- * this struct is a global variable initialized to {0x0,0x0,0x0}
  */
-volatile malloc_t base = {
-    .first = NULL,
-    .last  = NULL,
-    .used  = 0
-};
+volatile malloc_t base;
+
+void __libc_init_malloc(void){
+    memset((void*)&base, 0, sizeof(base));
+
+    base.end = base.first = (block_t*)(_brk(NULL));
+    base.last = NULL;
+}
+
+block_t* create_block(size_t size){
+    // round size up to the next power of 2 but at least 32
+    if(size <= 32)
+        size = 32;
+    else
+        size = (size_t)(1 << ((sizeof(size_t) * 8) - (unsigned)__builtin_clz((unsigned int)size - 1)));
+
+    // TODO: create a new block
+
+    errno = ENOMEM;
+    return NULL;
+}
 
 // first fit (fastest)
 #if defined(MALLOC_USE_FIRST_FIT)
@@ -60,47 +78,6 @@ block_t* find_free_block(size_t size){
     return best;
 }
 #endif /* defined(MALLOC_USE_BEST_FIT) */
-
-block_t* create_block(size_t size){
-    extern char __heap_start__;
-    extern char __heap_end__;
-    extern char __heap_size__;
-
-    // round size up to the next power of 2 but at least 32
-    if(size<=32)
-        size = 32;
-    else
-        size = (size_t)(1 << ((sizeof(size_t)*8) - (unsigned)__builtin_clz((unsigned int)size - 1)));
-
-    // heap setup
-    if(!base.last){
-        if((&__heap_size__) < ((char*)(size+BLOCK_SIZE))){
-            errno = ENOMEM;
-            return NULL;
-        }
-        base.first = (block_t*)(&__heap_start__);
-        base.last = base.first;
-        base.last->magic = MAGIC_FREE;
-        base.last->size = size;
-        base.last->prev = NULL;
-        base.last->next = NULL;
-        return base.last;
-    }
-
-    size_t p = (((size_t)base.last)+base.last->size+BLOCK_SIZE);
-    if((p+BLOCK_SIZE+size) <= ((size_t)(&__heap_end__))){
-        base.last->next = (block_t*)p;
-        base.last->next->prev = base.last;
-        base.last = base.last->next;
-        base.last->size = size;
-        base.last->magic = MAGIC_FREE;
-        base.last->next = NULL;
-        return base.last;
-    }
-
-    errno = ENOMEM;
-    return NULL;
-}
 
 /**
  * Split block into smaller chunks

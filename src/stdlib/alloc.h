@@ -61,6 +61,7 @@ typedef struct block_t{
 typedef struct{
     block_t* first; /**< pointer to first memory block in free list */
     block_t* last;  /**< pointer to last memory block */
+    void*    end;   /**< pointer to the current end of heap */
     size_t   used;  /**< total allocated memory in bytes*/
 }malloc_t;
 

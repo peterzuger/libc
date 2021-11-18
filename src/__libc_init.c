@@ -20,8 +20,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+extern void __libc_init_malloc(void);
 extern void __libc_init_files(void);
 
 void __libc_init(void){
+    __libc_init_malloc();
     __libc_init_files();
 }

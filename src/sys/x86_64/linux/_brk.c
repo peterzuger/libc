@@ -1,8 +1,8 @@
 /**
- * @file   libc/include/sys/thumb/none/syscall.h
+ * @file   libc/src/sys/x86_64/linux/_brk.c
  * @author Peter Züger
- * @date   17.11.2021
- * @brief  syscall stubs for thumb on NOSYS
+ * @date   18.11.2021
+ * @brief  _brk syscall implementation for linux
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2021 Peter Züger.
@@ -19,21 +19,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SYS_THUMB_NONE_SYSCALL_H__
-#define __SYS_THUMB_NONE_SYSCALL_H__
+#include <errno.h>
+#include <stdlib.h>
 
-#include <types/size_t.h>
+#include <syscall.h>
 
-#include <types/mode_t.h>
+void* _brk(void* addr){
+    long ret;
 
-int _close(int fd);
-int _fsync(int fd);
-int _getpid(void);
-int _kill(int pid, int sig);
-int _open(const char* fd, int flags, mode_t mode);
-size_t _read(int fd, void *buf, size_t size);
-size_t _write(int fd, const void *buf, size_t size);
-void _exit(int status);
-void* _brk(void* addr);
+    __asm volatile(
+        "syscall"
+        : "=a"(ret)
+        : "0"(__NR_brk), "D"(addr)
+        : "rcx", "r8", "r9", "r10", "r11", "memory", "cc");
 
-#endif /* __SYS_THUMB_NONE_SYSCALL_H__ */
+    if(ret < 0){
+        errno = ((int)-ret);
+        ret = 0;
+    }
+    return (void*)ret;
+}

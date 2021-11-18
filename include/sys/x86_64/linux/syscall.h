@@ -34,6 +34,7 @@ ssize_t _read(int fd, void *buf, size_t size);
 ssize_t _write(int fd, const void *buf, size_t size);
 int _open(const char* fd, int flags, mode_t mode);
 int _close(int fd);
+void* _brk(void* addr);
 pid_t _getpid(void);
 void _exit(int status);
 int _kill(pid_t pid, int sig);
