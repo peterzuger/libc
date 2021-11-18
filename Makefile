@@ -79,9 +79,9 @@ endif
 COMFLAGS  = $(WFLAGS) $(OPTFLAGS) $(IFLAGS) -static -ffreestanding
 COMFLAGS += -nostartfiles -nostdlib -nostdinc -fno-tree-loop-distribute-patterns -fno-stack-protector
 ifeq ($(ARCH),thumb)
-COMFLAGS += -mthumb -mcpu=$(CPU) -mfloat-abi=hard -mfpu=$(FPU)
+COMFLAGS += -mthumb -mcpu=$(CPU) -mfpu=$(FPU)
 else ifeq ($(ARCH),arm)
-COMFLAGS += -marm -mcpu=$(CPU) -mfloat-abi=hard -mfpu=$(FPU)
+COMFLAGS += -marm -mcpu=$(CPU) -mfpu=$(FPU)
 else ifeq ($(ARCH),x86_64)
 COMFLAGS += -mtune=$(CPU)
 endif
