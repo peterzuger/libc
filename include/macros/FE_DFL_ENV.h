@@ -22,12 +22,14 @@
 #ifndef __MACROS_FE_DFL_ENV_H__
 #define __MACROS_FE_DFL_ENV_H__
 
+#include <types/fenv_t.h>
+
 #if defined(__cplusplus)
 extern "C"{
 #endif /* defined(__cplusplus) */
 
 
-extern fenv_t __fe_dfl_env;
+extern const fenv_t __fe_dfl_env;
 
 
 #if defined(__cplusplus)
