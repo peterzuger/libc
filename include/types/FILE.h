@@ -43,7 +43,10 @@ struct __fbuf{
 typedef struct{
     int           fd;
     int           flags;
-    struct __fbuf buf;
+    union{
+        struct __fbuf buf;
+        char          nbuf[1];
+    };
     char          cbuf[1];
 }FILE;
 #endif /* !defined(__FILE_DEFINED__) */

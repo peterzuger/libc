@@ -24,6 +24,11 @@
 
 #include <macros/syscall.h>
 
+#include <types/size_t.h>
+
+#include <types/ssize_t.h>
+
+ssize_t _write(int fd, const void *buf, size_t size);
 int _close(int fd);
 void _exit(int status);
 
