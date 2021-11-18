@@ -1,8 +1,8 @@
 /**
- * @file   libc/include/sys/x86_64/linux/syscall.h
+ * @file   libc/src/sys/thumb/none/_read.c
  * @author Peter Züger
- * @date   17.11.2021
- * @brief  Linux syscalls
+ * @date   18.11.2021
+ * @brief  _read syscall stub for NOSYS
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2021 Peter Züger.
@@ -19,19 +19,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SYS_X86_64_LINUX_SYSCALL_H__
-#define __SYS_X86_64_LINUX_SYSCALL_H__
+#include <errno.h>
+#include <stdlib.h>
 
-#include <macros/syscall.h>
+#include <syscall.h>
 
-#include <types/size_t.h>
-
-#include <types/ssize_t.h>
-
-ssize_t _read(int fd, void *buf, size_t size);
-ssize_t _write(int fd, const void *buf, size_t size);
-int _close(int fd);
-void _exit(int status);
-int _fsync(int fd);
-
-#endif /* __SYS_X86_64_LINUX_SYSCALL_H__ */
+__attribute__((weak)) size_t _read(int, void*, size_t){
+    errno = ENOSYS;
+    return (size_t)-1;
+}

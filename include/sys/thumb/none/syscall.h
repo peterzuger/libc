@@ -26,6 +26,7 @@
 
 int _close(int fd);
 int _fsync(int fd);
+size_t _read(int fd, void *buf, size_t size);
 size_t _write(int fd, const void *buf, size_t size);
 void _exit(int status);
 

@@ -1,8 +1,8 @@
 /**
- * @file   libc/include/sys/x86_64/linux/syscall.h
+ * @file   libc/src/sys/x86_64/linux/_read.c
  * @author Peter Züger
- * @date   17.11.2021
- * @brief  Linux syscalls
+ * @date   18.11.2021
+ * @brief  _read syscall implementation for linux
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2021 Peter Züger.
@@ -19,19 +19,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SYS_X86_64_LINUX_SYSCALL_H__
-#define __SYS_X86_64_LINUX_SYSCALL_H__
-
-#include <macros/syscall.h>
-
+#include <errno.h>
 #include <types/size_t.h>
 
+#include <syscall.h>
 #include <types/ssize_t.h>
 
-ssize_t _read(int fd, void *buf, size_t size);
-ssize_t _write(int fd, const void *buf, size_t size);
-int _close(int fd);
-void _exit(int status);
-int _fsync(int fd);
+ssize_t _read(int fd, void *buf, size_t size){
+    ssize_t ret;
 
-#endif /* __SYS_X86_64_LINUX_SYSCALL_H__ */
+    __asm volatile(
+        "syscall"
+        : "=a" (ret)
+        : "0"(__NR_read), "D"(fd), "S"(buf), "d"(size)
+        : "rcx", "r8", "r9", "r10", "r11", "memory", "cc");
+
+    if(ret <= -125){
+        errno = -(ret);
+        ret = -1;
+    }
+    return ret;
+}
