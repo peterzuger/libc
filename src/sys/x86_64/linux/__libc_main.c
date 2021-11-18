@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <stdnoreturn.h>
 
+extern void __libc_init(void);
 extern int main(int argc, char** argv, char** envp);
 
 noreturn void __libc_main(int argc, char** argv, char** envp){
@@ -33,6 +34,8 @@ noreturn void __libc_main(int argc, char** argv, char** envp){
         for(size_t i = 0; i < count; i++)
             __preinit_array_start[i](argc, argv, envp);
     }
+
+    __libc_init();
 
     {
         extern void (*__init_array_start [])(int, char**, char**);
