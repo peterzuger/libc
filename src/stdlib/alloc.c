@@ -119,15 +119,16 @@ void split_block(block_t* block, size_t size){
 
 // Merge adjacent free blocks
 void merge_blocks(block_t* block){
-    if(block->next->magic == MAGIC_FREE){
+    if(block->next && (block->next->magic == MAGIC_FREE)){
         block->size += block->next->size + BLOCK_SIZE;
         block->next       = block->next->next;
         block->next->prev = block;
     }
-    if(block->prev->magic == MAGIC_FREE){
+    if(block->prev && (block->prev->magic == MAGIC_FREE)){
         block->prev->size += block->size + BLOCK_SIZE;
         block->prev->next = block->next;
-        block->next->prev = block->prev;
+        if(block->next)
+            block->next->prev = block->prev;
     }
 }
 
