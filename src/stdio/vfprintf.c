@@ -71,8 +71,8 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
         unsigned int flags = {0};
 
         // flags (0 or more in any order)
-        for(;;format++){
-            switch(*format){
+        for(;;){
+            switch(*format++){
             case '-': // left justified
                 flags &= ~ZERO_PADDING;
                 flags |= LEFT_JUSTIFIED;
@@ -98,8 +98,10 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
                 continue;
 
             default: // no more flags
+                format--;
                 break;
             }
+            break;
         }
 
         int width;
@@ -117,7 +119,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
                 width = 0;
         }
 
-        int precision;
+        int precision = 0;
         // precision   (optional)( .<int> , .* )
         if(*format == '.'){
             format++;
@@ -167,6 +169,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             length = DOUBLE;
             break;
         default:
+            format--;
             break;
         }
 
