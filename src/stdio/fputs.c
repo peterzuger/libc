@@ -20,10 +20,32 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdio.h>
+#include <string.h>
+#include <syscall.h>
 
 int fputs(const char* __restrict__ s, FILE* __restrict__ stream){
-    while(*s)
-        if(fputc(*s++, stream) == EOF)
-            return EOF;
+    if(stream->buf.p){
+        while(*s)
+            if(fputc(*s++, stream) == EOF)
+                return EOF;
+    }else{
+        size_t size = strlen(s);
+        const char* p = s;
+
+        while(1){
+            size_t ret = (size_t)_write(stream->fd, p, size);
+
+            // _write failed
+            if((ret == ((size_t)-1)) || (ret > stream->buf.pos)){
+                stream->flags |= __ERR;
+                return EOF;
+            }
+
+            size -= ret;
+
+            if(!size)
+                break;
+        }
+    }
     return 1;
 }
