@@ -24,10 +24,13 @@
 
 #include <types/size_t.h>
 
+#include <types/mode_t.h>
+
 int _close(int fd);
 int _fsync(int fd);
 int _getpid(void);
 int _kill(int pid, int sig);
+int _open(const char* fd, int flags, mode_t mode);
 size_t _read(int fd, void *buf, size_t size);
 size_t _write(int fd, const void *buf, size_t size);
 void _exit(int status);

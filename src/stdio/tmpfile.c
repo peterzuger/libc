@@ -1,8 +1,8 @@
 /**
- * @file   libc/include/sys/x86_64/linux/syscall.h
+ * @file   libc/src/stdio/tmpfile.c
  * @author Peter Züger
- * @date   17.11.2021
- * @brief  Linux syscalls
+ * @date   18.11.2021
+ * @brief  7.21.4.3 The tmpfile function
  *
  * This file is part of libc (https://gitlab.com/peterzuger/libc).
  * Copyright (c) 2021 Peter Züger.
@@ -19,24 +19,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef __SYS_X86_64_LINUX_SYSCALL_H__
-#define __SYS_X86_64_LINUX_SYSCALL_H__
+#include <stdio.h>
 
-#include <macros/syscall.h>
+#include <syscall.h>
 
-#include <types/size_t.h>
+extern FILE* __libc_get_FILE();
 
-#include <types/ssize_t.h>
-#include <types/mode_t.h>
-#include <types/pid_t.h>
+FILE* tmpfile(void){
+    FILE* f = __libc_get_FILE();
 
-ssize_t _read(int fd, void *buf, size_t size);
-ssize_t _write(int fd, const void *buf, size_t size);
-int _open(const char* fd, int flags, mode_t mode);
-int _close(int fd);
-pid_t _getpid(void);
-void _exit(int status);
-int _kill(pid_t pid, int sig);
-int _fsync(int fd);
+    if(f)
+        f->fd = _open("/tmp/", O_RDWR | O_TMPFILE, 0700);
 
-#endif /* __SYS_X86_64_LINUX_SYSCALL_H__ */
+    if(f->fd < 0)
+        return NULL;
+
+    f->buf.p = NULL;
+    f->flags = __READ | __WRITE;
+
+    return f;
+}
