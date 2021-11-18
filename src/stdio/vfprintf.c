@@ -27,13 +27,11 @@
 #include <ctype.h>  // for isdigit()
 #include <wchar.h>  // for wide character output
 
-typedef enum{
-    LEFT_JUSTIFIED = 1 << 0,
-    SIGN_ALWAYS    = 1 << 1,
-    SIGN_SPACE     = 1 << 2,
-    ALTERNATE      = 1 << 3,
-    ZERO_PADDING   = 1 << 4
-}format_flags_t;
+#define LEFT_JUSTIFIED ((unsigned int)(1 << 0))
+#define SIGN_ALWAYS    ((unsigned int)(1 << 1))
+#define SIGN_SPACE     ((unsigned int)(1 << 2))
+#define ALTERNATE      ((unsigned int)(1 << 3))
+#define ZERO_PADDING   ((unsigned int)(1 << 4))
 
 typedef enum{
     CHAR,
@@ -70,18 +68,18 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             continue;
         }
 
-        format_flags_t flags = {0};
+        unsigned int flags = {0};
 
         // flags (0 or more in any order)
         for(;;format++){
             switch(*format){
             case '-': // left justified
-                flags &= (char)~ZERO_PADDING;
+                flags &= ~ZERO_PADDING;
                 flags |= LEFT_JUSTIFIED;
                 continue;
 
             case '+': // show sign = always
-                flags &= (char)~SIGN_SPACE;
+                flags &= ~SIGN_SPACE;
                 flags |= SIGN_ALWAYS;
                 continue;
 
