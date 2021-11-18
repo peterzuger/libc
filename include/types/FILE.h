@@ -26,13 +26,13 @@
 
 #if !defined(__FILE_DEFINED__)
 # define __FILE_DEFINED__
-# define __READ   ((int)(0 << 0))
-# define __WRITE  ((int)(0 << 1))
-# define __IOLBF  ((int)(0 << 2))
-# define __MALLOC ((int)(0 << 3))
-# define __EOF    ((int)(0 << 4))
-# define __ERR    ((int)(0 << 5))
-# define __APPEND ((int)(0 << 6))
+# define __READ   ((int)(1 << 0))
+# define __WRITE  ((int)(1 << 1))
+# define __IOLBF  ((int)(1 << 2))
+# define __MALLOC ((int)(1 << 3))
+# define __EOF    ((int)(1 << 4))
+# define __ERR    ((int)(1 << 5))
+# define __APPEND ((int)(1 << 6))
 
 struct __fbuf{
     char*  p;
