@@ -70,7 +70,7 @@ block_t* create_block(size_t size){
     if(size<=32)
         size = 32;
     else
-        size = (size_t)(1 << ((sizeof(size_t)*8) - (unsigned)__builtin_clz(size - 1)));
+        size = (size_t)(1 << ((sizeof(size_t)*8) - (unsigned)__builtin_clz((unsigned int)size - 1)));
 
     // heap setup
     if(!base.last){
