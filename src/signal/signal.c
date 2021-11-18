@@ -19,15 +19,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+#include <errno.h>
 #include <signal.h>
 
-static void (*__signal_handlers[6])(int);
+void (*__signal_handlers[_SIG_MAX])(int) = {0};
 
 void (*signal(int sig, void (*func)(int)))(int){
-    if((sig >= 0) && (sig <= 6)){
-        void (*tmp)(int) = __signal_handlers[sig];
-        __signal_handlers[sig] = func;
-        return tmp;
+    if((sig < 0) || (sig >= _SIG_MAX)){
+        errno = EINVAL;
+        return SIG_ERR;
     }
-    return SIG_ERR;
+
+    void (*tmp)(int) = __signal_handlers[sig];
+    __signal_handlers[sig] = func;
+    return tmp;
 }

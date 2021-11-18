@@ -19,14 +19,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+#include <errno.h>
 #include <signal.h>
 
-extern void (*__signal_handlers[6])(int);
+#include <syscall.h>
+
+extern void (*__signal_handlers[_SIG_MAX])(int);
 
 int raise(int sig){
-    if((sig >= 0) && (sig <= 6)){
-        __signal_handlers[sig](sig);
-        return 0;
+    if((sig < 0) || (sig >= _SIG_MAX)){
+        errno = EINVAL;
+        return -1;
     }
-    return 1;
+
+    void (*tmp)(int) = __signal_handlers[sig];
+
+    if(tmp == SIG_DFL){
+        return _kill(_getpid(), sig);
+    }else if(tmp != SIG_IGN){
+        __signal_handlers[sig] = SIG_DFL;
+        tmp(sig);
+    }
+
+    return 0;
 }

@@ -32,4 +32,6 @@
 #define SIGSEGV  (4) /* an invalid access to storage                      */
 #define SIGTERM  (5) /* a termination request sent to the program         */
 
+#define _SIG_MAX (6) /* highest valid signal */
+
 #endif /* __MACROS_SIG_H__ */
