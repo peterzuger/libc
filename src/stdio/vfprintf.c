@@ -44,6 +44,10 @@ typedef enum{
     DOUBLE
 }length_t;
 
+static inline int HEX_digit(uint8_t c){
+    return "0123456789ABCDEF"[c & 0xF];
+}
+
 int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list arg){
     int num_chars = 0;
 
@@ -248,7 +252,17 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             }
             break;
 
-        case 'p':  // pointer                      -- 0x01ABCDEF
+        case 'p':{ // pointer                      -- 0x01ABCDEF
+            void* ptr = va_arg(arg, void*);
+            num_chars += (sizeof(void*) * 2) + 2;
+
+            if(fputc('0', stream) == EOF)return EOF;
+            if(fputc('x', stream) == EOF)return EOF;
+
+            for(int i = (sizeof(void*) * 8) - 4; i >= 0; i -= 4)
+                if(fputc(HEX_digit((uint8_t)(((size_t)ptr) >> i)), stream) == EOF)
+                    return EOF;
+        }
             break;
 
         case 'n':  // number of characters written so far
