@@ -37,8 +37,8 @@ volatile malloc_t base;
 void __libc_init_malloc(void){
     memset((void*)&base, 0, sizeof(base));
 
-    base.end = base.first = (block_t*)(_brk(NULL));
-    base.last = NULL;
+    base.end = (block_t*)(_brk(NULL));
+    base.first = base.last = NULL;
 }
 
 block_t* create_block(size_t size){
