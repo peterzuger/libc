@@ -68,8 +68,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             continue;
         }
 
-        unsigned int flags = {0};
-
+        unsigned int flags = 0;
         // flags (0 or more in any order)
         for(;;){
             switch(*format++){
@@ -104,7 +103,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
             break;
         }
 
-        int width;
+        int width = 0;
         // field width (optional)( int[nonnegative] , * )
         if(isdigit(*format) && *format != '0'){
             do{
@@ -123,23 +122,23 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
         // precision   (optional)( .<int> , .* )
         if(*format == '.'){
             format++;
-            if(*format == '*'){
+            if(isdigit(*format)){
+                do{
+                    precision *= 10;
+                    precision += *format - '0';
+                    format++;
+                }while(isdigit(*format));
+            }else if(*format == '*'){
                 format++;
                 precision = va_arg(arg, int);
                 if(precision < 0)
                     precision = 0;
-            }else if(isdigit(*format)){
-                do{
-                    precision *= 10;
-                    precision += *format - 48;
-                    format++;
-                }while(isdigit(*format));
             }else{
                 format++;
             }
         }
 
-        length_t length;
+        length_t length = 0;
         // length modifier
         switch(*format++){
         case 'h':               // short int / unsigned short int / short int*
