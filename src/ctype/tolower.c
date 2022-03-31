@@ -34,5 +34,5 @@
  *         locale); otherwise, the argument is returned unchanged.
  */
 int tolower(int c){
-    return isupper(c)?(c+32):c;
+    return isupper(c) ? (c + 32) : c;
 }

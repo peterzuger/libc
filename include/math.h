@@ -52,12 +52,12 @@
 
 // 7.12.14 Comparison macros
 #if !defined(__cplusplus)
-# define isgreater(x,y)       __builtin_isgreater(x, y)
-# define isgreaterequal(x,y)  __builtin_isgreaterequal(x, y)
-# define isless(x,y)          __builtin_isless(x, y)
-# define islessequal(x,y)     __builtin_islessequal(x, y)
-# define islessgreater(x,y)   __builtin_islessgreater(x, y)
-# define isunordered(x,y)     __builtin_isunordered(x, y)
+# define isgreater(x, y)       __builtin_isgreater(x, y)
+# define isgreaterequal(x, y)  __builtin_isgreaterequal(x, y)
+# define isless(x, y)          __builtin_isless(x, y)
+# define islessequal(x, y)     __builtin_islessequal(x, y)
+# define islessgreater(x, y)   __builtin_islessgreater(x, y)
+# define isunordered(x, y)     __builtin_isunordered(x, y)
 #endif /* !defined(__cplusplus) */
 
 #if defined(__cplusplus)

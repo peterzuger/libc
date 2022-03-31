@@ -41,14 +41,14 @@ void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
     void* p;
     int c;
 
-    while(l<u){
+    while(l < u){
         idx = (l + u) / 2;
-        p = (void *) (((const char *) base) + (idx * size));
-        c = (*compar) (key, p);
-        if(c<0)
+        p = (void*) (((const char*) base) + (idx * size));
+        c = (*compar)(key, p);
+        if(c < 0)
             u = idx;
-        else if(c>0)
-            l = idx+1;
+        else if(c > 0)
+            l = idx + 1;
         else
             return (void*)p;
     }

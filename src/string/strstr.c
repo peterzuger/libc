@@ -28,7 +28,7 @@ __attribute__((pure)) char* strstr(const char* s1, const char* s2){
     const unsigned char* o;
 
     while(*l){
-        for(p = r,o = l; *p && *o; p++,o++)
+        for(p = r, o = l; *p && *o; p++, o++)
             if(*p != *o)
                 break;
         if(!(*p && *o))

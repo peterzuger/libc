@@ -27,5 +27,5 @@
  * The isgraph function tests for any printing character except space (' ').
  */
 int isgraph(int c){
-    return ((c>='!')&&(c<='~'));
+    return ((c >= '!') && (c <= '~'));
 }

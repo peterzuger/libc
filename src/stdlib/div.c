@@ -27,7 +27,7 @@ div_t div(int numer, int denom){
     result.quot = numer / denom;
     result.rem = numer % denom;
 
-    if (numer >= 0 && result.rem < 0){
+    if(numer >= 0 && result.rem < 0){
         ++result.quot;
         result.rem -= denom;
     }
@@ -41,7 +41,7 @@ ldiv_t ldiv(long int numer, long int denom){
     result.quot = numer / denom;
     result.rem = numer % denom;
 
-    if (numer >= 0 && result.rem < 0){
+    if(numer >= 0 && result.rem < 0){
         ++result.quot;
         result.rem -= denom;
     }
@@ -55,7 +55,7 @@ lldiv_t lldiv(long long int numer, long long int denom){
     result.quot = numer / denom;
     result.rem = numer % denom;
 
-    if (numer >= 0 && result.rem < 0){
+    if(numer >= 0 && result.rem < 0){
         ++result.quot;
         result.rem -= denom;
     }

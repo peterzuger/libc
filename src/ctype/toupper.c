@@ -34,5 +34,5 @@
  *         locale); otherwise, the argument is returned unchanged.
  */
 int toupper(int c){
-    return islower(c)?(c-32):c;
+    return islower(c) ? (c - 32) : c;
 }

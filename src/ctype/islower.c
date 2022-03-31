@@ -30,5 +30,5 @@
  * true only for the lowercase letters (as defined in 5.2.1).
  */
 int islower(int c){
-    return ((c>='a')&&(c<='z'));
+    return ((c >= 'a') && (c <= 'z'));
 }

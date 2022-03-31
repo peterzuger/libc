@@ -27,5 +27,5 @@
  * The isprint function tests for any printing character including space (' ').
  */
 int isprint(int c){
-    return ((c>=' ')&&(c<='~'));
+    return ((c >= ' ') && (c <= '~'));
 }

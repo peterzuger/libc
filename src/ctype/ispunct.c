@@ -30,6 +30,6 @@
  * every printing character for which neither isspace nor isalnum is true.
  */
 int ispunct(int c){
-    return (((c>='!')&&(c<='/')) || ((c>=':')&&(c<='@')) ||
-            ((c>='[')&&(c<='`')) || ((c>='{')&&(c<='~')));
+    return (((c >= '!') && (c <= '/')) || ((c >= ':') && (c <= '@')) ||
+            ((c >= '[') && (c <= '`')) || ((c >= '{') && (c <= '~')));
 }

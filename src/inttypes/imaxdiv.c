@@ -27,7 +27,7 @@ imaxdiv_t imaxdiv(intmax_t numer, intmax_t denom){
     result.quot = numer / denom;
     result.rem = numer % denom;
 
-    if (numer >= 0 && result.rem < 0){
+    if(numer >= 0 && result.rem < 0){
         ++result.quot;
         result.rem -= denom;
     }

@@ -244,7 +244,7 @@ int vfprintf(FILE* __restrict__ stream, const char* __restrict__ format, va_list
                         return EOF;
                     n = 0;
                     while(n < m){
-                        if(fputc(str[n++],stream) == EOF)
+                        if(fputc(str[n++], stream) == EOF)
                             return EOF;
                         num_chars++;
                     }

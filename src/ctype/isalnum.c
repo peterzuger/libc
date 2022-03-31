@@ -28,5 +28,5 @@
  * which isalpha or isdigit is true.
  */
 int isalnum(int c){
-    return (isdigit(c) || isalpha(c));
+    return isdigit(c) || isalpha(c);
 }

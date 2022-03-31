@@ -22,6 +22,6 @@
 #ifndef __MACRO_NAN_H__
 #define __MACRO_NAN_H__
 
-#define NAN  (__builtin_nanf (""))
+#define NAN  (__builtin_nanf(""))
 
 #endif /* __MACRO_NAN_H__ */

@@ -31,5 +31,5 @@
  * which isupper or islower is true.
  */
 int isalpha(int c){
-    return (isupper(c) || islower(c));
+    return isupper(c) || islower(c);
 }

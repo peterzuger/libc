@@ -32,5 +32,5 @@
  * the standard blank characters.
  */
 int isblank(int c){
-    return ((c=='\t')||(c==' '));
+    return ((c == '\t') || (c == ' '));
 }

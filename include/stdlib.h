@@ -49,7 +49,7 @@ long long int atoll(const char* nptr);
 double strtod(const char* __restrict__ nptr, char** __restrict__ endptr);
 float strtof(const char* __restrict__ nptr, char** __restrict__ endptr);
 long double strtold(const char* __restrict__ nptr, char** __restrict__ endptr);
-long int strtol(const char* __restrict__ nptr,char** __restrict__ endptr, int base);
+long int strtol(const char* __restrict__ nptr, char** __restrict__ endptr, int base);
 long long int strtoll(const char* __restrict__ nptr,
                       char** __restrict__ endptr, int base);
 unsigned long int strtoul(const char* __restrict__ nptr,

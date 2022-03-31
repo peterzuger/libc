@@ -30,5 +30,5 @@
  * true only for the uppercase letters (as defined in 5.2.1).
  */
 int isupper(int c){
-    return ((c>='A')&&(c<='Z'));
+    return ((c >= 'A') && (c <= 'Z'));
 }

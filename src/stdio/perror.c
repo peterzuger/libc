@@ -25,9 +25,9 @@
 
 void perror(const char* s){
     if(s){
-        fputs(s,stderr);
-        fputs(": ",stderr);
+        fputs(s, stderr);
+        fputs(": ", stderr);
     }
-    fputs(strerror(errno),stderr);
-    fputs("\n",stderr);
+    fputs(strerror(errno), stderr);
+    fputs("\n", stderr);
 }
