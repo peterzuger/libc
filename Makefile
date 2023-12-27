@@ -36,6 +36,8 @@ ASRC  = $(wildcard src/sys/$(ARCH)/$(SYS)/*.S)
 OBJECTS  = $(patsubst %.c,$(BUILD)/%.o,$(CSRC))
 OBJECTS += $(patsubst %.S,$(BUILD)/%.o,$(ASRC))
 
+DEPENDENCIES = $(patsubst %.c,$(BUILD)/%.d,$(CSRC))
+
 TARGET = $(BUILD)/$(TARGET_NAME).a
 
 ifeq ($(ARCH),arm)
@@ -105,6 +107,8 @@ $(BUILD)/%.o: %.c
 	$(MKDIR) --parents ${dir $@}
 	$(GCC) $(GCCFLAGS) -MD -MF $(@:.o=.d) $< -o $@
 
+-include $(DEPENDENCIES)
+
 $(BUILD)/%.o: %.S
 	$(ECHO) "GCC\t$@"
 	$(GCC) $(ASFLAGS) $< -o $@
@@ -115,5 +119,5 @@ $(TARGET): $(OBJECTS)
 
 .PHONY: clean
 clean:
-	$(RM) -f $(OBJECTS) $(TARGET)
+	$(RM) -f $(OBJECTS) $(DEPENDENCIES) $(TARGET)
 	$(Q)find $(BUILD) -type d -empty -delete
