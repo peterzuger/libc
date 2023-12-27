@@ -8,6 +8,8 @@ CPU         ?= cortex-m4
 FPU         ?= auto
 MULTITHREAD ?= 0
 
+BUILD       ?= build
+
 ifeq ($(VERBOSE),1)
 	Q =
 else
@@ -31,8 +33,10 @@ ASRC  = $(wildcard src/sys/$(ARCH)/*.S)
 CSRC += $(wildcard src/sys/$(ARCH)/$(SYS)/*.c)
 ASRC  = $(wildcard src/sys/$(ARCH)/$(SYS)/*.S)
 
-OBJECTS  = $(CSRC:.c=.o)
-OBJECTS += $(ASRC:.S=.o)
+OBJECTS  = $(patsubst %.c,$(BUILD)/%.o,$(CSRC))
+OBJECTS += $(patsubst %.S,$(BUILD)/%.o,$(ASRC))
+
+TARGET = $(BUILD)/$(TARGET_NAME).a
 
 ifeq ($(ARCH),arm)
 CC_VAR = arm-none-eabi-
@@ -94,22 +98,22 @@ GCCFLAGS = $(COMFLAGS) -c
 ARFLAGS  =
 ASFLAGS  = $(COMFLAGS) -c
 
-all: $(TARGET_NAME).a
+all: $(TARGET)
 
-%.o: %.c
+$(BUILD)/%.o: %.c
 	$(ECHO) "GCC\t$@"
-	$(GCC) $(GCCFLAGS) $< -o $@
+	$(MKDIR) --parents ${dir $@}
+	$(GCC) $(GCCFLAGS) -MD -MF $(@:.o=.d) $< -o $@
 
-%.o: %.S
+$(BUILD)/%.o: %.S
 	$(ECHO) "GCC\t$@"
 	$(GCC) $(ASFLAGS) $< -o $@
 
-$(TARGET_NAME).a: $(OBJECTS)
-	$(RM) -f $@
+$(TARGET): $(OBJECTS)
 	$(ECHO) "AR\t$@"
 	$(AR) $(ARFLAGS) rcs $@ $^
 
 .PHONY: clean
 clean:
-	$(RM) -f $(OBJECTS)
-	$(RM) -f $(TARGET_NAME).a
+	$(RM) -f $(OBJECTS) $(TARGET)
+	$(Q)find $(BUILD) -type d -empty -delete
