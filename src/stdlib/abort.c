@@ -28,6 +28,6 @@
  */
 _Noreturn void abort(){
     raise(SIGABRT);
-    _Exit(1);
+    _Exit(EXIT_FAILURE);
     __builtin_unreachable();
 }
