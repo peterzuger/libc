@@ -29,22 +29,37 @@ int setvbuf(FILE* __restrict__ stream, char* __restrict__ buf, int mode,
 
     fflush(stream);
 
-    if(stream->flags & __MALLOC)
-        free(stream->buf.p);
-    stream->flags &= ~(__IOLBF | __MALLOC);
-    stream->buf.p = NULL;
-
-    if((mode != _IONBF) && (!buf)){
-        buf = malloc(size ? size : BUFSIZ);
-        if(!buf)
-            return EOF;
-        stream->flags |= __MALLOC;
+    // only change mode, reuse buffer if the size matches
+    if(!buf && stream->buf.p && stream->buf.len == size && mode != _IONBF){
+        if(mode == _IOLBF)
+            stream->flags |= __IOLBF;
+        else
+            stream->flags &= ~__IOLBF;
+        return 0;
     }
 
-    if(buf){
+    if(stream->flags & __MALLOC)
+        free(stream->buf.p);
+    stream->flags  &= ~(__IOLBF | __MALLOC);
+    stream->buf.p   = NULL;
+    stream->buf.len = 0;
+    stream->buf.pos = 0;
+
+    // stream is in _IONBF mode
+
+    if(mode != _IONBF){
+        if(!buf){
+            size = size ? size : BUFSIZ;
+            buf = malloc(size);
+            if(!buf)
+                return EOF;
+            stream->flags |= __MALLOC;
+        }
+
         stream->buf.p   = buf;
         stream->buf.len = size;
-        stream->buf.pos = 0;
+
+        // stream is in _IOFBF mode
 
         if(mode == _IOLBF)
             stream->flags |= __IOLBF;
