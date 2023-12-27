@@ -47,16 +47,20 @@ endif
 CC   = $(Q)$(CC_VAR)gcc
 GCC  = $(Q)$(CC_VAR)gcc
 GXX  = $(Q)$(CC_VAR)g++
-CPP  = $(Q)$(CC_VAR)gcc -E
+CPP  = $(Q)$(CC_VAR)gcc --preprocess
 AR   = $(Q)$(CC_VAR)ar
 AS   = $(Q)$(CC_VAR)as
 
 ECHO = @echo -e
 
 ifeq ($(VERBOSE),1)
-	RM = rm -v
+	RM = rm --verbose
+	RMDIR = rmdir --verbose
+	MKDIR = mkdir --verbose
 else
 	RM = @rm
+	RMDIR = @rmdir
+	MKDIR = @mkdir
 endif
 
 ifeq ($(DEBUG),1)
