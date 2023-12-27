@@ -2,20 +2,16 @@ TARGET_NAME ?= libc
 VERBOSE     ?=
 DEBUG       ?=
 
-ARCH        ?= thumb
+ARCH        ?=
 SYS         ?= none
-CPU         ?= cortex-m4
+CPU         ?=
 FPU         ?= auto
-MULTITHREAD ?= 0
+THREADING   ?= 0
 
 BUILD       ?= build
+TARGET = $(BUILD)/$(TARGET_NAME).a
 
-ifeq ($(VERBOSE),1)
-	Q =
-else
-	Q = @
-endif
-
+#
 CSRC  = $(wildcard src/*.c)
 CSRC += $(wildcard src/complex/*.c)
 CSRC += $(wildcard src/ctype/*.c)
@@ -38,7 +34,24 @@ OBJECTS += $(patsubst %.S,$(BUILD)/%.o,$(ASRC))
 
 DEPENDENCIES = $(patsubst %.c,$(BUILD)/%.d,$(CSRC))
 
-TARGET = $(BUILD)/$(TARGET_NAME).a
+# Commands
+ifeq ($(VERBOSE),1)
+	Q =
+	RM = rm --verbose
+	RMDIR = rmdir --verbose
+	MKDIR = mkdir --verbose
+else
+	Q = @
+	RM = @rm
+	RMDIR = @rmdir
+	MKDIR = @mkdir
+endif
+
+ifeq ($(DEBUG),1)
+	DBGFLAGS = -g3
+else
+	DBGFLAGS =
+endif
 
 ifeq ($(ARCH),arm)
 CC_VAR = arm-none-eabi-
@@ -59,47 +72,36 @@ AS   = $(Q)$(CC_VAR)as
 
 ECHO = @echo -e
 
-ifeq ($(VERBOSE),1)
-	RM = rm --verbose
-	RMDIR = rmdir --verbose
-	MKDIR = mkdir --verbose
-else
-	RM = @rm
-	RMDIR = @rmdir
-	MKDIR = @mkdir
-endif
-
-ifeq ($(DEBUG),1)
-	DBGFLAGS = -g3
-else
-	DBGFLAGS =
-endif
-
-OPTFLAGS = -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
-IFLAGS   = -Iinclude -Iinclude/sys/$(ARCH)/$(SYS)
-WFLAGS   = -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
-WFLAGS  += -Wlogical-op -Wnull-dereference -Wshadow -Wformat=2
-WFLAGS  += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
-WFLAGS  += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
-WFLAGS  += -Waddress -Wjump-misses-init
+# Flags
+OPTFLAGS += -O2 -ffunction-sections -fdata-sections $(DBGFLAGS)
+IFLAGS   += -Iinclude -Iinclude/sys/$(ARCH)/$(SYS)
+WFLAGS   += -Wall -Wextra -Wpedantic -Wduplicated-cond -Wduplicated-branches
+WFLAGS   += -Wlogical-op -Wnull-dereference -Wshadow -Wformat=2
+WFLAGS   += -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum
+WFLAGS   += -Wunsafe-loop-optimizations -Wundef -Wconversion -Winline
+WFLAGS   += -Waddress -Wjump-misses-init
 ifeq ($(DEBUG),1)
 	WFLAGS += -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn
 endif
 
-COMFLAGS  = $(WFLAGS) $(OPTFLAGS) $(IFLAGS) -static -ffreestanding
-COMFLAGS += -nostartfiles -nostdlib -nostdinc -fno-tree-loop-distribute-patterns -fno-stack-protector
 ifeq ($(ARCH),thumb)
-COMFLAGS += -mthumb -mcpu=$(CPU) -mfpu=$(FPU)
+ARCHFLAGS += -mthumb -mcpu=$(CPU) -mfpu=$(FPU)
 else ifeq ($(ARCH),arm)
-COMFLAGS += -marm -mcpu=$(CPU) -mfpu=$(FPU)
+ARCHFLAGS += -marm -mcpu=$(CPU) -mfpu=$(FPU)
 else ifeq ($(ARCH),x86_64)
-COMFLAGS += -mtune=$(CPU)
+ifneq ($(CPU),)
+ARCHFLAGS += -mtune=$(CPU)
+endif
 endif
 
-GCCFLAGS = $(COMFLAGS) -c
-ARFLAGS  =
-ASFLAGS  = $(COMFLAGS) -c
+COMFLAGS += $(WFLAGS) $(OPTFLAGS) $(IFLAGS) $(ARCHFLAGS) -static -ffreestanding
+COMFLAGS += -nostartfiles -nostdlib -nostdinc -fno-tree-loop-distribute-patterns -fno-stack-protector
 
+GCCFLAGS = $(COMFLAGS) -c
+ASFLAGS  = $(COMFLAGS) -c
+ARFLAGS  =
+
+# Targets
 all: $(TARGET)
 
 $(BUILD)/%.o: %.c
@@ -120,4 +122,4 @@ $(TARGET): $(OBJECTS)
 .PHONY: clean
 clean:
 	$(RM) -f $(OBJECTS) $(DEPENDENCIES) $(TARGET)
-	$(Q)find $(BUILD) -type d -empty -delete
+	$(Q)find $(BUILD) -type d -empty -delete || true
