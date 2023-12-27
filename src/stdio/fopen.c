@@ -82,7 +82,6 @@ FILE* fopen(const char* __restrict__ filename, const char* __restrict__ mode){
         if(f->fd < 0)
             return NULL;
 
-        f->buf.p = NULL;
         f->flags = flags;
     }
 

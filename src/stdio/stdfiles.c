@@ -63,8 +63,10 @@ void __libc_fini_files(void){
 
 FILE* __libc_get_FILE(){
     for(size_t i = 0; i < FOPEN_MAX; ++i){
-        if(__libc_files[i].flags == 0)
+        if(__libc_files[i].flags == 0){
+            memset(&__libc_files[i], 0, sizeof(FILE));
             return &__libc_files[i];
+        }
     }
     return NULL;
 }
